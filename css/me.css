@@ -1,0 +1,76 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+  /* Medium devices (desktops, 992px and up) */
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+}
+textarea { resize:none; }
+.icon{
+    color: #0B0E1E; /*ebony*/
+    font-size: 40px;
+}
+.icon:hover{
+    cursor: pointer;
+}
+#main{
+    position: relative;
+    background-color: #0B0E1E; /*ebony*/
+    height: 100vh;
+    z-index: 1;
+}
+
+.star{
+    position: absolute;
+    margin: 1px;
+    width: 25px;
+    z-index: 5;
+}
+
+.bio{
+    background-color: #F6F7FD;
+    border-radius: 10%/7%;
+    width: 25vw;
+    height: 80vh;
+    margin-top: 4%;
+    margin-left: 7%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    z-index: 2;
+}
+.bio-text{
+    margin: 0px;
+    font-size: 28px;
+    z-index: 2;
+}   
+.bluegrey{
+    font-weight: bold;
+    color: #1C4B9C; /*#1C4B9C*/
+}
+
+.works{
+    height: 100vh;
+}
+
+.works_cont{
+    margin-top: 50px;
+}
+
+.work_row{
+    margin-top:75px;
+}
+.portfolio_image{
+    /*margin: 10px;*/
+    width: 280px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2%;
+}
