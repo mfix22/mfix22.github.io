@@ -1,15 +1,17 @@
 document.getElementById('main').appendChild
 
 var stars = []
-for(var i = 0; i <44; i++){
+for(var i = 0; i <84; i++){
 	var left = 0;
 	var topD = 0;
-	while (true){
-		left = Math.floor((Math.random() * 94) + 2);
-		topD = Math.floor((Math.random() * 90) + 5);
-		if ((left < 5 || left > 35	) || (topD < 5 || topD > 90)) 
-			break;
-	}		
+	left = Math.floor((Math.random() * 90) + 5);
+	topD = Math.floor((Math.random() * 90) + 5);
+	// while (true){
+	// 	left = Math.floor((Math.random() * 94) + 2);
+	// 	topD = Math.floor((Math.random() * 90) + 5);
+	// 	if ((left < 5 || left > 35	) || (topD < 5 || topD > 90)) 
+	// 		break;
+	// }		
 	var star = document.createElement('img');
 	stars.push(star);
 	star.setAttribute('src','img/star.png');

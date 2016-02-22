@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Medium devices (desktops, 992px and up) */
+$ebony: #0B0E1E;
+$offwhite: #F6F7FD;
+$bluegrey: #1C4B9C;
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+textarea {
+    resize: none;
+}
+
+.icon {
+    color: $ebony;
+    /*ebony*/
+    font-size: 40px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+#main {
+    position: relative;
+    background-color: $ebony;
+    /*ebony*/
+    height: 100vh;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    margin: 1px;
+    width: 10px;
+    z-index: 1;
+}
+
+.bio {
+    position: absolute;
+    background-color: $offwhite;
+    border-radius: 10%/6%;
+    width: 25vw;
+    height: 80vh;
+    margin-top: 4%;
+    margin-left: 7%;
+    padding-right: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    z-index: 10;
+    overflow:hidden;
+}
+
+.bio-text {
+    margin: 0px;
+    font-size: 28px;
+    z-index: 10;
+}
+
+.bluegrey {
+    font-weight: bold;
+    color: $bluegrey;
+}
+
+.works_wrapper {
+    // background-color: $ebony;
+ 
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+    background-color: black;
+    /*height: 100vh;*/
+}
+
+.works {
+    background-color: $ebony;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px;
+    // overflow: auto;
+    // border-top-right-radius: 2%;
+    // border-top-left-radius: 2%;
+    // background-color: black;
+    // /*height: 100vh;*/
+}
+
+.works_cont {
+    margin-top: 50px;
+}
+
+.work_row {
+    margin-top: 75px;
+}
+
+.portfolio_image {
+    /*margin: 10px;*/
+    width: 280px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 2%;
+}
+.section_header{
+    color: $offwhite;
+    text-decoration: underline;
+    font-size: 28px;
+    position: relative;
+    left: 11%;
+    top: 45px;;
+}

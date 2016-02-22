@@ -1,0 +1,25 @@
+{
+  "name": "me",
+  "version": "1.0.0",
+  "description": "proof of my work life",
+  "main": "me.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfix22/me.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Michael Fix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfix22/me/issues"
+  },
+  "homepage": "https://github.com/mfix22/me",
+  "dependencies": {
+    "particles": "^0.3.1"
+  }
+}
