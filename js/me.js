@@ -2,6 +2,17 @@
 particlesJS.load('particles-js', 'assets/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+$('#main').scroll(function(){
+	var st = $(document).scrollTop();
+    //alert($(window).scrollTop() - $('#scroll_to_see').offset().top);
+    // console.log(st);
+    if (st > -200){
+    	// console.log("here");
+    	//document.getElementById('scroll_to_see').style.visibility="hidden";
+    	$('#scroll_to_see').addClass('animated fadeOut');
+    }
+});
 // var stars = []
 // for(var i = 0; i <84; i++){
 // 	var left = 0;
