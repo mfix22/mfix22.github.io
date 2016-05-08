@@ -158,11 +158,11 @@ textarea {
 }
 
 #scroll_to_see{
-    position: absolute;
+    position: relative;
     color: $offwhite;
-    top: 32%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 72%;
+    // left: 50%;
+    // transform: translateX(-50%);
     font-family: "Courier";
 }
 

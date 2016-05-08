@@ -121,11 +121,9 @@ textarea {
   bottom: 0px; }
 
 #scroll_to_see {
-  position: absolute;
+  position: relative;
   color: #F6F7FD;
-  top: 32%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 72%;
   font-family: "Courier"; }
 
 .border_radius_5 {
