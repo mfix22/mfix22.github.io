@@ -15,7 +15,7 @@
    id="svg4249"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 3">
+   sodipodi:docname="eventbot.svg">
   <defs
      id="defs4251">
     <clipPath
@@ -37,9 +37,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="-792.21652"
-     inkscape:cy="774.53815"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-208.61681"
+     inkscape:cy="699.25723"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -67,15 +67,21 @@
     <rect
        style="fill:#690080;fill-opacity:1;stroke:none"
        id="rect4268"
-       width="655.71429"
-       height="655.71429"
+       width="500"
+       height="500"
        x="-150"
-       y="50.933624" />
+       y="206.64792"
+       inkscape:export-filename="C:\Users\Michael\Documents\Web\Me\img\eventbot.png"
+       inkscape:export-xdpi="17.226562"
+       inkscape:export-ydpi="17.226562" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4283"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Montserrat;-inkscape-font-specification:Montserrat"
-       transform="matrix(5.3884768,0,0,5.3884768,-560.78778,-1696.7289)"><flowRegion
+       transform="matrix(4.1088603,0,0,4.1088603,-463.23687,-1125.9923)"
+       inkscape:export-filename="C:\Users\Michael\Documents\Web\Me\img\eventbot.png"
+       inkscape:export-xdpi="17.226562"
+       inkscape:export-ydpi="17.226562"><flowRegion
          id="flowRegion4285"><rect
            id="rect4287"
            width="157.14285"
@@ -84,8 +90,8 @@
            y="360.93362"
            style="fill:#ffffff" /></flowRegion><flowPara
          id="flowPara4289">+</flowPara></flowRoot>    <image
-       y="405.21936"
-       x="202.85713"
+       y="476.80045"
+       x="119.06317"
        id="image5067"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAMgCAYAAADbcAZoAAAABHNCSVQICAgIfAhkiAAAIABJREFU
 eJzs3XdUFPf6BvCH3kUR7BGxN+wm1qtiiVgoir0jWLBrFI0t9q5YUUAsCIoK2LvYu8agsVeiIIoi
@@ -1283,15 +1289,21 @@ AgAAAMA2BAgAAAAA2xAgAAAAAGxDgAAAAACwDQECAAAAwDYECAAAAADbECAAAAAAbEOAAAAAALAN
 AQIAAADANgQIAAAAANsQIAAAAABsQ4AAAAAAsA0BAgAAAMA2BAgAAAAA2/w/m8pJszrHsccAAAAA
 SUVORK5CYII=
 "
-       height="288.57144"
-       width="288.57144" />
+       height="220.04358"
+       width="220.04358"
+       inkscape:export-filename="C:\Users\Michael\Documents\Web\Me\img\eventbot.png"
+       inkscape:export-xdpi="17.226562"
+       inkscape:export-ydpi="17.226562" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:none"
        id="rect5081"
-       width="181.42857"
-       height="170"
-       x="-75.714287"
-       y="133.79076" />
+       width="138.34422"
+       height="129.62962"
+       x="-93.355118"
+       y="269.82874"
+       inkscape:export-filename="C:\Users\Michael\Documents\Web\Me\img\eventbot.png"
+       inkscape:export-xdpi="17.226562"
+       inkscape:export-ydpi="17.226562" />
     <image
        y="-59.78067"
        x="-532.85712"
@@ -1442,6 +1454,9 @@ bUQrAAAAAElFTkSuQmCC
        height="500"
        width="500"
        clip-path="url(#clipPath5085)"
-       transform="translate(294.28571,27.142857)" />
+       transform="matrix(0.76252722,0,0,0.76252722,188.77995,188.50681)"
+       inkscape:export-filename="C:\Users\Michael\Documents\Web\Me\img\eventbot.png"
+       inkscape:export-xdpi="17.226562"
+       inkscape:export-ydpi="17.226562" />
   </g>
 </svg>
