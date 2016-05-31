@@ -47,8 +47,7 @@ textarea {
   padding-right: 3%;
   padding-top: 0%;
   padding-left: 3%;
-  z-index: 10;
-  overflow: hidden; }
+  z-index: 10; }
 
 .bio-text {
   margin: 0px;
@@ -128,5 +127,17 @@ textarea {
 
 .border_radius_5 {
   border-radius: 5%; }
+
+#profile {
+  z-index: 100;
+  position: absolute;
+  left: 27.8vw;
+  top: 2vh;
+  position: fixed; }
+
+#profile_img {
+  border-radius: 50%;
+  border: 4px white solid;
+  width: 10vw; }
 
 /*# sourceMappingURL=me.css.map */
