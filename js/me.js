@@ -4,10 +4,10 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
 });
 
 $('#main').scroll(function(){
-	var st = $(document).scrollTop();
-    //alert($(window).scrollTop() - $('#scroll_to_see').offset().top);
-    // console.log(st);
-    if (st > -200){
+	var st = $(window).scrollTop() - $('#scroll_to_see').offset().top;
+
+    console.log(st);
+    if (st > -450){
     	// console.log("here");
     	//document.getElementById('scroll_to_see').style.visibility="hidden";
     	$('#scroll_to_see').addClass('animated fadeOut');
