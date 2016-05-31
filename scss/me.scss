@@ -183,3 +183,19 @@ textarea {
     border: 4px white solid;
     width: 10vw;
 }
+
+#astronaut{
+    width: 20px;
+    position: fixed;;
+    top: 50%;
+    left: 50%;
+}
+
+.delay{
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    -ms-animation-duration: 4s;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
