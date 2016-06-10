@@ -82,8 +82,7 @@ textarea {
   width: 280px;
   position: relative;
   left: 50%;
-  transform: translate(-50%);
-  border-radius: 2%; }
+  transform: translate(-50%); }
 
 .section_header {
   color: #F6F7FD;
@@ -124,9 +123,6 @@ textarea {
   color: #F6F7FD;
   top: 72%;
   font-family: "Courier"; }
-
-.border_radius_5 {
-  border-radius: 5%; }
 
 #profile {
   z-index: 100;
