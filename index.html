@@ -1,21 +1,8 @@
+---
+---
 <!doctype html>
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Michael Fix</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="/img/m.png">
-        <link rel="icon" href="/img/m.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/set1.css">
-        <link  rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/me.css">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
-    </head>
+    {% include head.html %}
     <body>
         <div id="particles-js"></div>
         <!-- <div><img id="astronaut" src="/img/astronaut.png"/></div> -->
@@ -56,168 +43,60 @@
                             <div id="scroll_to_see"><h2> scroll to see more </h2></div>
                         </div>
                         <div class="row work_row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class="effect-milo">
-                                            <img class="card" src="img/nodejs.png"/>
-                                            <figcaption>
-                                                <h2><!-- Floating Help <span>Button</span> --></h2>
-                                                <p>SquadBot: keep up with where your team is at</p>
-                                                <a target="_blank" href="https://github.com/mfix22/event_bot/">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <!-- <a href="https://github.com/mfix22/floating_help_button" target="_blank">
-                                        <img class="portfolio_image" src="img/fab_square.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class=" effect-milo">
-                                            <img class="card" src="img/automaton.png"/>
-                                            <figcaption>
-                                                <h2>Automaton</h2>
-                                                <p>Advertising that drives itself</p>
-                                                <a target="_blank" href="http://automatonads.com">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                <!--
-                                    <a href="http://transcend.engineering" target="_blank">
-                                        <img class="portfolio_image" src="img/transcend.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
+                            {% include miloCard.html
+                              imgURL="img/nodejs.png"
+                              desc="SquadBot: keep up with where your team is at"
+                              linkURL="https://github.com/mfix22/event_bot/"
+                            %}
+                            {% include miloCard.html
+                              imgURL="img/automaton.png"
+                              header="Automaton"
+                              desc="Advertising that drives itself"
+                              linkURL="http://automatonads.com"
+                            %}
                         </div>
                         <div class="row work_row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class=" effect-milo">
-                                            <img class="card" src="img/transcend.png"/>
-                                            <figcaption>
-                                                <h2><!-- <span>Milo</span> --></h2>
-                                                <p> Transcend, UW Madison innovative hub</p>
-                                                <a target="_blank" href="http://transcend.engineering">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                <!--
-                                    <a href="http://transcend.engineering" target="_blank">
-                                        <img class="portfolio_image" src="img/transcend.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class=" effect-milo">
-                                            <img class="card" src="img/tm.png"/>
-                                            <figcaption>
-                                                <h2><!-- <span>Milo</span> --></h2>
-                                                <p> Transcend Madison, by-students-for-students innovation competition</p>
-                                                <a target="_blank" href="http://transcend.engineering/competition">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                <!--
-                                    <a href="http://transcend.engineering" target="_blank">
-                                        <img class="portfolio_image" src="img/transcend.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
+                            {% include miloCard.html
+                              imgURL="img/transcend.png"
+                              desc="Transcend, UW Madison innovative hub"
+                              linkURL="http://transcend.engineering"
+                            %}
+                            {% include miloCard.html
+                              imgURL="img/tm.png"
+                              desc="Transcend Madison, by-students-for-students innovation competition"
+                              linkURL="http://transcend.engineering/competition"
+                            %}
                         </div>
                         <div class="row work_row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class="effect-milo">
-                                            <img class="card" src="img/fab_square.png"/>
-                                            <figcaption>
-                                                <h2><!-- Floating Help <span>Button</span> --></h2>
-                                                <p>Floating button, Add it to any site as a help tool</p>
-                                                <a target="_blank" href="https://github.com/mfix22/floating_help_button">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <!-- <a href="https://github.com/mfix22/floating_help_button" target="_blank">
-                                        <img class="portfolio_image" src="img/fab_square.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class="effect-milo">
-                                            <img class="card" src="img/eventbot.png"/>
-                                            <figcaption>
-                                                <h2><!-- Floating Help <span>Button</span> --></h2>
-                                                <p>Event production Slack slash command tool</p>
-                                                <a target="_blank" href="https://github.com/mfix22/event_bot/">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <!-- <a href="https://github.com/mfix22/floating_help_button" target="_blank">
-                                        <img class="portfolio_image" src="img/fab_square.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
+                          {% include miloCard.html
+                            imgURL="img/fab_square.png"
+                            desc="Floating button, Add it to any site as a help tool"
+                            linkURL="https://github.com/mfix22/floating_help_button"
+                          %}
+                          {% include miloCard.html
+                            imgURL="img/eventbot.png"
+                            desc="Event production Slack slash command tool"
+                            linkURL="https://github.com/mfix22/event_bot/"
+                          %}
                         </div>
                         <div class="row work_row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class="effect-milo">
-                                            <img class="card" src="img/rideshare.png"/>
-                                            <figcaption>
-                                                <h2><!-- RideShare San Diego</span> --></h2>
-                                                <p>Custom mobile friendly site for ridesharing promotion</p>
-                                                <a target="_blank" href="https://github.com/mfix22/ride_share_promo">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <!-- <a href="https://github.com/mfix22/ride_share_promo" target="_blank">
-                                        <img class="portfolio_image" src="img/rideshare.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div>
-                                    <div class="grid">
-                                        <figure class="effect-milo">
-                                            <img class="card" src="img/buz_square.png"/>
-                                            <figcaption>
-                                                <h2></h2>
-                                                <p>Hyperlocal communication. Look up and meet people.</p>
-                                                <a target="_blank" href="https://github.com/zshires/buz">View more</a>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <!-- <a href="https://github.com/zshires/buz" target="_blank">
-                                        <img class="portfolio_image" src="img/buz_square.png"/>
-                                    </a> -->
-                                </div>
-                            </div>
+                          {% include miloCard.html
+                            imgURL="img/rideshare.png"
+                            desc="Custom mobile friendly site for ridesharing promotion"
+                            linkURL="https://github.com/mfix22/ride_share_promo"
+                          %}
+                          {% include miloCard.html
+                            imgURL="img/buz_square.png"
+                            desc="Hyperlocal communication. Look up and meet people."
+                            linkURL="https://github.com/zshires/buz"
+                          %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--<footer> <p>&copy; Mike Fix 2015</p></footer>-->
-        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="node_modules/particles.js/particles.js"></script>
-        <script src="src/app.js"></script>
-
-        <script>
-            // For Demo purposes only (show hover effect on mobile devices)
-            [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
-                el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
-            } );
-        </script>
+        <!--<footer> <p>&copy; Mike  Fix 2015</p></footer>-->
+        {% include scripts.html %}
 
     </body>
 </html>
