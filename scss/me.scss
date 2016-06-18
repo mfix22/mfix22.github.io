@@ -14,7 +14,7 @@ $bluegrey: #1C4B9C;
 @font-face {
     font-family:"Courier";
     src: url("fonts/cour.ttf") /* EOT file for IE */
-}   
+}
 
 
 body {
@@ -75,12 +75,12 @@ textarea {
 
 .bluegrey {
     font-weight: bold;
-    color: $bluegrey;   
+    color: $bluegrey;
 }
 
 .works_wrapper {
     // background-color: $ebony;
- 
+
     border-top-right-radius: 2%;
     border-top-left-radius: 2%;
     background-color: black;
@@ -162,7 +162,7 @@ textarea {
     top: 72%;
     // left: 50%;
     // transform: translateX(-50%);
-    font-family: "Courier";
+    font-family: "Courier", sans-serif;
 }
 
 .border_radius_5{
