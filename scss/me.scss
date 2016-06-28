@@ -107,7 +107,8 @@ textarea {
 }
 
 .work_row {
-    margin-top: 75px;
+    margin-top: 37px;
+    margin-bottom: 37px;
 }
 
 .portfolio_image {
@@ -183,10 +184,13 @@ textarea {
 }
 
 #astronaut{
-    width: 20px;
-    position: fixed;;
-    top: 50%;
-    left: 50%;
+    width: 30px;
+    position: fixed;
+    top: 25vh;
+    left: 75vw;
+    -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);
 }
 
 .delay{
@@ -196,4 +200,12 @@ textarea {
     -ms-animation-duration: 4s;
     animation-duration: 2s;
     animation-delay: 2s;
+}
+
+.year{
+  color: #F6F7FD;
+  text-decoration: underline;
+  margin-bottom: -35px;
+  margin-left: 18px;
+  font-family: "Courier", sans-serif;
 }

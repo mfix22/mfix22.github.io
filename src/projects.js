@@ -1,5 +1,19 @@
 module.exports =  [
   {
+    'id' : 'librarify',
+    'desc' : 'Create a Node.js library instantly from a REST API',
+    'img' : 'grey.png',
+    'link' : 'https://www.npmjs.com/package/librarify',
+    'header' : 'Librarify'
+  },
+  {
+    'id' : 'what3words',
+    'desc' : 'Node client for what3words API',
+    'img' : 'what3words.png',
+    'link' : 'https://www.npmjs.com/package/what3words',
+    'header' : 'what3words'
+  },
+  {
     'id' : 'squadbot',
     'desc' : 'SquadBot: keep up with where your team is at',
     'img' : 'nodejs.png',
