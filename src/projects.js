@@ -2,7 +2,7 @@ module.exports =  [
   {
     'id' : 'librarify',
     'desc' : 'Create a Node.js library instantly from a REST API',
-    'img' : 'grey.png',
+    'img' : 'librarify.png',
     'link' : 'https://www.npmjs.com/package/librarify',
     'header' : 'Librarify'
   },

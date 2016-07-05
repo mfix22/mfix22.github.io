@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Michael Fix</title>
+        <style>
+          body {
+            background-color: #888888;
+            font-size: 24px;
+            color: white;
+          }
+          code {
+            background: #f9f9f9;
+            padding: 1px 3px;
+            border: 1px solid #E8E8E8;
+            border-radius: 0.2rem;
+          }
+          code.location{
+            color: #66FF66;
+          }
+          code.time{
+            color: #ff6666;
+          }
+          code.date{
+            color: #6666ff;
+          }
+          code.repeat{
+            color: #ffa566
+          }
+          #sentence{
+            /*text-align: center;*/
+            position: fixed;
+            top: 30vh;
+            left: 30vw;
+          }
+          #inputer{
+            position: fixed;
+            top: 80vh;
+            left: 35vw;
+          }
+        </style>
+    </head>
+    <body>
+        <div>
+          <p id='sentence'></p>
+        </div>
+        <input id='inputer'  size="50"></input>
+        <script   src="https://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+        <script src="bundle.js"></script>
+    </body>
+</html>

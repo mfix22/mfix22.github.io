@@ -7,15 +7,11 @@ $offwhite: #F6F7FD;
 $bluegrey: #1C4B9C;
 
 @font-face {
-    font-family:"Consola";
-    src: url("fonts/consola.ttf") /* EOT file for IE */
-}
-
-@font-face {
     font-family:"Courier";
-    src: url("fonts/cour.ttf") /* EOT file for IE */
+    src: url("../fonts/cour.ttf") /* EOT file for IE */
 }
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
 body {
     padding: 0px;
@@ -52,19 +48,20 @@ textarea {
 }
 
 .bio {
-    position: fixed;
-    background-color: $offwhite;
-    border-radius: 5%/3%;
-    width: 25vw;
-    height: 80vh;
-    margin-top: 4%;
-    margin-left: 7%;
-    padding-right: 3%;
-    padding-top: 0%;
-    // padding-bottom: 5%;
-    padding-left: 3%;
-    z-index: 10;
-    // overflow:scroll;
+  font-family: 'Ubuntu', sans-serif;
+  position: fixed;
+  background-color: $offwhite;
+  border-radius: 5%/3%;
+  width: 25vw;
+  height: 80vh;
+  margin-top: 4%;
+  margin-left: 7%;
+  padding-right: 3%;
+  padding-top: 0%;
+  // padding-bottom: 5%;
+  padding-left: 3%;
+  z-index: 10;
+  // overflow:scroll;
 }
 
 .bio-text {
