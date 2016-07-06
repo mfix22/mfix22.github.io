@@ -11,7 +11,7 @@ var bootstrap_theme = require('../css/bootstrap-theme.min.css');
 var animate_css = require('../css/animate.css');
 var set1_css = require('../css/set1.css');
 var normalize_css  = require('../css/normalize.css');
-var styles = require('../scss/index.scss');
+// var styles = require('../scss/index.scss');
 
 for (var i in PROJECTS){
   var p = PROJECTS[i];

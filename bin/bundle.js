@@ -59,7 +59,7 @@
 	var animate_css = __webpack_require__(182);
 	var set1_css = __webpack_require__(184);
 	var normalize_css = __webpack_require__(186);
-	var styles = __webpack_require__(188);
+	// var styles = require('../scss/index.scss');
 
 	for (var i in PROJECTS) {
 	  var p = PROJECTS[i];
@@ -30485,7 +30485,7 @@
 	}, {
 	  'id': 'squadbot',
 	  'desc': 'SquadBot: keep up with where your team is at',
-	  'img': 'nodejs.png',
+	  'img': 'squadbot.png',
 	  'link': 'http://squadup.io'
 	}, {
 	  'id': 'automaton',
@@ -31104,52 +31104,6 @@
 
 	// exports
 
-
-/***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(189);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(179)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./index.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./index.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 189 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(174)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);", ""]);
-
-	// module
-	exports.push([module.id, "/* ==========================================================================\r\n   Author's custom styles\r\n   ========================================================================== */\n/* Medium devices (desktops, 992px and up) */\n@font-face {\n  font-family: \"Courier\";\n  src: url(" + __webpack_require__(190) + "); }\n\nbody {\n  padding: 0px;\n  margin: 0px;\n  background-color: #0B0E1E; }\n\ntextarea {\n  resize: none; }\n\n.icon {\n  color: #0B0E1E;\n  /*ebony*/\n  font-size: 40px; }\n\n.icon:hover {\n  cursor: pointer; }\n\n#main {\n  /*ebony*/\n  height: 100vh;\n  z-index: 1;\n  overflow-x: hidden; }\n\n.star {\n  position: absolute;\n  margin: 1px;\n  width: 10px;\n  z-index: 1; }\n\n.bio {\n  font-family: 'Ubuntu', sans-serif;\n  position: fixed;\n  background-color: #F6F7FD;\n  border-radius: 5%/3%;\n  width: 25vw;\n  height: 80vh;\n  margin-top: 4%;\n  margin-left: 7%;\n  padding-right: 3%;\n  padding-top: 0%;\n  padding-left: 3%;\n  z-index: 10; }\n\n.bio-text {\n  margin: 0px;\n  font-size: 3vh;\n  z-index: 10; }\n\n.bluegrey {\n  font-weight: bold;\n  color: #1C4B9C; }\n\n.works_wrapper {\n  border-top-right-radius: 2%;\n  border-top-left-radius: 2%;\n  background-color: black;\n  /*height: 100vh;*/ }\n\n.works {\n  background-color: #0B0E1E;\n  overflow-x: hidden;\n  padding: 0px; }\n\n.works_cont {\n  margin-top: 50px;\n  margin-left: 50px;\n  overflow-x: hidden; }\n\n.work_row {\n  margin-top: 37px;\n  margin-bottom: 37px; }\n\n.portfolio_image {\n  /*margin: 10px;*/\n  width: 280px;\n  position: relative;\n  left: 50%;\n  transform: translate(-50%); }\n\n.section_header {\n  color: #F6F7FD;\n  text-decoration: underline;\n  font-size: 28px;\n  position: relative;\n  left: 11%;\n  top: 45px; }\n\n.offset_full {\n  height: 100vh; }\n\n#particles-js {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-color: #0B0E1E;\n  background-image: url(" + __webpack_require__(188) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: 50% 50%;\n  overflow: hidden; }\n\n.contact_list {\n  list-style-type: none;\n  padding: 0px; }\n\n.contact_word {\n  display: inline;\n  margin-left: 10px; }\n\n#medium {\n  text-align: center;\n  bottom: 0px; }\n\n#scroll_to_see {\n  position: relative;\n  color: #F6F7FD;\n  top: 72%;\n  font-family: \"Courier\", sans-serif; }\n\n#profile {\n  z-index: 100;\n  position: absolute;\n  left: 27.8vw;\n  top: 2vh;\n  position: fixed; }\n\n#profile_img {\n  border-radius: 50%;\n  border: 4px white solid;\n  width: 10vw; }\n\n#astronaut {\n  width: 30px;\n  position: fixed;\n  top: 25vh;\n  left: 75vw;\n  -ms-transform: rotate(15deg);\n  /* IE 9 */\n  -webkit-transform: rotate(15deg);\n  /* Chrome, Safari, Opera */\n  transform: rotate(15deg); }\n\n.delay {\n  -webkit-animation-duration: 4s;\n  -moz-animation-duration: 4s;\n  -o-animation-duration: 4s;\n  -ms-animation-duration: 4s;\n  animation-duration: 2s;\n  animation-delay: 2s; }\n\n.year {\n  color: #F6F7FD;\n  text-decoration: underline;\n  margin-bottom: -35px;\n  margin-left: 18px;\n  font-family: \"Courier\", sans-serif; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "21af0453dad2d7ff5e3f159a354df102.ttf";
 
 /***/ }
 /******/ ]);

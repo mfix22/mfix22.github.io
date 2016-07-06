@@ -16,7 +16,7 @@ module.exports =  [
   {
     'id' : 'squadbot',
     'desc' : 'SquadBot: keep up with where your team is at',
-    'img' : 'nodejs.png',
+    'img' : 'squadbot.png',
     'link': 'http://squadup.io'
   },
   {
