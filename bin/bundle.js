@@ -30471,6 +30471,11 @@
 	'use strict';
 
 	module.exports = [{
+	  'id': 'resource_map',
+	  'desc': 'Map of Madison entrepreneurship ecosystem',
+	  'img': 'map.png',
+	  'link': 'https://transcend.engineering/map'
+	}, {
 	  'id': 'librarify',
 	  'desc': 'Create a Node.js library instantly from a REST API',
 	  'img': 'librarify.png',
