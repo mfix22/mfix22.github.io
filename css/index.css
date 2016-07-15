@@ -14,14 +14,6 @@ body {
 textarea {
   resize: none; }
 
-.icon {
-  color: #0B0E1E;
-  /*ebony*/
-  font-size: 40px; }
-
-.icon:hover {
-  cursor: pointer; }
-
 #main {
   /*ebony*/
   height: 100vh;
@@ -137,15 +129,15 @@ textarea {
   width: 10vw; }
 
 #astronaut {
-  width: 30px;
+  width: 500px;
   position: fixed;
   top: 25vh;
-  left: 75vw;
-  -ms-transform: rotate(15deg);
-  /* IE 9 */
+  bottom: 0vh;
+  left: 50vw;
+  /*-ms-transform: rotate(15deg);
   -webkit-transform: rotate(15deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(15deg); }
+  transform: rotate(15deg);*/
+}
 
 .delay {
   -webkit-animation-duration: 4s;
@@ -161,5 +153,8 @@ textarea {
   margin-bottom: -35px;
   margin-left: 18px;
   font-family: "Courier", sans-serif; }
+
+.footer {
+  color: #F6F7FD; }
 
 /*# sourceMappingURL=index.css.map */

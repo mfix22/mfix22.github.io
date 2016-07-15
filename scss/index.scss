@@ -2,6 +2,7 @@
    Author's custom styles
    ========================================================================== */
 /* Medium devices (desktops, 992px and up) */
+// @import "node_modules/octicons/index.scss";
 $ebony: #0B0E1E;
 $offwhite: #F6F7FD;
 $bluegrey: #1C4B9C;
@@ -23,15 +24,14 @@ textarea {
     resize: none;
 }
 
-.icon {
-    color: $ebony;
-    /*ebony*/
-    font-size: 40px;
-}
+// .icon {
+//     color: $ebony;
+//     font-size: 40px;
+// }
 
-.icon:hover {
-    cursor: pointer;
-}
+// .icon:hover {
+//     cursor: pointer;
+// }
 
 #main {
     /*ebony*/
@@ -181,13 +181,14 @@ textarea {
 }
 
 #astronaut{
-    width: 30px;
-    position: fixed;
-    top: 25vh;
-    left: 75vw;
-    -ms-transform: rotate(15deg); /* IE 9 */
-    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
-    transform: rotate(15deg);
+  width: 500px;
+  position: fixed;
+  top: 25vh;
+  bottom: 0vh;
+  left: 50vw;
+  /*-ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);*/
 }
 
 .delay{
@@ -200,9 +201,13 @@ textarea {
 }
 
 .year{
-  color: #F6F7FD;
+  color: $offwhite;
   text-decoration: underline;
   margin-bottom: -35px;
   margin-left: 18px;
   font-family: "Courier", sans-serif;
+}
+
+.footer{
+  color: $offwhite;
 }

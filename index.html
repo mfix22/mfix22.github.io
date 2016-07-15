@@ -14,7 +14,8 @@
     </head>
     <body>
         <div id="particles-js"></div>
-        <div><img id="astronaut" src="/img/astronaut.png"/></div>
+        <!-- <div><img id="astronaut" src="/img/astronaut.png"/></div> -->
+        <div id="astronaut"></div>
         <div class="col-md-12 col-sm-12 col-xs-12" id="main">
             <div class="row">
                 <div class="col-md-4">
@@ -83,6 +84,9 @@
                           <div id="rideshare"></div>
                           <div id="buz"></div>
                         </div>
+                        <div class="row text-center">
+                          <!-- <p class="footer"><i class="icon ion-code footer-icon"></i> with <i class="icon ion-coffee footer-icon"></i> by Michael Fix &copy; 2016</p> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,6 +97,9 @@
           /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
           particlesJS.load('particles-js', 'assets/particles.json', function() {
             console.log('callback - particles.js config loaded');
+          });
+          particlesJS.load('astronaut', 'assets/astronaut.json', function() {
+            console.log('callback - astronaut config loaded');
           });
         </script>
         <script src="bin/bundle.js"></script>
