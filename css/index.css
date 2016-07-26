@@ -163,6 +163,15 @@ textarea {
   text-decoration: underline;
   margin: 10px 0 3px 0; }
 
+.planet_caption ul {
+  padding: 0px; }
+
+.planet_caption li {
+  display: inline;
+  list-style: none;
+  font-size: 30px;
+  margin: 0px 15px 0px 0px; }
+
 .delay {
   -webkit-animation-duration: 4s;
   -moz-animation-duration: 4s;

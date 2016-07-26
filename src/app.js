@@ -17,14 +17,13 @@ var normalize_css  = require('../css/normalize.css');
 for (var i in PROJECTS){
   var p = PROJECTS[i];
   ReactDOM.render(
-    <PlanetCard desc={p.desc} link={p.link} img={p.img} header={p.header}/>,
+    <PlanetCard desc={p.desc} link={p.link} img={p.img} header={p.header} technologies={p.technologies}/>,
     document.getElementById(p.id)
   )
 }
 
 $(".planet").hover(function() {
   $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
-    console.log(visibility);
     return (visibility == 'visible') ? 'hidden' : 'visible';
   });
 });
