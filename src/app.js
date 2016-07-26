@@ -6,6 +6,7 @@ var classnames = require('classnames');
 // local modules
 var PROJECTS = require('./projects');
 var MiloCard = require('./MiloCard');
+var PlanetCard = require('./PlanetCard');
 var bootstrap = require('../css/bootstrap.min.css');
 var bootstrap_theme = require('../css/bootstrap-theme.min.css');
 var animate_css = require('../css/animate.css');
@@ -16,10 +17,17 @@ var normalize_css  = require('../css/normalize.css');
 for (var i in PROJECTS){
   var p = PROJECTS[i];
   ReactDOM.render(
-    <MiloCard desc={p.desc} link={p.link} img={p.img} header={p.header}/>,
+    <PlanetCard desc={p.desc} link={p.link} img={p.img} header={p.header}/>,
     document.getElementById(p.id)
   )
 }
+
+$(".planet").hover(function() {
+  $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
+    console.log(visibility);
+    return (visibility == 'visible') ? 'hidden' : 'visible';
+  });
+});
 
 $('#main').scroll(function(){
 	var st = $(window).scrollTop() - $('#scroll_to_see').offset().top;

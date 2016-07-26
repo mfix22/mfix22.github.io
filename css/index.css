@@ -136,8 +136,32 @@ textarea {
   left: 50vw;
   /*-ms-transform: rotate(15deg);
   -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);*/
-}
+  transform: rotate(15deg);*/ }
+
+.planet {
+  /* Prevent background color leak outs */
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  margin: 25px 0px 0px 25px;
+  border-radius: 100%;
+  width: 300px; }
+
+.planet:hover {
+  border: 10px solid #F6F7FD; }
+
+.planet_caption {
+  margin-top: 10px;
+  background: #F6F7FD;
+  visibility: hidden;
+  padding: 1px 15px 1px 15px;
+  border-radius: 3px;
+  color: #0B0E1E;
+  font-family: 'Ubuntu', sans-serif; }
+
+.planet_caption > h3 {
+  text-decoration: underline;
+  margin: 10px 0 3px 0; }
 
 .delay {
   -webkit-animation-duration: 4s;
