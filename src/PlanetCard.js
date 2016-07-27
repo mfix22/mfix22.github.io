@@ -12,7 +12,7 @@ var PlanetCard = React.createClass({
             <p>{this.props.desc}</p>
             <ul>
               {this.props.technologies.map(function(listValue){
-                return <li><i className={listValue}></i></li>
+                return <li className='planet_caption_list_item'><span title={listValue.aria}><i className={listValue.type}></i></span></li>
               })}
             </ul>
           </div>

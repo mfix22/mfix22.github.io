@@ -67,8 +67,9 @@
 	  ReactDOM.render(React.createElement(PlanetCard, { desc: p.desc, link: p.link, img: p.img, header: p.header, technologies: p.technologies }), document.getElementById(p.id));
 	}
 
-	$(".planet").hover(function () {
-	  $(this).parent().siblings(".planet_caption").css('visibility', function (i, visibility) {
+	$(".planet_container").hover(function () {
+	  // $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
+	  $(".planet_caption", this).css('visibility', function (i, visibility) {
 	    return visibility == 'visible' ? 'hidden' : 'visible';
 	  });
 	});
@@ -30477,16 +30478,54 @@
 
 	'use strict';
 
-	var NODE = 'devicon-nodejs-plain colored';
-	var MONGO = "devicon-mongodb-plain colored";
-	var JS = 'devicon-javascript-plain colored';
-	var SASS = 'devicon-sass-original colored';
-	var INKSCAPE = 'devicon-inkscape-plain colored';
-	var HTML = 'devicon-html5-plain colored';
-	var CSS = 'devicon-css3-plain colored';
-	var BOOTSTRAP = 'devicon-bootstrap-plain colored';
-	var ANDROID = 'devicon-android-plain colored';
-	var JQUERY = 'devicon-jquery-plain colored';
+	var NODE = {
+	  type: 'devicon-nodejs-plain colored',
+	  aria: 'Node.js'
+	};
+	var MONGO = {
+	  type: "devicon-mongodb-plain colored",
+	  aria: 'MongoDB'
+	};
+	var JS = {
+	  type: 'devicon-javascript-plain colored',
+	  aria: 'Javascript'
+	};
+	var SASS = {
+	  type: 'devicon-sass-original colored',
+	  aria: 'Sass'
+	};
+	var INKSCAPE = {
+	  type: 'devicon-inkscape-plain colored',
+	  aria: 'Inkscape'
+	};
+	var HTML = {
+	  type: 'devicon-html5-plain colored',
+	  aria: 'HTML5'
+	};
+	var CSS = {
+	  type: 'devicon-css3-plain colored',
+	  aria: 'CSS3'
+	};
+	var BOOTSTRAP = {
+	  type: 'devicon-bootstrap-plain colored',
+	  aria: 'Bootstrap'
+	};
+	var ANDROID = {
+	  type: 'devicon-android-plain colored',
+	  aria: 'Android'
+	};
+	var JQUERY = {
+	  type: 'devicon-jquery-plain colored',
+	  aria: 'JQuery'
+	};
+	var STRIPE = {
+	  type: 'icon-cc-stripe',
+	  aria: 'Stripe API'
+	};
+	var SLACK = {
+	  type: 'icon-slack',
+	  aria: 'Slack API'
+	};
 
 	module.exports = [{
 	  'id': 'resource_map',
@@ -30494,7 +30533,7 @@
 	  'img': 'map.png',
 	  'link': 'https://transcend.engineering/map',
 	  'header': 'Entrepreneurship Map',
-	  'technologies': [HTML, CSS, JS, JQUERY]
+	  'technologies': [STRIPE, HTML, CSS, JS, JQUERY]
 	}, {
 	  'id': 'librarify',
 	  'desc': 'Create a Node.js library instantly from a REST API',
@@ -30515,7 +30554,7 @@
 	  'img': 'squadbot.png',
 	  'link': 'http://squadup.io',
 	  'header': 'SquadBot',
-	  'technologies': [NODE, MONGO, JS]
+	  'technologies': [SLACK, NODE, MONGO, JS]
 	}, {
 	  'id': 'automaton',
 	  'desc': 'Advertising that drives itself, custom site.',
@@ -30550,7 +30589,7 @@
 	  'img': 'eventbot.png',
 	  'link': 'https://github.com/mfix22/event_bot',
 	  'header': 'EventBot',
-	  'technologies': [NODE, JS]
+	  'technologies': [SLACK, NODE, JS]
 	}, {
 	  'id': 'rideshare',
 	  'desc': 'Custom mobile friendly site for ridesharing promotion',
@@ -30656,8 +30695,12 @@
 	            this.props.technologies.map(function (listValue) {
 	              return React.createElement(
 	                "li",
-	                null,
-	                React.createElement("i", { className: listValue })
+	                { className: "planet_caption_list_item" },
+	                React.createElement(
+	                  "span",
+	                  { title: listValue.aria },
+	                  React.createElement("i", { className: listValue.type })
+	                )
 	              );
 	            })
 	          )

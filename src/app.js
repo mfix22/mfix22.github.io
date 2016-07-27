@@ -22,8 +22,9 @@ for (var i in PROJECTS){
   )
 }
 
-$(".planet").hover(function() {
-  $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
+$(".planet_container").hover(function() {
+  // $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
+  $(".planet_caption", this).css('visibility', function(i, visibility) {
     return (visibility == 'visible') ? 'hidden' : 'visible';
   });
 });

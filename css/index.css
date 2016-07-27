@@ -151,7 +151,7 @@ textarea {
   border: 10px solid #F6F7FD; }
 
 .planet_caption {
-  margin-top: 10px;
+  margin-top: 15px;
   background: #F6F7FD;
   visibility: hidden;
   padding: 1px 15px 1px 15px;
@@ -166,11 +166,15 @@ textarea {
 .planet_caption ul {
   padding: 0px; }
 
-.planet_caption li {
+.planet_caption_list_item {
   display: inline;
   list-style: none;
   font-size: 30px;
   margin: 0px 15px 0px 0px; }
+
+.no-padding-no-margin {
+  padding: 0px;
+  margin: 0px; }
 
 .delay {
   -webkit-animation-duration: 4s;
@@ -188,6 +192,8 @@ textarea {
   font-family: "Courier", sans-serif; }
 
 .footer {
-  color: #F6F7FD; }
+  color: #aaa;
+  margin: 0;
+  font-size: 16px; }
 
 /*# sourceMappingURL=index.css.map */
