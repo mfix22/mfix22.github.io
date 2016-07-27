@@ -30763,7 +30763,7 @@
 	            { className: 'horizontal_list_item' },
 	            React.createElement(
 	              'a',
-	              { target: '_blank', href: listValue.url },
+	              { target: '_blank', className: 'brand-icon-link', href: listValue.url },
 	              React.createElement(
 	                'span',
 	                { title: listValue.aria },
