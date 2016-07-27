@@ -68,7 +68,7 @@
 	ReactDOM.render(React.createElement(HorizontalIconList, { icons: builtWith }), document.getElementById('footer-icons'));
 	for (var i in PROJECTS) {
 	  var p = PROJECTS[i];
-	  ReactDOM.render(React.createElement(PlanetCard, { desc: p.desc, link: p.link, img: p.img, header: p.header, technologies: p.technologies }), document.getElementById(p.id));
+	  ReactDOM.render(React.createElement(PlanetCard, { desc: p.desc, moon: p.moon, link: p.link, img: p.img, header: p.header, technologies: p.technologies }), document.getElementById(p.id));
 	}
 
 	$(".planet_container").hover(function () {
@@ -30490,7 +30490,8 @@
 	  'img': 'map.png',
 	  'link': 'https://transcend.engineering/map',
 	  'header': 'Entrepreneurship Map',
-	  'technologies': [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS]
+	  'technologies': [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
+	  'moon': true
 	}, {
 	  'id': 'librarify',
 	  'desc': 'Create a Node.js library instantly from a REST API',
@@ -30712,6 +30713,12 @@
 	          'a',
 	          { target: '_blank', href: this.props.link },
 	          React.createElement('img', { className: 'planet', src: 'img/' + this.props.img })
+	        ),
+	        React.createElement('div', { id: this.props.moon ? 'earth' : null }),
+	        React.createElement(
+	          'div',
+	          { id: this.props.moon ? 'moon-orbit' : null },
+	          React.createElement('div', { id: this.props.moon ? 'moon' : null })
 	        ),
 	        React.createElement(
 	          'div',

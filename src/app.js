@@ -26,7 +26,7 @@ ReactDOM.render(
 for (var i in PROJECTS){
   var p = PROJECTS[i];
   ReactDOM.render(
-    <PlanetCard desc={p.desc} link={p.link} img={p.img} header={p.header} technologies={p.technologies}/>,
+    <PlanetCard desc={p.desc} moon={p.moon} link={p.link} img={p.img} header={p.header} technologies={p.technologies}/>,
     document.getElementById(p.id)
   );
 }

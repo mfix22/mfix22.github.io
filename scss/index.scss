@@ -210,11 +210,15 @@ textarea {
   margin: 25px 0px 0px 25px;
   border-radius: 100%;
   width: 300px;
+  position: relative;
+  z-index: 10000;
 }
 .planet:hover{
   border: 10px solid $offwhite;
 }
 .planet_caption {
+  z-index: 100;
+  position: relative;
   margin-top: 15px;
   background: $offwhite;
   visibility: hidden;
@@ -268,4 +272,48 @@ textarea {
   margin: 0;
   font-size: 16px;
   // color: $offwhite;
+}
+
+#moon-orbit {
+  z-index: 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 330px;
+  height: 330px;
+  margin-top: -215px;
+  margin-left: -170px;
+  position: absolute;
+  -webkit-animation: spin-right 40s linear infinite;
+  -moz-animation: spin-right 40s linear infinite;
+  -ms-animation: spin-right 40s linear infinite;
+  -o-animation: spin-right 40s linear infinite;
+  animation: spin-right 40s linear infinite;
+}
+#moon {
+  z-index: 0;
+  background-color: #b2b2b2;
+  border-radius: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  width: 20px;
+  height: 20px;
+  top: 0%;
+  left: 50%;
+  position: absolute;
+}
+@-webkit-keyframes spin-right {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin-right {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@keyframes spin-right {
+    100% {
+        transform: rotate(360deg);
+    }
 }

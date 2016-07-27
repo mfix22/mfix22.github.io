@@ -8,6 +8,7 @@ module.exports =  [
     'link' : 'https://transcend.engineering/map',
     'header' : 'Entrepreneurship Map',
     'technologies' : [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
+    'moon' : true
   },
   {
     'id' : 'librarify',

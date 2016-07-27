@@ -8,6 +8,11 @@ var PlanetCard = React.createClass({
           <a target="_blank" href={this.props.link}>
             <img className="planet" src={'img/' + this.props.img}/>
           </a>
+          <div id={(this.props.moon) ? 'earth' : null}>
+          </div>
+          <div id={(this.props.moon) ? 'moon-orbit' : null}>
+            <div id={(this.props.moon) ? 'moon' : null}></div>
+          </div>
           <div className="planet_caption">
             <h3>{this.props.header}</h3>
             <p>{this.props.desc}</p>
