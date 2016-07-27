@@ -1,4 +1,5 @@
 var React = require('react');
+var HorizontalIconList = require('./HorizontalIconList');
 var PlanetCard = React.createClass({
   render: function() {
     return (
@@ -10,11 +11,7 @@ var PlanetCard = React.createClass({
           <div className="planet_caption">
             <h3>{this.props.header}</h3>
             <p>{this.props.desc}</p>
-            <ul>
-              {this.props.technologies.map(function(listValue){
-                return <li className='planet_caption_list_item'><span title={listValue.aria}><i className={listValue.type}></i></span></li>
-              })}
-            </ul>
+            <HorizontalIconList icons={this.props.technologies}/>
           </div>
         </div>
       </div>

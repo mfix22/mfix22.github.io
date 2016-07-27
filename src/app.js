@@ -4,9 +4,11 @@ var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var classnames = require('classnames');
 // local modules
-var PROJECTS = require('./projects');
+var PROJECTS = require('../assets/projects');
+var C = require('../assets/company_logos');
 var MiloCard = require('./MiloCard');
 var PlanetCard = require('./PlanetCard');
+var HorizontalIconList = require('./HorizontalIconList');
 var bootstrap = require('../css/bootstrap.min.css');
 var bootstrap_theme = require('../css/bootstrap-theme.min.css');
 var animate_css = require('../css/animate.css');
@@ -14,12 +16,19 @@ var set1_css = require('../css/set1.css');
 var normalize_css  = require('../css/normalize.css');
 // var styles = require('../scss/index.scss');
 
+
+
+var builtWith = [C.REACT, C.SASS, C.BOOTSTRAP, C.JS, C.HTML, C.CSS, C.ATOM]
+ReactDOM.render(
+  <HorizontalIconList icons={builtWith}/>,
+  document.getElementById('footer-icons')
+);
 for (var i in PROJECTS){
   var p = PROJECTS[i];
   ReactDOM.render(
     <PlanetCard desc={p.desc} link={p.link} img={p.img} header={p.header} technologies={p.technologies}/>,
     document.getElementById(p.id)
-  )
+  );
 }
 
 $(".planet_container").hover(function() {

@@ -1,51 +1,4 @@
-var NODE = {
-  type : 'devicon-nodejs-plain colored',
-  aria : 'Node.js'
-}
-var MONGO = {
-  type : "devicon-mongodb-plain colored",
-  aria : 'MongoDB'
-}
-var JS = {
-  type : 'devicon-javascript-plain colored',
-  aria : 'Javascript'
-}
-var SASS = {
-  type : 'devicon-sass-original colored',
-  aria : 'Sass'
-}
-var INKSCAPE = {
-  type : 'devicon-inkscape-plain colored',
-  aria : 'Inkscape'
-}
-var HTML = {
-  type : 'devicon-html5-plain colored',
-  aria : 'HTML5'
-}
-var CSS = {
-  type : 'devicon-css3-plain colored',
-  aria : 'CSS3'
-}
-var BOOTSTRAP = {
-  type : 'devicon-bootstrap-plain colored',
-  aria : 'Bootstrap'
-}
-var ANDROID = {
-  type : 'devicon-android-plain colored',
-  aria : 'Android'
-}
-var JQUERY = {
-  type : 'devicon-jquery-plain colored',
-  aria : 'JQuery'
-}
-var STRIPE = {
-  type : 'icon-cc-stripe',
-  aria : 'Stripe API'
-}
-var SLACK = {
-  type : 'icon-slack',
-  aria : 'Slack API'
-}
+var C = require('../assets/company_logos');
 
 module.exports =  [
   {
@@ -54,7 +7,7 @@ module.exports =  [
     'img' : 'map.png',
     'link' : 'https://transcend.engineering/map',
     'header' : 'Entrepreneurship Map',
-    'technologies' : [STRIPE, HTML, CSS, JS, JQUERY]
+    'technologies' : [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
   },
   {
     'id' : 'librarify',
@@ -62,7 +15,7 @@ module.exports =  [
     'img' : 'librarify.png',
     'link' : 'https://www.npmjs.com/package/librarify',
     'header' : 'Librarify',
-    'technologies' : [NODE, JS]
+    'technologies' : [C.NODE, C.JS]
   },
   {
     'id' : 'what3words',
@@ -70,7 +23,7 @@ module.exports =  [
     'img' : 'what3words.png',
     'link' : 'https://www.npmjs.com/package/what3words',
     'header' : 'what3words',
-    'technologies' : [NODE, JS]
+    'technologies' : [C.NODE, C.JS]
   },
   {
     'id' : 'squadbot',
@@ -78,7 +31,7 @@ module.exports =  [
     'img' : 'squadbot.png',
     'link': 'http://squadup.io',
     'header' : 'SquadBot',
-    'technologies' : [SLACK, NODE, MONGO, JS]
+    'technologies' : [C.SLACK, C.NODE, C.MONGO, C.JS]
   },
   {
     'id' : 'automaton',
@@ -86,7 +39,7 @@ module.exports =  [
     'img' : 'automaton.png',
     'link': 'http://automatonads.com',
     'header' : 'Automaton',
-    'technologies' : [CSS, HTML, INKSCAPE, JQUERY, JS]
+    'technologies' : [C.CSS, C.HTML, C.INKSCAPE, C.JQUERY, C.JS]
   },
   {
     'id' : 'transcend',
@@ -94,7 +47,7 @@ module.exports =  [
     'img' : 'transcend.png',
     'link': 'http://transcend.engineering',
     'header' : 'Transcend',
-    'technologies' : [HTML, CSS, SASS]
+    'technologies' : [C.HTML, C.CSS, C.SASS]
   },
   {
     'id' : 'tm',
@@ -110,7 +63,7 @@ module.exports =  [
     'img' : 'fab_square.png',
     'link': 'https://github.com/mfix22/floating_help_button',
     'header' : 'Floating Action Button',
-    'technologies' : [HTML, CSS, JS]
+    'technologies' : [C.HTML, C.CSS, C.JS]
   },
   {
     'id' : 'eventbot',
@@ -118,7 +71,7 @@ module.exports =  [
     'img' : 'eventbot.png',
     'link': 'https://github.com/mfix22/event_bot',
     'header' : 'EventBot',
-    'technologies' : [SLACK, NODE, JS]
+    'technologies' : [C.SLACK, C.NODE, C.JS]
   },
   {
     'id' : 'rideshare',
@@ -126,7 +79,7 @@ module.exports =  [
     'img' : 'rideshare.png',
     'link': 'https://github.com/mfix22/ride_share_promo',
     'header' : 'Rideshare San Diego',
-    'technologies' : [HTML, CSS]
+    'technologies' : [C.HTML, C.CSS]
   },
   {
     'id' : 'buz',
@@ -134,6 +87,6 @@ module.exports =  [
     'img' : 'buz_square.png',
     'link': 'https://github.com/zshires/buz',
     'header' : 'Buz',
-    'technologies' : [ANDROID, INKSCAPE]
+    'technologies' : [C.ANDROID, C.INKSCAPE]
   }
 ];

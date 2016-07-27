@@ -106,9 +106,19 @@ textarea {
   display: inline;
   margin-left: 10px; }
 
+/* FIX icomoon font issues */
 #medium {
-  text-align: center;
-  bottom: 0px; }
+  font-size: 2.5vh; }
+
+#medium:hover {
+  text-decoration: none; }
+  #medium:hover .contact_word {
+    text-decoration: underline; }
+
+#medium .contact_word {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3vh;
+  margin-left: 6px; }
 
 #scroll_to_see {
   position: relative;
@@ -164,13 +174,17 @@ textarea {
   margin: 10px 0 3px 0; }
 
 .planet_caption ul {
-  padding: 0px; }
+  padding: 0px;
+  margin: 0px; }
 
-.planet_caption_list_item {
+.horizontal_list_item {
   display: inline;
   list-style: none;
   font-size: 30px;
   margin: 0px 15px 0px 0px; }
+
+.horizontal_list_item:hover {
+  text-decoration: none; }
 
 .no-padding-no-margin {
   padding: 0px;

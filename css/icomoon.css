@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?49iz3k');
+  src:  url('../fonts/icomoon/icomoon.eot?49iz3k#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?49iz3k') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?49iz3k') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?49iz3k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-download:before {
+  color: #3bb2d0;
+  content: "\e900";
+}
+.icon-momentjs .path1:before {
+  content: "\e901";
+  color: rgb(55, 102, 96);
+}
+.icon-momentjs .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(82, 153, 144);
+}
+.icon-medium:before {
+  content: "\e904";
+}
+.icon-cc-stripe:before {
+  color: #00afe1;
+  content: "\1f312";
+}
+.icon-slack:before {
+  color: #d14;
+  content: "\e903";
+}
