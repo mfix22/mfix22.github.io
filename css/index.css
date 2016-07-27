@@ -38,12 +38,14 @@ textarea {
   padding-right: 3%;
   padding-top: 0%;
   padding-left: 3%;
-  z-index: 10; }
+  z-index: 10;
+  overflow: auto; }
 
 .bio-text {
   margin: 0px;
   font-size: 3vh;
-  z-index: 10; }
+  z-index: 10;
+  overflow: auto; }
 
 .bluegrey {
   font-weight: bold;

@@ -61,13 +61,14 @@ textarea {
   // padding-bottom: 5%;
   padding-left: 3%;
   z-index: 10;
-  // overflow:scroll;
+  overflow:auto;
 }
 
 .bio-text {
-    margin: 0px;
-    font-size: 3vh;
-    z-index: 10;
+  margin: 0px;
+  font-size: 3vh;
+  z-index: 10;
+  overflow: auto;
 }
 
 .bluegrey {
