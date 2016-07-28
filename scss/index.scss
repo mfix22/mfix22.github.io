@@ -217,6 +217,11 @@ textarea {
 .planet:hover{
   border: 10px solid $offwhite;
 }
+.planet_container:hover{
+  .planet_caption{
+    visibility: visible;
+  }
+}
 .planet_caption {
   z-index: 100;
   position: relative;
@@ -320,6 +325,30 @@ textarea {
     }
 }
 
+@media (max-width: 992px) {
+  .bio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: auto;
+    margin: 20px 0px;
+  }
+  #profile{
+    display: none;
+  }
+  #scroll_to_see{
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    // left: 50%;
+    text-align: center;
+  }
+  .planet_caption{
+    visibility: visible;
+  }
+}
 @media (max-width: 1200px) {
   .moon-orbit{
     display: none;
