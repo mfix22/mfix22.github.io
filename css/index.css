@@ -253,5 +253,8 @@ textarea {
 @keyframes spin-right {
   100% {
     transform: rotate(360deg); } }
+@media (max-width: 1200px) {
+  .moon-orbit {
+    display: none; } }
 
 /*# sourceMappingURL=index.css.map */

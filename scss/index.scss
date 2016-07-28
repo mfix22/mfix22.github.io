@@ -276,6 +276,7 @@ textarea {
 }
 
 #moon-orbit {
+  // border: 1px solid black;
   z-index: 1;
   border-radius: 50%;
   top: 50%;
@@ -317,4 +318,10 @@ textarea {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@media (max-width: 1200px) {
+  .moon-orbit{
+    display: none;
+  }
 }
