@@ -99,7 +99,7 @@ textarea {
 
 .works_cont {
     margin-top: 50px;
-    transform: translateX(50px);
+    // transform: translateX(50px);
     // overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -217,11 +217,14 @@ textarea {
 .planet:hover{
   border: 10px solid $offwhite;
 }
-// .planet_container:hover{
-//   .planet_caption{
-//     visibility: visible;
-//   }
-// }
+.planet_container{
+  overflow: hidden;
+}
+.planet_container:hover{
+  .planet_caption{
+    visibility: visible;
+  }
+}
 .planet_caption {
   z-index: 500;
   position: relative;
