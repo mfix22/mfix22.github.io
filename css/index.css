@@ -154,11 +154,12 @@ textarea {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  margin: 25px 0px 0px 25px;
-  border-radius: 100%;
-  width: 300px;
+  z-index: 500;
   position: relative;
-  z-index: 500; }
+  width: 300px;
+  max-width: 90vw;
+  margin: 25px 0px 0px 25px;
+  border-radius: 100%; }
 
 .planet:hover {
   border: 10px solid #F6F7FD; }
@@ -278,10 +279,15 @@ textarea {
     transform: translateX(-50%);
     text-align: center; }
 
+  .planet {
+    margin: 35px 0 0 0;
+    max-width: 100%; }
+
   .planet_caption {
     visibility: visible; } }
 @media (max-width: 1200px) {
-  .moon-orbit {
-    display: none; } }
+  #moon-orbit {
+    display: none;
+    visibility: hidden; } }
 
 /*# sourceMappingURL=index.css.map */
