@@ -99,7 +99,7 @@ textarea {
 
 .works_cont {
     margin-top: 50px;
-    margin-left: 50px;
+    transform: translateX(50px);
     // overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -179,7 +179,7 @@ textarea {
 }
 
 #profile{
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
     left: 27.8vw;
     top: 2vh;
@@ -212,18 +212,18 @@ textarea {
   border-radius: 100%;
   width: 300px;
   position: relative;
-  z-index: 10000;
+  z-index: 500;
 }
 .planet:hover{
   border: 10px solid $offwhite;
 }
-.planet_container:hover{
-  .planet_caption{
-    visibility: visible;
-  }
-}
+// .planet_container:hover{
+//   .planet_caption{
+//     visibility: visible;
+//   }
+// }
 .planet_caption {
-  z-index: 100;
+  z-index: 500;
   position: relative;
   margin-top: 15px;
   background: $offwhite;
@@ -298,7 +298,7 @@ textarea {
   animation: spin-right 40s linear infinite;
 }
 #moon {
-  z-index: 0;
+  z-index: 1;
   background-color: #b2b2b2;
   border-radius: 50px;
   margin-left: -25px;
@@ -336,6 +336,7 @@ textarea {
   }
   #profile{
     display: none;
+    z-index: 101;
   }
   #scroll_to_see{
     position: absolute;

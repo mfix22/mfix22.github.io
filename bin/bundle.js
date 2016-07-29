@@ -71,15 +71,15 @@
 	  ReactDOM.render(React.createElement(PlanetCard, { desc: p.desc, moon: p.moon, link: p.link, img: p.img, header: p.header, technologies: p.technologies }), document.getElementById(p.id));
 	}
 
-	// $(".planet_container").hover(function() {
-	//   // $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
-	//   if (window.matchMedia( "(max-width: 992px)" )){
-	//     console.log('HERE');
-	//     $(".planet_caption", this).css('visibility', function(i, visibility) {
-	//       return (visibility == 'visible') ? 'hidden' : 'visible';
-	//     });
-	//   }
-	// });
+	$(".planet_container").hover(function () {
+	  // $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
+	  if (window.matchMedia("(max-width: 992px)")) {
+	    console.log('HERE');
+	    $(".planet_caption", this).css('visibility', function (i, visibility) {
+	      return visibility == 'visible' ? 'hidden' : 'visible';
+	    });
+	  }
+	});
 
 	$('#main').scroll(function () {
 	  var st = $(window).scrollTop() - $('#scroll_to_see').offset().top;
@@ -30491,7 +30491,7 @@
 	  'id': 'resource_map',
 	  'desc': 'Map of Madison, WI entrepreneurship ecosystem',
 	  'img': 'map.png',
-	  'link': 'https://transcend.engineering/map',
+	  'link': 'http://transcend.engineering/map',
 	  'header': 'Entrepreneurship Map',
 	  'technologies': [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
 	  'moon': true

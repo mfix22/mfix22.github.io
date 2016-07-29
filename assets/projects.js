@@ -5,7 +5,7 @@ module.exports =  [
     'id' : 'resource_map',
     'desc' : 'Map of Madison, WI entrepreneurship ecosystem',
     'img' : 'map.png',
-    'link' : 'https://transcend.engineering/map',
+    'link' : 'http://transcend.engineering/map',
     'header' : 'Entrepreneurship Map',
     'technologies' : [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
     'moon' : true
