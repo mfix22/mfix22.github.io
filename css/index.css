@@ -27,7 +27,7 @@ textarea {
   z-index: 1; }
 
 .bio {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   position: fixed;
   background-color: #F6F7FD;
   border-radius: 5%/3%;
@@ -117,7 +117,7 @@ textarea {
     text-decoration: underline; }
 
 #medium .contact_word {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 3vh;
   margin-left: 6px; }
 
@@ -165,7 +165,7 @@ textarea {
   border: 10px solid #F6F7FD; }
 
 .planet_container {
-  overflow: hidden; }
+  position: relative; }
 
 .planet_container:hover .planet_caption {
   visibility: visible; }
@@ -179,7 +179,7 @@ textarea {
   padding: 1px 15px 1px 15px;
   border-radius: 3px;
   color: #0B0E1E;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "Ubuntu", sans-serif; }
 
 .planet_caption > h3 {
   text-decoration: underline;
@@ -207,7 +207,7 @@ textarea {
   -moz-animation-duration: 4s;
   -o-animation-duration: 4s;
   -ms-animation-duration: 4s;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-delay: 2s; }
 
 .year {
@@ -225,12 +225,10 @@ textarea {
 #moon-orbit {
   z-index: 1;
   border-radius: 50%;
-  top: 50%;
-  left: 50%;
+  top: 3.0303%;
+  left: 4.54545%;
   width: 330px;
   height: 330px;
-  margin-top: -215px;
-  margin-left: -170px;
   position: absolute;
   -webkit-animation: spin-right 40s linear infinite;
   -moz-animation: spin-right 40s linear infinite;
@@ -284,8 +282,8 @@ textarea {
     max-width: 100%; }
 
   .planet_caption {
-    visibility: visible; } }
-@media (max-width: 1200px) {
+    visibility: visible; }
+
   #moon-orbit {
     display: none;
     visibility: hidden; } }

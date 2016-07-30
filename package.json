@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "sass": "sass --watch scss:css"
+    "sass": "sass --watch scss:css",
+    "pug" : "pug -P --watch ./ --out ./",
+    "jade" : "npm run pug", 
+    "serve" : "python -m SimpleHTTPServer 8000"
   },
   "repository": {
     "type": "git",

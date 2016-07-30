@@ -7,6 +7,9 @@ $ebony: #0B0E1E;
 $offwhite: #F6F7FD;
 $bluegrey: #1C4B9C;
 
+$font-main: 'Ubuntu', sans-serif;
+$font-code: "Courier", sans-serif;
+
 @font-face {
     font-family:"Courier";
     src: url("../fonts/cour.ttf") /* EOT file for IE */
@@ -48,7 +51,7 @@ textarea {
 }
 
 .bio {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-main;
   position: fixed;
   background-color: $offwhite;
   border-radius: 5%/3%;
@@ -161,7 +164,7 @@ textarea {
   }
 }
 #medium .contact_word{
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-main;
   font-size: 3vh;
   margin-left: 6px;
 }
@@ -172,7 +175,7 @@ textarea {
     top: 72%;
     // left: 50%;
     // transform: translateX(-50%);
-    font-family: "Courier", sans-serif;
+    font-family: $font-code;
 }
 
 .border_radius_5{
@@ -219,9 +222,11 @@ textarea {
   border: 10px solid $offwhite;
 }
 .planet_container{
-  overflow: hidden;
+
+  position: relative;
 }
 .planet_container:hover{
+    // overflow: hidden;
   .planet_caption{
     visibility: visible;
   }
@@ -235,7 +240,7 @@ textarea {
   padding: 1px 15px 1px 15px;
   border-radius: 3px;
   color: $ebony;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-main;
 }
 .planet_caption > h3{
   text-decoration: underline;
@@ -265,7 +270,7 @@ textarea {
     -moz-animation-duration: 4s;
     -o-animation-duration: 4s;
     -ms-animation-duration: 4s;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-delay: 2s;
 }
 
@@ -288,12 +293,13 @@ textarea {
   // border: 1px solid black;
   z-index: 1;
   border-radius: 50%;
-  top: 50%;
-  left: 50%;
+  top: 10px / 330px * 100%;
+  left: 15px / 330px * 100%;
+  // left: 50%;
   width: 330px;
   height: 330px;
-  margin-top: -215px;
-  margin-left: -170px;
+  // margin-top: -215px;
+  // margin-left: -170px;
   position: absolute;
   -webkit-animation: spin-right 40s linear infinite;
   -moz-animation: spin-right 40s linear infinite;
@@ -357,10 +363,10 @@ textarea {
   .planet_caption{
     visibility: visible;
   }
-}
-@media (max-width: 1200px) {
   #moon-orbit{
     display: none;
     visibility: hidden;
   }
 }
+  // @media (max-width: 1200px) {
+  // }
