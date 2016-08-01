@@ -30728,7 +30728,7 @@
 	        ),
 	        React.createElement(
 	          'div',
-	          { className: 'planet_caption' },
+	          { className: 'planet_caption animated fadeIn' },
 	          React.createElement(
 	            'h3',
 	            null,

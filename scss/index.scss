@@ -27,6 +27,13 @@ textarea {
   resize: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
 // .icon {
 //     color: $ebony;
 //     font-size: 40px;
@@ -241,6 +248,7 @@ textarea {
   border-radius: 3px;
   color: $ebony;
   font-family: $font-main;
+  transition: all 300ms ease-in-out
 }
 .planet_caption > h3{
   text-decoration: underline;
