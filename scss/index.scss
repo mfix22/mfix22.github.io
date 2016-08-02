@@ -27,8 +27,18 @@ textarea {
   resize: none;
 }
 
+a:visited,
+a:active,
+a:focus,
+a:-webkit-any-link,
+li:visited,
+li:focus,
+li:active,
+li:-webkit-any-link {
+  text-decoration: none;
+}
+
 ul {
-  margin: 0;
   padding: 0;
 }
 li {
@@ -50,6 +60,19 @@ li {
     overflow-x: hidden;
 }
 
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $ebony;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+
 .star {
     position: absolute;
     margin: 1px;
@@ -63,22 +86,36 @@ li {
   background-color: $offwhite;
   border-radius: 5%/3%;
   width: 25vw;
-  height: 80vh;
+  height: auto;
   margin-top: 4%;
   margin-left: 7%;
   padding-right: 3%;
-  padding-top: 0%;
-  // padding-bottom: 5%;
+  padding-top: 0;
+  padding-bottom: 20px;
   padding-left: 3%;
   z-index: 10;
-  overflow:auto;
+  overflow: visible;
 }
 
 .bio-text {
   margin: 0px;
   font-size: 3vh;
   z-index: 10;
-  overflow: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#profile{
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(45%, -35%);
+}
+#profile_img{
+  border-radius: 50%;
+  border: 4px white solid;
+  width: 10vw;
 }
 
 .bluegrey {
@@ -87,30 +124,19 @@ li {
 }
 
 .works_wrapper {
-    // background-color: $ebony;
-
     border-top-right-radius: 2%;
     border-top-left-radius: 2%;
     background-color: black;
-    /*height: 100vh;*/
 }
 
 .works {
     background-color: $ebony;
-    // overflow-y: scroll;
     overflow-x: hidden;
     padding: 0px;
-    // overflow: auto;
-    // border-top-right-radius: 2%;
-    // border-top-left-radius: 2%;
-    // background-color: black;
-    // /*height: 100vh;*/
 }
 
 .works_cont {
     margin-top: 50px;
-    // transform: translateX(50px);
-    // overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -135,20 +161,9 @@ li {
     top: 45px;;
 }
 .offset_full{
-    height:  100vh;
+  height:  100vh;
 }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: $ebony;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  overflow: hidden;
-}
 
 .contact_list{
     list-style-type: none;
@@ -177,37 +192,20 @@ li {
 }
 
 #scroll_to_see{
-    position: relative;
-    color: $offwhite;
-    top: 72%;
-    // left: 50%;
-    // transform: translateX(-50%);
-    font-family: $font-code;
-}
-
-.border_radius_5{
-}
-
-#profile{
-    z-index: 1000;
-    position: absolute;
-    left: 27.8vw;
-    top: 2vh;
-    position: fixed;
-    // transform: translateX(-80%);
-}
-#profile_img{
-    border-radius: 50%;
-    border: 4px white solid;
-    width: 10vw;
+  position: relative;
+  color: $offwhite;
+  top: 72%;
+  // left: 50%;
+  // transform: translateX(-50%);
+  font-family: $font-code;
 }
 
 #astronaut{
-  width: 500px;
   position: fixed;
   top: 25vh;
   bottom: 0vh;
-  left: 50vw;
+  left: 30vw;
+  right: 10vw;
   /*-ms-transform: rotate(15deg);
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg);*/
