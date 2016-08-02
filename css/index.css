@@ -17,11 +17,9 @@ textarea {
 a:visited,
 a:active,
 a:focus,
-a:-webkit-any-link,
 li:visited,
 li:focus,
-li:active,
-li:-webkit-any-link {
+li:active {
   text-decoration: none; }
 
 ul {
