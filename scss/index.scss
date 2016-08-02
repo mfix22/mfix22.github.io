@@ -348,13 +348,16 @@ li {
     width: auto;
     margin: 20px 0px;
   }
+  .offset_full{
+    height: 80vh;
+  }
   #profile{
     display: none;
     z-index: 101;
   }
   #scroll_to_see{
     position: absolute;
-    top: 80vh;
+    top: 70vh;
     left: 50%;
     transform: translateX(-50%);
     // left: 50%;
