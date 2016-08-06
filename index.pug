@@ -6,28 +6,21 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="shortcut icon", href="/img/m.png")
     link(rel="icon", href="/img/m.png", type="image/x-icon")
-    //- IONICONS
-    link(rel="stylesheet", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
-    link(rel="stylesheet", href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css")
-    link(rel="stylesheet", href="/css/bootstrap.min.css")
-    link(rel="stylesheet", href="/css/animate.css")
-    link(rel="stylesheet", href="/css/icomoon.css")
     link(rel="stylesheet", href="/css/index.css")
     title Michael Fix
   body
     #particles-js
     #astronaut
-    #main.col-md-12.col-sm-12.col-xs-12
+    #main.main.col-md-12.col-sm-12.col-xs-12
       .row
         .col-md-4.col-xs-12
           .bio
-            #profile
-              img(id="profile_img", src="./img/profile.jpg")
+            .profile
+              img.profile_img(src="./img/profile.jpg")
             .bio-text
-              #example
               h1 Hi, i'm <a href=""><span class="bluegrey">Mike</span></a>
               p I like to think about the overlap of art and engineering, and to create with <i>humans</i> in mind.<br><br>You can reach me anytime at:
-              ul
+              ul.contact_list
                 a(href="mailto:mrfix84@gmail.com", alt="email me", target="_blank")
                   li.ion-android-mail
                     span.contact_word mrfix84@gmail.com
@@ -35,20 +28,20 @@ html
                   li.ion-social-twitter
                     span.contact_word @fixitup2
               p and find out more about my projects here:
-              ul
+              ul.contact_list
                 a(href="https://github.com/mfix22", alt="star me", target="_blank")
                   li.ion-social-github
                     span.contact_word mfix22
                 a(href="https://linkedin.com/in/michaelfix2", alt="connect with me", target="_blank")
                   li.ion-social-linkedin
                     span.contact_word michaelfix2
-                a#medium(href="https://medium.com/@fixitup2", alt="read me", target="_blank")
+                a.medium(href="https://medium.com/@fixitup2", alt="read me", target="_blank")
                   li.icon-medium
                     span.contact_word @fixitup2
         .col-md-8
           .container.works_cont
             .row.offset_full
-              #scroll_to_see
+              #scroll_to_see.scroll_to_see
                 h2 scroll to see more
             .row
               h2.year 2016

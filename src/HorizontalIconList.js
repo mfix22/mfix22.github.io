@@ -5,12 +5,12 @@ var HorizontalIconList = React.createClass({
       <ul className='no-padding-no-margin'>
         {this.props.icons.map(function(listValue){
           if (listValue.url) {
-            return <li className='horizontal_list_item'>
+            return <li key={listValue.key} className='horizontal_list_item'>
                      <a target='_blank' className="brand-icon-link" href={listValue.url}>
                        <span title={listValue.aria}><i className={listValue.type}></i></span>
                      </a>
                    </li>
-          } return <li className='horizontal_list_item'><span title={listValue.aria}><i className={listValue.type}></i></span></li>
+          } return <li key={listValue.key} className='horizontal_list_item'><span title={listValue.aria}><i className={listValue.type}></i></span></li>
         })}
       </ul>
     );

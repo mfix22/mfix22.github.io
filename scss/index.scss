@@ -1,10 +1,18 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* Medium devices (desktops, 992px and up) */
-// @import "node_modules/octicons/index.scss";
-$ebony: #0B0E1E;
+//- IONICONS
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+//- DEVICONS
+@import "https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css";
+//- BOOTSTRAP
+@import "../css/bootstrap.min.css";
+//- ANIMATE.CSS
+@import "../css/animate.css";
+//- ICONMOON FONTS
+@import "../css/icomoon.css";
+
 $offwhite: #F6F7FD;
+$body-grey: #aaa;
+$moon-color: #b2b2b2;
+$ebony: #0B0E1E;
 $bluegrey: #1C4B9C;
 
 $font-main: 'Ubuntu', sans-serif;
@@ -42,22 +50,6 @@ ul {
 li {
   list-style: none;
 }
-// .icon {
-//     color: $ebony;
-//     font-size: 40px;
-// }
-
-// .icon:hover {
-//     cursor: pointer;
-// }
-
-#main {
-    /*ebony*/
-    height: 100vh;
-    z-index: 1;
-    overflow-x: hidden;
-}
-
 
 #particles-js {
   position: absolute;
@@ -71,12 +63,47 @@ li {
   overflow: hidden;
 }
 
-.star {
-    position: absolute;
-    margin: 1px;
-    width: 10px;
-    z-index: 1;
+#astronaut{
+  position: fixed;
+  top: 25vh;
+  bottom: 0vh;
+  left: 30vw;
+  right: 10vw;
 }
+
+// Helper Classes
+.bluegrey {
+    font-weight: bold;
+    color: $bluegrey;
+}
+
+.delay{
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  -ms-animation-duration: 4s;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.offset_full{
+  height:  100vh;
+  display: block;
+}
+
+.no-padding-no-margin {
+  padding: 0px;
+  margin: 0px;
+}
+
+// Body
+
+.main {
+  height: 100vh;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
 
 .bio {
   font-family: $font-main;
@@ -93,44 +120,37 @@ li {
   padding-left: 3%;
   z-index: 10;
   overflow: visible;
+
+  .bio-text {
+    margin: 0px;
+    font-size: 3vh;
+    z-index: 10;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
-.bio-text {
-  margin: 0px;
-  font-size: 3vh;
-  z-index: 10;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#profile{
+.profile{
   z-index: 1000;
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(45%, -35%);
-}
-#profile_img{
-  border-radius: 50%;
-  border: 4px white solid;
-  width: 10vw;
+
+  img.profile_img{
+    border-radius: 50%;
+    border: 4px white solid;
+    width: 10vw;
+  }
+
 }
 
-.bluegrey {
-    font-weight: bold;
-    color: $bluegrey;
-}
-
-.works_wrapper {
-    border-top-right-radius: 2%;
-    border-top-left-radius: 2%;
-    background-color: black;
-}
-
-.works {
-    background-color: $ebony;
-    overflow-x: hidden;
-    padding: 0px;
+.scroll_to_see{
+  position: relative;
+  color: $offwhite;
+  top: 63%;
+  left: +50px;
+  font-family: $font-code;
 }
 
 .works_cont {
@@ -143,97 +163,57 @@ li {
     margin-bottom: 37px;
 }
 
-.portfolio_image {
-    /*margin: 10px;*/
-    width: 280px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-}
-.section_header{
-    color: $offwhite;
-    text-decoration: underline;
-    font-size: 28px;
-    position: relative;
-    left: 11%;
-    top: 45px;;
-}
-.offset_full{
-  height:  100vh;
-}
-
-
 .contact_list{
-    list-style-type: none;
-    padding: 0px;
+
+  /* FIX icomoon font issues */
+  a.medium{
+    font-size: 2.5vh;
+  }
+  a.medium:hover{
+    text-decoration: none;
+    .contact_word{
+      text-decoration: underline;
+    }
+  }
+  a.medium .contact_word{
+    font-family: $font-main;
+    font-size: 3vh;
+    margin-left: 6px;
+  }
 }
 
 .contact_word{
-    display: inline;
-    margin-left: 10px;
+  display: inline;
+  margin-left: 10px;
 }
 
-/* FIX icomoon font issues */
-#medium{
-  font-size: 2.5vh;
-}
-#medium:hover{
-  text-decoration: none;
-  .contact_word{
-    text-decoration: underline;
+.planet_container{
+  position: relative;
+
+  &:hover{
+      // overflow: hidden;
+    .planet_caption{
+      visibility: visible;
+    }
   }
 }
-#medium .contact_word{
-  font-family: $font-main;
-  font-size: 3vh;
-  margin-left: 6px;
-}
-
-#scroll_to_see{
-  position: relative;
-  color: $offwhite;
-  top: 63%;
-  left: +50px;
-  // transform: translateX(-50%);
-  font-family: $font-code;
-}
-
-#astronaut{
-  position: fixed;
-  top: 25vh;
-  bottom: 0vh;
-  left: 30vw;
-  right: 10vw;
-  /*-ms-transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);*/
-}
-
 .planet {
   /* Prevent background color leak outs */
  -webkit-background-clip: padding-box;
  -moz-background-clip:    padding;
- background-clip:         padding-box;
+  background-clip:         padding-box;
   z-index: 500;
   position: relative;
   width: 300px;
   max-width: 90vw;
   margin: 25px 0px 0px 25px;
   border-radius: 100%;
-}
-.planet:hover{
-  border: 10px solid $offwhite;
-}
-.planet_container{
 
-  position: relative;
-}
-.planet_container:hover{
-    // overflow: hidden;
-  .planet_caption{
-    visibility: visible;
+  &:hover {
+    border: 10px solid $offwhite;
   }
 }
+
 .planet_caption {
   z-index: 500;
   position: relative;
@@ -244,16 +224,19 @@ li {
   border-radius: 3px;
   color: $ebony;
   font-family: $font-main;
-  transition: all 300ms ease-in-out
+  transition: all 300ms ease-in-out;
+
+  h3 {
+    text-decoration: underline;
+    margin: 10px 0 3px 0;
+  }
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+  }
 }
-.planet_caption > h3{
-  text-decoration: underline;
-  margin: 10px 0 3px 0;
-}
-.planet_caption ul {
-  padding: 0px;
-  margin: 0px;
-}
+
 .horizontal_list_item{
   display: inline;
   list-style: none;
@@ -264,19 +247,6 @@ li {
   text-decoration: none;
 }
 
-.no-padding-no-margin {
-  padding: 0px;
-  margin: 0px;
-}
-
-.delay{
-    -webkit-animation-duration: 4s;
-    -moz-animation-duration: 4s;
-    -o-animation-duration: 4s;
-    -ms-animation-duration: 4s;
-    animation-duration: 4s;
-    animation-delay: 2s;
-}
 
 .year{
   color: $offwhite;
@@ -287,13 +257,12 @@ li {
 }
 
 .footer{
-  color: #aaa;
+  color: $body-grey;
   margin: 0;
   font-size: 16px;
-  // color: $offwhite;
 }
 
-#moon-orbit {
+.moon-orbit {
   // border: 1px solid black;
   z-index: 1;
   border-radius: 50%;
@@ -310,19 +279,21 @@ li {
   -ms-animation: spin-right 40s linear infinite;
   -o-animation: spin-right 40s linear infinite;
   animation: spin-right 40s linear infinite;
+
+  .moon {
+    z-index: 1;
+    background-color: $moon-color;
+    border-radius: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    width: 20px;
+    height: 20px;
+    top: 0%;
+    left: 50%;
+    position: absolute;
+  }
 }
-#moon {
-  z-index: 1;
-  background-color: #b2b2b2;
-  border-radius: 50px;
-  margin-left: -25px;
-  margin-top: -25px;
-  width: 20px;
-  height: 20px;
-  top: 0%;
-  left: 50%;
-  position: absolute;
-}
+
 @-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);
@@ -351,11 +322,11 @@ li {
   .offset_full{
     height: 80vh;
   }
-  #profile{
+  .profile{
     display: none;
     z-index: 101;
   }
-  #scroll_to_see{
+  .scroll_to_see{
     position: absolute;
     top: 70vh;
     left: 50%;
@@ -370,10 +341,8 @@ li {
   .planet_caption{
     visibility: visible;
   }
-  #moon-orbit{
+  .moon-orbit{
     display: none;
     visibility: hidden;
   }
 }
-  // @media (max-width: 1200px) {
-  // }

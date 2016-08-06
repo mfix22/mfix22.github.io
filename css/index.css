@@ -1,7 +1,8 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* Medium devices (desktops, 992px and up) */
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+@import "https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css";
+@import url(../css/bootstrap.min.css);
+@import url(../css/animate.css);
+@import url(../css/icomoon.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
 @font-face {
   font-family: "Courier";
@@ -28,12 +29,6 @@ ul {
 li {
   list-style: none; }
 
-#main {
-  /*ebony*/
-  height: 100vh;
-  z-index: 1;
-  overflow-x: hidden; }
-
 #particles-js {
   position: absolute;
   width: 100%;
@@ -45,11 +40,37 @@ li {
   background-position: 50% 50%;
   overflow: hidden; }
 
-.star {
-  position: absolute;
-  margin: 1px;
-  width: 10px;
-  z-index: 1; }
+#astronaut {
+  position: fixed;
+  top: 25vh;
+  bottom: 0vh;
+  left: 30vw;
+  right: 10vw; }
+
+.bluegrey {
+  font-weight: bold;
+  color: #1C4B9C; }
+
+.delay {
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  -ms-animation-duration: 4s;
+  animation-duration: 4s;
+  animation-delay: 2s; }
+
+.offset_full {
+  height: 100vh;
+  display: block; }
+
+.no-padding-no-margin {
+  padding: 0px;
+  margin: 0px; }
+
+.main {
+  height: 100vh;
+  z-index: 1;
+  overflow-x: hidden; }
 
 .bio {
   font-family: "Ubuntu", sans-serif;
@@ -66,39 +87,30 @@ li {
   padding-left: 3%;
   z-index: 10;
   overflow: visible; }
+  .bio .bio-text {
+    margin: 0px;
+    font-size: 3vh;
+    z-index: 10;
+    max-width: 100%;
+    max-height: 100%; }
 
-.bio-text {
-  margin: 0px;
-  font-size: 3vh;
-  z-index: 10;
-  max-width: 100%;
-  max-height: 100%; }
-
-#profile {
+.profile {
   z-index: 1000;
   position: absolute;
   right: 0;
   top: 0;
   transform: translate(45%, -35%); }
+  .profile img.profile_img {
+    border-radius: 50%;
+    border: 4px white solid;
+    width: 10vw; }
 
-#profile_img {
-  border-radius: 50%;
-  border: 4px white solid;
-  width: 10vw; }
-
-.bluegrey {
-  font-weight: bold;
-  color: #1C4B9C; }
-
-.works_wrapper {
-  border-top-right-radius: 2%;
-  border-top-left-radius: 2%;
-  background-color: black; }
-
-.works {
-  background-color: #0B0E1E;
-  overflow-x: hidden;
-  padding: 0px; }
+.scroll_to_see {
+  position: relative;
+  color: #F6F7FD;
+  top: 63%;
+  left: +50px;
+  font-family: "Courier", sans-serif; }
 
 .works_cont {
   margin-top: 50px;
@@ -108,62 +120,27 @@ li {
   margin-top: 37px;
   margin-bottom: 37px; }
 
-.portfolio_image {
-  /*margin: 10px;*/
-  width: 280px;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%); }
-
-.section_header {
-  color: #F6F7FD;
-  text-decoration: underline;
-  font-size: 28px;
-  position: relative;
-  left: 11%;
-  top: 45px; }
-
-.offset_full {
-  height: 100vh; }
-
 .contact_list {
-  list-style-type: none;
-  padding: 0px; }
+  /* FIX icomoon font issues */ }
+  .contact_list a.medium {
+    font-size: 2.5vh; }
+  .contact_list a.medium:hover {
+    text-decoration: none; }
+    .contact_list a.medium:hover .contact_word {
+      text-decoration: underline; }
+  .contact_list a.medium .contact_word {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3vh;
+    margin-left: 6px; }
 
 .contact_word {
   display: inline;
   margin-left: 10px; }
 
-/* FIX icomoon font issues */
-#medium {
-  font-size: 2.5vh; }
-
-#medium:hover {
-  text-decoration: none; }
-  #medium:hover .contact_word {
-    text-decoration: underline; }
-
-#medium .contact_word {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 3vh;
-  margin-left: 6px; }
-
-#scroll_to_see {
-  position: relative;
-  color: #F6F7FD;
-  top: 63%;
-  left: +50px;
-  font-family: "Courier", sans-serif; }
-
-#astronaut {
-  position: fixed;
-  top: 25vh;
-  bottom: 0vh;
-  left: 30vw;
-  right: 10vw;
-  /*-ms-transform: rotate(15deg);
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);*/ }
+.planet_container {
+  position: relative; }
+  .planet_container:hover .planet_caption {
+    visibility: visible; }
 
 .planet {
   /* Prevent background color leak outs */
@@ -176,15 +153,8 @@ li {
   max-width: 90vw;
   margin: 25px 0px 0px 25px;
   border-radius: 100%; }
-
-.planet:hover {
-  border: 10px solid #F6F7FD; }
-
-.planet_container {
-  position: relative; }
-
-.planet_container:hover .planet_caption {
-  visibility: visible; }
+  .planet:hover {
+    border: 10px solid #F6F7FD; }
 
 .planet_caption {
   z-index: 500;
@@ -197,14 +167,12 @@ li {
   color: #0B0E1E;
   font-family: "Ubuntu", sans-serif;
   transition: all 300ms ease-in-out; }
-
-.planet_caption > h3 {
-  text-decoration: underline;
-  margin: 10px 0 3px 0; }
-
-.planet_caption ul {
-  padding: 0px;
-  margin: 0px; }
+  .planet_caption h3 {
+    text-decoration: underline;
+    margin: 10px 0 3px 0; }
+  .planet_caption ul {
+    padding: 0px;
+    margin: 0px; }
 
 .horizontal_list_item {
   display: inline;
@@ -214,18 +182,6 @@ li {
 
 .brand-icon-link:hover {
   text-decoration: none; }
-
-.no-padding-no-margin {
-  padding: 0px;
-  margin: 0px; }
-
-.delay {
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  -o-animation-duration: 4s;
-  -ms-animation-duration: 4s;
-  animation-duration: 4s;
-  animation-delay: 2s; }
 
 .year {
   color: #F6F7FD;
@@ -239,7 +195,7 @@ li {
   margin: 0;
   font-size: 16px; }
 
-#moon-orbit {
+.moon-orbit {
   z-index: 1;
   border-radius: 50%;
   top: 3.0303%;
@@ -252,18 +208,17 @@ li {
   -ms-animation: spin-right 40s linear infinite;
   -o-animation: spin-right 40s linear infinite;
   animation: spin-right 40s linear infinite; }
-
-#moon {
-  z-index: 1;
-  background-color: #b2b2b2;
-  border-radius: 50px;
-  margin-left: -25px;
-  margin-top: -25px;
-  width: 20px;
-  height: 20px;
-  top: 0%;
-  left: 50%;
-  position: absolute; }
+  .moon-orbit .moon {
+    z-index: 1;
+    background-color: #b2b2b2;
+    border-radius: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    width: 20px;
+    height: 20px;
+    top: 0%;
+    left: 50%;
+    position: absolute; }
 
 @-webkit-keyframes spin-right {
   100% {
@@ -286,11 +241,11 @@ li {
   .offset_full {
     height: 80vh; }
 
-  #profile {
+  .profile {
     display: none;
     z-index: 101; }
 
-  #scroll_to_see {
+  .scroll_to_see {
     position: absolute;
     top: 70vh;
     left: 50%;
@@ -304,7 +259,7 @@ li {
   .planet_caption {
     visibility: visible; }
 
-  #moon-orbit {
+  .moon-orbit {
     display: none;
     visibility: hidden; } }
 
