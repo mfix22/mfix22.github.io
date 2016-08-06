@@ -151,7 +151,8 @@ li {
 #scroll_to_see {
   position: relative;
   color: #F6F7FD;
-  top: 72%;
+  top: 63%;
+  left: +50px;
   font-family: "Courier", sans-serif; }
 
 #astronaut {
