@@ -1,0 +1,44 @@
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: $ebony;
+}
+
+textarea {
+  resize: none;
+}
+
+a:visited,
+a:active,
+a:focus,
+li:visited,
+li:focus,
+li:active, {
+  text-decoration: none;
+  color: $bluegrey;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.tooltip.right {
+  .tooltip-inner {
+    background-color: $toolip-color;
+  }
+  .tooltip-arrow {
+    border-right-color: $toolip-color;
+  }
+}
+.tooltip.top {
+  .tooltip-inner {
+    background-color: $toolip-color;
+  }
+  .tooltip-arrow {
+    border-top-color: $toolip-color;
+  }
+}
