@@ -83,5 +83,11 @@ module.exports = {
     "type" : "icon-download",
     "aria" : "Mapbox.js",
     "url" : "https://www.mapbox.com/mapbox.js/api/v2.4.0/"
+  },
+  "PUG" : {
+    "key" : "PUG",
+    "type" : "icon-pug",
+    "aria" : "Pug (Jade)",
+    "url" : "http://jade-lang.com/"
   }
 }

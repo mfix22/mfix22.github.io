@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "sass": "sass --watch scss:css",
-    "pug" : "pug -P --watch ./ --out ./",
-    "jade" : "npm run pug", 
-    "serve" : "python -m SimpleHTTPServer 8000"
+    "pug": "pug -P --watch ./ --out ./",
+    "jade": "npm run pug",
+    "serve": "python -m SimpleHTTPServer 8000"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,11 @@
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
+    "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "devicon": "^2.0.0",
-    "jquery": "^3.0.0",
+    "jquery": "^3.1.0",
+    "octicons": "^4.3.0",
     "particles": "^0.3.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"

@@ -3,17 +3,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var classnames = require('classnames');
+var bootstrap = require('bootstrap');
 // local modules
 var PROJECTS = require('../assets/projects');
 var C = require('../assets/company_logos');
 var MiloCard = require('./MiloCard');
 var PlanetCard = require('./PlanetCard');
 var HorizontalIconList = require('./HorizontalIconList');
-// var animate_css = require('../css/animate.css');
-// var bootstrap = require('../css/bootstrap.min.css');
-// var set1_css = require('../css/set1.css');
-// var normalize_css  = require('../css/normalize.css');
-// var styles = require('../scss/index.scss');
 
 
 
@@ -22,6 +18,7 @@ ReactDOM.render(
   <HorizontalIconList icons={builtWith}/>,
   document.getElementById('footer-icons')
 );
+
 for (var i in PROJECTS){
   var p = PROJECTS[i];
   ReactDOM.render(
@@ -30,23 +27,14 @@ for (var i in PROJECTS){
   );
 }
 
-// $(".planet_container").hover(function() {
-//   // $(this).parent().siblings(".planet_caption").css('visibility', function(i, visibility) {
-//   if (window.matchMedia( "(max-width: 992px)" )){
-//     console.log('HERE');
-//     $(".planet_caption", this).css('visibility', function(i, visibility) {
-//       return (visibility == 'visible') ? 'hidden' : 'visible';
-//     });
-//   } else{
-//     $(".planet_caption", this).css('visibility', 'visible');
-//     });
-//   }
-// });
-
 $('#main').scroll(function(){
 	var st = $(window).scrollTop() - $('#scroll_to_see').offset().top;
-    if (st > -450){
+  // console.log(st);
+    if (st > -285){
     	//document.getElementById('scroll_to_see').style.visibility="hidden";
     	$('#scroll_to_see').addClass('animated fadeOut');
     }
 });
+
+
+$('[data-toggle="tooltip"]').tooltip();

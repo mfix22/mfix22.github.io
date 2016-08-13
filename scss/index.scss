@@ -2,6 +2,8 @@
 @import "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 //- DEVICONS
 @import "https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css";
+//- OCTICONS
+@import "https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css";
 //- BOOTSTRAP
 @import "../css/bootstrap.min.css";
 //- ANIMATE.CSS
@@ -13,10 +15,11 @@ $offwhite: #F6F7FD;
 $body-grey: #aaa;
 $moon-color: #b2b2b2;
 $ebony: #0B0E1E;
+$toolip-color: $ebony;
 $bluegrey: #1C4B9C;
 
 $font-main: 'Ubuntu', sans-serif;
-$font-code: "Courier", sans-serif;
+$font-code: "Courier", monospace;
 
 @font-face {
     font-family:"Courier";
@@ -42,6 +45,7 @@ li:visited,
 li:focus,
 li:active, {
   text-decoration: none;
+  color: $bluegrey;
 }
 
 ul {
@@ -49,6 +53,15 @@ ul {
 }
 li {
   list-style: none;
+}
+
+.tooltip.right {
+  .tooltip-inner {
+    background-color: $toolip-color;
+  }
+  .tooltip-arrow {
+    border-right-color: $toolip-color;
+  }
 }
 
 #particles-js {
@@ -130,17 +143,20 @@ li {
   }
 }
 
-.profile{
+.avatar{
   z-index: 1000;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(45%, -35%);
-
-  img.profile_img{
-    border-radius: 50%;
-    border: 4px white solid;
-    width: 10vw;
+  transform: translate(52%, -35%);
+  border-radius: 50%;
+  border: 4px white solid;
+  width: 10vw;
+  height: 10vw;
+  background: {
+    image: url("../img/profile.jpg");
+    size: cover;
+    repeat: no-repeat;
   }
 
 }
@@ -189,6 +205,7 @@ li {
 
 .planet_container{
   position: relative;
+  z-index: 3;
 
   &:hover{
       // overflow: hidden;
@@ -260,6 +277,7 @@ li {
   color: $body-grey;
   margin: 0;
   font-size: 16px;
+  font-family: $font-code;
 }
 
 .moon-orbit {
@@ -322,7 +340,7 @@ li {
   .offset_full{
     height: 80vh;
   }
-  .profile{
+  .avatar{
     display: none;
     z-index: 101;
   }

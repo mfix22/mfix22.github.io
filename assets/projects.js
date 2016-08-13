@@ -2,6 +2,14 @@ var C = require('../assets/company_logos');
 
 module.exports =  [
   {
+    'id' : 'bandwagon',
+    'desc' : 'US Patent 9321503 B2 for collapsible bike trailer. Invention for transporting higher volumes while still allowing for easy storage. This project was completed alongside Katrina L. Ruedinger during freshman year at UW Madison.',
+    'img' : 'bandwagon.png',
+    'link' : 'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503',
+    'header' : 'Bandwagon Bike Trailer',
+    'technologies' : []
+  },
+  {
     'id' : 'resource_map',
     'desc' : 'Map of Madison, WI entrepreneurship ecosystem',
     'img' : 'map.png',
@@ -60,7 +68,7 @@ module.exports =  [
   },
   {
     'id' : 'fab',
-    'desc' : 'Floating button, Add it to any site as a help tool',
+    'desc' : 'Floating button; add it to any site as a help tool',
     'img' : 'fab_square.png',
     'link': 'https://github.com/mfix22/floating_help_button',
     'header' : 'Floating Action Button',

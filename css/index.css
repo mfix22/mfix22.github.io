@@ -1,5 +1,6 @@
 @import "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 @import "https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css";
 @import url(../css/bootstrap.min.css);
 @import url(../css/animate.css);
 @import url(../css/icomoon.css);
@@ -21,13 +22,19 @@ a:focus,
 li:visited,
 li:focus,
 li:active {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #1C4B9C; }
 
 ul {
   padding: 0; }
 
 li {
   list-style: none; }
+
+.tooltip.right .tooltip-inner {
+  background-color: #0B0E1E; }
+.tooltip.right .tooltip-arrow {
+  border-right-color: #0B0E1E; }
 
 #particles-js {
   position: absolute;
@@ -94,23 +101,26 @@ li {
     max-width: 100%;
     max-height: 100%; }
 
-.profile {
+.avatar {
   z-index: 1000;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(45%, -35%); }
-  .profile img.profile_img {
-    border-radius: 50%;
-    border: 4px white solid;
-    width: 10vw; }
+  transform: translate(52%, -35%);
+  border-radius: 50%;
+  border: 4px white solid;
+  width: 10vw;
+  height: 10vw;
+  background-image: url("../img/profile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .scroll_to_see {
   position: relative;
   color: #F6F7FD;
   top: 63%;
   left: +50px;
-  font-family: "Courier", sans-serif; }
+  font-family: "Courier", monospace; }
 
 .works_cont {
   margin-top: 50px;
@@ -138,7 +148,8 @@ li {
   margin-left: 10px; }
 
 .planet_container {
-  position: relative; }
+  position: relative;
+  z-index: 3; }
   .planet_container:hover .planet_caption {
     visibility: visible; }
 
@@ -193,7 +204,8 @@ li {
 .footer {
   color: #aaa;
   margin: 0;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: "Courier", monospace; }
 
 .moon-orbit {
   z-index: 1;
@@ -241,7 +253,7 @@ li {
   .offset_full {
     height: 80vh; }
 
-  .profile {
+  .avatar {
     display: none;
     z-index: 101; }
 
