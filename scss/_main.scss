@@ -135,6 +135,7 @@
   }
 
   a.resume{
+    color: $bluegrey
     @extend .medium;
     li {
       font-size: 3vh;
