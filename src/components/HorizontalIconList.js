@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react')
 
-var HorizontalIconList = (props) => (
+const HorizontalIconList = (props) => (
   <ul className='no-padding-no-margin'>
     {props.icons.map(function(listValue){
       if (listValue.url) {
