@@ -1,6 +1,26 @@
-var C = require('../assets/company_logos');
+const {
+  STRIPE,
+  MAPBOX,
+  JS,
+  JQUERY,
+  HTML,
+  NODE,
+  SLACK,
+  MONGO,
+  CSS,
+  INKSCAPE,
+  SASS,
+  ANDROID
+} = require('../assets/company_logos');
 
 module.exports =  {
+  emily: {
+    desc: 'Emily Hansel\'s Portfolio Website - Dancer & Choreographer',
+    img: 'emily.png',
+    link: 'http://emilyhansel.me',
+    header: 'Portfolio Sites',
+    technologies: []
+  },
   bandwagon: {
     desc : 'Invention known at the Bandwagon Bike Trailer. This collapsible bike trailer can transport higher volumes while still storing easily. This project was completed alongside Katrina L. Ruedinger during freshman year at UW Madison.',
     img : 'bandwagon.png',
@@ -13,7 +33,7 @@ module.exports =  {
     img : 'map.png',
     link : 'http://transcend.engineering/map',
     header : 'Entrepreneurship Map',
-    technologies : [C.STRIPE, C.MAPBOX, C.JS, C.JQUERY, C.HTML, C.CSS],
+    technologies : [STRIPE, MAPBOX, JS, JQUERY, HTML, CSS],
     moon : true
   },
   librarify: {
@@ -21,35 +41,35 @@ module.exports =  {
     img : 'librarify.png',
     link : 'https://www.npmjs.com/package/librarify',
     header : 'Librarify',
-    technologies : [C.NODE, C.JS]
+    technologies : [NODE, JS]
   },
   what3words: {
     desc : 'Node client for the what3words API',
     img : 'what3words.png',
     link : 'https://www.npmjs.com/package/what3words',
     header : 'what3words',
-    technologies : [C.NODE, C.JS]
+    technologies : [NODE, JS]
   },
   squadbot: {
     desc : 'Bot that helps you meet up with your team in real life.',
     img : 'squadbot.png',
     link: 'http://squadup.io',
     header : 'SquadBot',
-    technologies : [C.SLACK, C.NODE, C.MONGO, C.JS]
+    technologies : [SLACK, NODE, MONGO, JS]
   },
   automaton: {
     desc : 'Advertising that drives itself, custom site.',
     img : 'automaton.png',
     link: 'http://automatonads.com',
     header : 'Automaton',
-    technologies : [C.CSS, C.HTML, C.INKSCAPE, C.JQUERY, C.JS]
+    technologies : [CSS, HTML, INKSCAPE, JQUERY, JS]
   },
   transcend: {
     desc : 'Transcend, UW Madison innovative hub',
     img : 'transcend.png',
     link: 'http://transcend.engineering',
     header : 'Transcend',
-    technologies : [C.HTML, C.CSS, C.SASS]
+    technologies : [HTML, CSS, SASS]
   },
   tm: {
     desc : 'Transcend Madison, by-students-for-students innovation competition',
@@ -63,27 +83,27 @@ module.exports =  {
     img : 'fab_square.png',
     link: 'https://github.com/mfix22/floating_help_button',
     header : 'Floating Action Button',
-    technologies : [C.HTML, C.CSS, C.JS]
+    technologies : [HTML, CSS, JS]
   },
   eventbot: {
     desc : 'Event production Slack slash command tool',
     img : 'eventbot.png',
     link: 'https://github.com/mfix22/event_bot',
     header : 'EventBot',
-    technologies : [C.SLACK, C.NODE, C.JS]
+    technologies : [SLACK, NODE, JS]
   },
   rideshare: {
     desc : 'Custom mobile friendly site for ridesharing promotion',
     img : 'rideshare.png',
     link: 'https://github.com/mfix22/ride_share_promo',
     header : 'Rideshare San Diego',
-    technologies : [C.HTML, C.CSS]
+    technologies : [HTML, CSS]
   },
   buz: {
     desc : 'Hyperlocal communication. Look up and meet people.',
     img : 'buz_square.png',
     link: 'https://github.com/zshires/buz',
     header : 'Buz',
-    technologies : [C.ANDROID, C.INKSCAPE]
+    technologies : [ANDROID, INKSCAPE]
   }
 }

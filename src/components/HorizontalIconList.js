@@ -1,4 +1,5 @@
 var React = require('react');
+
 var HorizontalIconList = (props) => (
   <ul className='no-padding-no-margin'>
     {props.icons.map(function(listValue){
