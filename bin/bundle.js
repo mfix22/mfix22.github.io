@@ -31878,44 +31878,44 @@
 	"use strict";
 
 	var React = __webpack_require__(1);
-	var MiloCard = React.createClass({
-	    displayName: "MiloCard",
-
-	    render: function render() {
-	        return React.createElement(
-	            "div",
-	            { className: "col-md-4 col-sm-6 col-xs-12" },
+	var MiloCard = function MiloCard(_ref) {
+	  var img = _ref.img,
+	      header = _ref.header,
+	      desc = _ref.desc,
+	      link = _ref.link;
+	  return React.createElement(
+	    "div",
+	    { className: "col-md-4 col-sm-6 col-xs-12" },
+	    React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "div",
+	        { className: "grid" },
+	        React.createElement(
+	          "figure",
+	          { className: "effect-milo" },
+	          React.createElement("img", { className: "card", src: 'img/' + img }),
+	          React.createElement(
+	            "figcaption",
+	            null,
 	            React.createElement(
-	                "div",
-	                null,
-	                React.createElement(
-	                    "div",
-	                    { className: "grid" },
-	                    React.createElement(
-	                        "figure",
-	                        { className: "effect-milo" },
-	                        React.createElement("img", { className: "card", src: 'img/' + this.props.img }),
-	                        React.createElement(
-	                            "figcaption",
-	                            null,
-	                            React.createElement(
-	                                "h2",
-	                                null,
-	                                this.props.header
-	                            ),
-	                            React.createElement(
-	                                "p",
-	                                null,
-	                                this.props.desc
-	                            ),
-	                            React.createElement("a", { target: "_blank", href: this.props.link })
-	                        )
-	                    )
-	                )
-	            )
-	        );
-	    }
-	});
+	              "h2",
+	              null,
+	              header
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              desc
+	            ),
+	            React.createElement("a", { target: "_blank", href: link })
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
 
 	module.exports = MiloCard;
 
@@ -32071,46 +32071,48 @@
 
 	var React = __webpack_require__(1);
 	var HorizontalIconList = __webpack_require__(185);
-	var PlanetCard = React.createClass({
-	  displayName: 'PlanetCard',
-
-	  render: function render() {
-	    return React.createElement(
+	var PlanetCard = function PlanetCard(_ref) {
+	  var link = _ref.link,
+	      img = _ref.img,
+	      moon = _ref.moon,
+	      header = _ref.header,
+	      desc = _ref.desc,
+	      technologies = _ref.technologies;
+	  return React.createElement(
+	    'div',
+	    { className: 'col-md-4 col-sm-6 col-xs-12' },
+	    React.createElement(
 	      'div',
-	      { className: 'col-md-4 col-sm-6 col-xs-12' },
+	      { className: 'planet_container' },
+	      React.createElement(
+	        'a',
+	        { target: '_blank', href: link },
+	        React.createElement('img', { className: 'planet', src: 'img/' + img })
+	      ),
+	      !!moon ? React.createElement('div', { className: 'earth' }) : null,
+	      !!moon ? React.createElement(
+	        'div',
+	        { className: 'moon-orbit' },
+	        React.createElement('div', { className: 'moon' })
+	      ) : null,
 	      React.createElement(
 	        'div',
-	        { className: 'planet_container' },
+	        { className: 'planet_caption' },
 	        React.createElement(
-	          'a',
-	          { target: '_blank', href: this.props.link },
-	          React.createElement('img', { className: 'planet', src: 'img/' + this.props.img })
-	        ),
-	        React.createElement('div', { className: this.props.moon ? 'earth' : null }),
-	        React.createElement(
-	          'div',
-	          { className: this.props.moon ? 'moon-orbit' : null },
-	          React.createElement('div', { className: this.props.moon ? 'moon' : null })
+	          'h3',
+	          null,
+	          header
 	        ),
 	        React.createElement(
-	          'div',
-	          { className: 'planet_caption' },
-	          React.createElement(
-	            'h3',
-	            null,
-	            this.props.header
-	          ),
-	          React.createElement(
-	            'p',
-	            null,
-	            this.props.desc
-	          ),
-	          React.createElement(HorizontalIconList, { icons: this.props.technologies })
-	        )
+	          'p',
+	          null,
+	          desc
+	        ),
+	        React.createElement(HorizontalIconList, { icons: technologies })
 	      )
-	    );
-	  }
-	});
+	    )
+	  );
+	};
 
 	module.exports = PlanetCard;
 
@@ -32121,41 +32123,41 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var HorizontalIconList = React.createClass({
-	  displayName: 'HorizontalIconList',
-
-	  render: function render() {
-	    return React.createElement(
-	      'ul',
-	      { className: 'no-padding-no-margin' },
-	      this.props.icons.map(function (listValue) {
-	        if (listValue.url) {
-	          return React.createElement(
-	            'li',
-	            { key: listValue.key, className: 'horizontal_list_item' },
-	            React.createElement(
-	              'a',
-	              { target: '_blank', className: 'brand-icon-link', href: listValue.url },
-	              React.createElement(
-	                'span',
-	                { title: listValue.aria },
-	                React.createElement('i', { className: listValue.type })
-	              )
-	            )
-	          );
-	        }return React.createElement(
+	var HorizontalIconList = function HorizontalIconList(props) {
+	  return React.createElement(
+	    'ul',
+	    { className: 'no-padding-no-margin' },
+	    props.icons.map(function (listValue) {
+	      if (listValue.url) {
+	        return React.createElement(
 	          'li',
 	          { key: listValue.key, className: 'horizontal_list_item' },
 	          React.createElement(
-	            'span',
-	            { title: listValue.aria },
-	            React.createElement('i', { className: listValue.type })
+	            'a',
+	            { target: '_blank', className: 'brand-icon-link', href: listValue.url },
+	            React.createElement(
+	              'span',
+	              { title: listValue.aria },
+	              React.createElement('i', { className: listValue.type })
+	            )
 	          )
 	        );
-	      })
-	    );
-	  }
-	});
+	      }
+	      return React.createElement(
+	        'li',
+	        {
+	          key: listValue.key,
+	          className: 'horizontal_list_item'
+	        },
+	        React.createElement(
+	          'span',
+	          { title: listValue.aria },
+	          React.createElement('i', { className: listValue.type })
+	        )
+	      );
+	    })
+	  );
+	};
 
 	module.exports = HorizontalIconList;
 
