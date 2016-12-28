@@ -15,11 +15,11 @@ const {
 } = require('../../assets/company_logos')
 
 const projectOrder = [
-  'squad',
+  // 'squad',
   'squadbot',
   'librarify',
   'tm',
-  'emily',
+  // 'emily',
   'what3words',
   'bandwagon',
   'resource_map',
