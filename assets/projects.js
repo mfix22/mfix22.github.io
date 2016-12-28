@@ -10,10 +10,18 @@ const {
   CSS,
   INKSCAPE,
   SASS,
-  ANDROID
-} = require('../assets/company_logos');
+  ANDROID,
+  REACT
+} = require('../assets/company_logos')
 
 module.exports =  {
+  squad: {
+    desc: 'The most intuitive, simple, calendar for teams',
+    img: 'squad.png',
+    link: 'https://github.com/SquadCalendar/squad',
+    header: 'Squad',
+    technologies: [REACT, JS]
+  },
   emily: {
     desc: 'Emily Hansel\'s Portfolio Website - Dancer & Choreographer',
     img: 'emily.png',

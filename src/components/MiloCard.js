@@ -1,5 +1,5 @@
-var React = require('react');
-var MiloCard = ({ img,header, desc, link }) => (
+const React = require('react');
+const MiloCard = ({ img,header, desc, link }) => (
   <div className="col-md-4 col-sm-6 col-xs-12">
     <div>
       <div className="grid">

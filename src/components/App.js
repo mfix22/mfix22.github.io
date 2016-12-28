@@ -15,9 +15,11 @@ const {
 } = require('../../assets/company_logos')
 
 const projectOrder = [
+  'squad',
   'squadbot',
   'librarify',
   'tm',
+  'emily',
   'what3words',
   'bandwagon',
   'resource_map',
@@ -33,19 +35,18 @@ const App = () => {
   return (
     <div>
       {
-        chunk(projectOrder.map(id => PROJECTS[id]), 2).map((pair, index) => {
-          const [first, second] = pair
-          return (
-            <div key={index} className="row work_row">
-              <PlanetCard
-                {...first}
-              />
-              <PlanetCard
-                {...second}
-              />
-            </div>
-          )
-        })
+        chunk(projectOrder.map(id => PROJECTS[id]), 2).map((pair, index) => (
+          <div key={index} className="row work_row">
+            {
+              pair.map((planet, i) =>
+                <PlanetCard
+                  key={i}
+                  {...planet}
+                />
+              )
+            }
+          </div>
+        ))
       }
       <div className="row text-center" id="footer">
         <p className="footer">
