@@ -21,8 +21,8 @@
 
 // Helper Classes
 .bluegrey {
-    font-weight: bold;
-    color: $bluegrey;
+  font-weight: bold;
+  color: $bluegrey;
 }
 
 .delay{
@@ -135,7 +135,7 @@
   }
 
   a.resume{
-    color: $bluegrey
+    color: $bluegrey;
     @extend .medium;
     li {
       font-size: 3vh;
@@ -169,23 +169,19 @@
   background-clip:         padding-box;
   z-index: 500;
   position: relative;
-  width: 300px;
+  width: 250px;
   max-width: 90vw;
-  margin: 25px 0px 0px 25px;
+  margin: 25px 0px 0px 50px;
   border-radius: 100%;
-
-  &:hover {
-    border: 10px solid $offwhite;
-  }
 }
 
 .planet_caption {
   z-index: 500;
   position: relative;
-  margin-top: 15px;
+  margin: 15px 10px 0px;
   background: $offwhite;
   visibility: hidden;
-  padding: 1px 15px 1px 15px;
+  padding: 1px 30px 1px 15px;
   border-radius: 3px;
   color: $ebony;
   font-family: $font-main;
