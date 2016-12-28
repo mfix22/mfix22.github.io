@@ -25,9 +25,7 @@ ReactDOM.render(
 
 $('#main').scroll(function(){
 	let st = $(window).scrollTop() - $('#scroll_to_see').offset().top;
-  // console.log(st);
     if (st > -285){
-    	//document.getElementById('scroll_to_see').style.visibility="hidden";
     	$('#scroll_to_see').addClass('animated fadeOut');
     }
 });
