@@ -34197,11 +34197,7 @@
 	    CSS = _require2.CSS,
 	    ATOM = _require2.ATOM;
 
-	var projectOrder = [
-	// 'squad',
-	'squadbot', 'librarify', 'tm',
-	// 'emily',
-	'what3words', 'bandwagon', 'resource_map', 'transcend', 'automaton'];
+	var projectOrder = ['squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'resource_map', 'transcend', 'automaton'];
 
 	var App = function App() {
 	  return React.createElement(

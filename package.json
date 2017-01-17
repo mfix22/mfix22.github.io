@@ -2,7 +2,7 @@
   "name": "me",
   "version": "0.1.0",
   "description": "Proof of my work life",
-  "main": "me.js",
+  "main": "bin/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
