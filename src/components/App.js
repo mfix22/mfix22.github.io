@@ -50,8 +50,7 @@ const App = () => {
       }
       <div className="row text-center" id="footer">
         <p className="footer">
-          <span className="octicon octicon-terminal" />
-           with <i className="icon ion-coffee footer-icon"></i> and
+          <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
         </p>
         <HorizontalIconList
           icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
