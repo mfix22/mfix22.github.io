@@ -61,7 +61,7 @@ module.exports =  {
   squadbot: {
     desc : 'Bot that helps you meet up with your team in real life.',
     img : 'squadbot.png',
-    link: 'http://squadup.io',
+    link: 'http://bot.squadup.io',
     header : 'SquadBot',
     technologies : [SLACK, NODE, MONGO, JS]
   },
