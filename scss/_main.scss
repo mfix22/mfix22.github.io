@@ -260,6 +260,28 @@
   }
 }
 
+.writing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed;
+}
+.writing__link,
+a.writing__link{
+  display: block;
+  text-align: left;
+  padding-left: 48px;
+  padding-bottom: 24px;
+  color: $offwhite;
+  font-family: $font-code;
+
+  &.header {
+    margin-top: -48px;
+  }
+}
+
 @-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);

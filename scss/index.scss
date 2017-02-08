@@ -25,6 +25,8 @@ $bluegrey: #1C4B9C;
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
 
 $font-main: 'Ubuntu', sans-serif;
-$font-code: "Courier", monospace;
+$font-code: "Lucida Console", Monaco, monospace;
 
-@import 'reset', 'main', 'smallScreen';
+@import 'reset';
+@import 'main';
+@import 'smallScreen';

@@ -26,6 +26,10 @@ li {
   list-style: none;
 }
 
+code {
+  font-family: $font-code;
+}
+
 .tooltip.right {
   .tooltip-inner {
     background-color: $toolip-color;

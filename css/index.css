@@ -32,6 +32,9 @@ ul {
 li {
   list-style: none; }
 
+code {
+  font-family: "Lucida Console", Monaco, monospace; }
+
 .tooltip.right .tooltip-inner {
   background-color: #0b0e1e; }
 .tooltip.right .tooltip-arrow {
@@ -130,7 +133,7 @@ li {
   color: #F6F7FD;
   top: 63%;
   left: +50px;
-  font-family: "Courier", monospace; }
+  font-family: "Lucida Console", Monaco, monospace; }
 
 .works_cont {
   margin-top: 50px;
@@ -218,7 +221,7 @@ li {
   color: #aaa;
   margin: 0;
   font-size: 16px;
-  font-family: "Courier", monospace; }
+  font-family: "Lucida Console", Monaco, monospace; }
 
 .moon-orbit {
   z-index: 1;
@@ -244,6 +247,26 @@ li {
     top: 0%;
     left: 50%;
     position: absolute; }
+
+.writing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  position: fixed; }
+
+.writing__link,
+a.writing__link {
+  display: block;
+  text-align: left;
+  padding-left: 48px;
+  padding-bottom: 24px;
+  color: #F6F7FD;
+  font-family: "Lucida Console", Monaco, monospace; }
+  .writing__link.header,
+  a.writing__link.header {
+    margin-top: -48px; }
 
 @-webkit-keyframes spin-right {
   100% {
