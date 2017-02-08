@@ -56,18 +56,23 @@
   font-family: $font-main;
   position: fixed;
   background-color: $offwhite;
-  border-radius: 5%/3%;
-  width: 25vw;
+  border-radius: 8px;
+  width: 20%;
   height: auto;
   margin-top: 5%;
   margin-left: 5%;
-  padding: 0 16px 20px;
+  padding: 0 16px 0px;
   z-index: 10;
   overflow: visible;
 
+  h1 {
+    font-size: 28px;
+    text-align: right;
+    margin: 28px 16px 28px 0;
+  }
   .bio-text {
     margin: 0px;
-    font-size: 16px;
+    font-size: 14px;
     z-index: 10;
     max-width: 100%;
     max-height: 100%;
@@ -77,9 +82,9 @@
 .avatar{
   z-index: 1000;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
-  transform: translate(52%, -35%);
+  transform: translate(-48%, -35%);
   border-radius: 50%;
   border: 4px $offwhite solid;
   width: 10vw;
