@@ -21,7 +21,7 @@ const PlanetCard = ({ link, img, moon, header, desc, technologies }) => (
         null
       }
       <div className="planet_caption">
-        <h3>{header}</h3>
+        <h6>{header}</h6>
         <p>{desc}</p>
         <HorizontalIconList icons={technologies} />
       </div>

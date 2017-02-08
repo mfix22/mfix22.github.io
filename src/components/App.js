@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div>
       {
-        chunk(projectOrder.map(id => PROJECTS[id]), 2).map((pair, index) => (
+        chunk(projectOrder.map(id => PROJECTS[id]), 3).map((pair, index) => (
           <div key={index} className="row work_row">
             {
               pair.map((planet, i) =>

@@ -2,8 +2,7 @@
 const React = require('react')
 const { render } = require('react-dom')
 
-const configure = require('./helpers/configure')
-configure()
+require('./helpers/configure')()
 
 // local modules
 const App = require('./components/App')

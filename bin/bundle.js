@@ -52,8 +52,7 @@
 	var _require = __webpack_require__(32),
 	    render = _require.render;
 
-	var configure = __webpack_require__(178);
-	configure();
+	__webpack_require__(178)();
 
 	// local modules
 	var App = __webpack_require__(193);
@@ -34205,7 +34204,7 @@
 	    null,
 	    chunk(projectOrder.map(function (id) {
 	      return PROJECTS[id];
-	    }), 2).map(function (pair, index) {
+	    }), 3).map(function (pair, index) {
 	      return React.createElement(
 	        'div',
 	        { key: index, className: 'row work_row' },
@@ -34223,7 +34222,7 @@
 	        'p',
 	        { className: 'footer' },
 	        React.createElement('span', { className: 'octicon octicon-terminal' }),
-	        'with ',
+	        ' with ',
 	        React.createElement('i', { className: 'icon ion-coffee footer-icon' }),
 	        ' and'
 	      ),
@@ -34309,7 +34308,7 @@
 	  squadbot: {
 	    desc: 'Bot that helps you meet up with your team in real life.',
 	    img: 'squadbot.png',
-	    link: 'http://squadup.io',
+	    link: 'http://bot.squadup.io',
 	    header: 'SquadBot',
 	    technologies: [SLACK, NODE, MONGO, JS]
 	  },
@@ -34517,7 +34516,7 @@
 	        'div',
 	        { className: 'planet_caption' },
 	        React.createElement(
-	          'h3',
+	          'h6',
 	          null,
 	          header
 	        ),

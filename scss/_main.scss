@@ -59,12 +59,9 @@
   border-radius: 5%/3%;
   width: 25vw;
   height: auto;
-  margin-top: 4%;
-  margin-left: 7%;
-  padding-right: 3%;
-  padding-top: 0;
-  padding-bottom: 20px;
-  padding-left: 3%;
+  margin-top: 5%;
+  margin-left: 5%;
+  padding: 0 16px 20px;
   z-index: 10;
   overflow: visible;
 
@@ -112,8 +109,9 @@
 }
 
 .work_row {
-    margin-top: 37px;
-    margin-bottom: 37px;
+    margin: 37px 8px 0 0;
+
+    // margin-bottom: 37px;
 }
 
 .contact_list{
@@ -151,6 +149,10 @@
 .planet_container{
   position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &:hover{
       // overflow: hidden;
@@ -163,29 +165,29 @@
   /* Prevent background color leak outs */
  -webkit-background-clip: padding-box;
  -moz-background-clip:    padding;
-  background-clip:         padding-box;
+  background-clip:        padding-box;
   z-index: 500;
   position: relative;
-  width: 250px;
+  width: 100px;
   max-width: 90vw;
-  margin: 25px 0px 0px 50px;
+  // margin: 25px 0px 0px 50px;
   border-radius: 100%;
 }
 
 .planet_caption {
   z-index: 500;
   position: relative;
-  margin: 15px 10px 0px;
+  margin: 15px 0 0;
   background: $offwhite;
   visibility: hidden;
-  padding: 1px 30px 1px 15px;
+  padding: 1px 8px 1px;
   border-radius: 3px;
   color: $ebony;
   font-family: $font-main;
+  font-size: 10px;
   transition: all 300ms ease-in-out;
 
-  h3 {
-    text-decoration: underline;
+  h6 {
     margin: 10px 0 3px 0;
   }
 
@@ -198,7 +200,7 @@
 .horizontal_list_item{
   display: inline;
   list-style: none;
-  font-size: 30px;
+  font-size: 16px;
   margin: 0px 15px 0px 0px;
 }
 .brand-icon-link:hover{
