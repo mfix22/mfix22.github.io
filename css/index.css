@@ -226,10 +226,10 @@ code {
 .moon-orbit {
   z-index: 1;
   border-radius: 50%;
-  top: 3.0303%;
-  left: 4.54545%;
-  width: 330px;
-  height: 330px;
+  top: -3.33333%;
+  left: 15%;
+  width: 120px;
+  height: 120px;
   position: absolute;
   -webkit-animation: spin-right 40s linear infinite;
   -moz-animation: spin-right 40s linear infinite;
@@ -242,8 +242,8 @@ code {
     border-radius: 50px;
     margin-left: -25px;
     margin-top: -25px;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     top: 0%;
     left: 50%;
     position: absolute; }
