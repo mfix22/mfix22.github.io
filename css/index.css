@@ -268,6 +268,16 @@ a.writing__link {
   a.writing__link.header {
     margin-top: -48px; }
 
+.scale__text {
+  display: block;
+  color: #F6F7FD;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin-bottom: 32px; }
+  .scale__text:first-of-type {
+    float: left; }
+  .scale__text:last-of-type {
+    float: right; }
+
 @-webkit-keyframes spin-right {
   100% {
     -webkit-transform: rotate(360deg); } }

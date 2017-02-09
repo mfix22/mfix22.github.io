@@ -282,6 +282,20 @@ a.writing__link{
   }
 }
 
+.scale__text{
+  display: block;
+  color: $offwhite;
+  font-family: $font-code;
+  margin-bottom: 32px;
+
+  &:first-of-type {
+    float: left;
+  }
+  &:last-of-type {
+    float: right;
+  }
+}
+
 @-webkit-keyframes spin-right {
     100% {
         -webkit-transform: rotate(360deg);

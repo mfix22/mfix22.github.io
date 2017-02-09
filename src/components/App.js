@@ -1,8 +1,13 @@
 const React = require('react')
+const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
+const getMuiTheme = require('material-ui/styles/getMuiTheme').default
 const PROJECTS = require('../../assets/projects')
 const { chunk } = require('../helpers/util')
 const PlanetCard = require('./PlanetCard')
 const HorizontalIconList = require('./HorizontalIconList')
+const Slider = require('./Slider')
+
+require('react-tap-event-plugin')()
 
 const {
   REACT,
@@ -35,31 +40,39 @@ const projectOrder = [
 
 const App = () => {
   return (
-    <div>
-      {
-        chunk(projectOrder.map(id => PROJECTS[id]), 3).map((pair, index) => (
-          <div key={index} className="row work_row">
-            {
-              pair.map((planet, i) =>
-                <PlanetCard
-                  key={i}
-                  {...planet}
-                />
-              )
-            }
-          </div>
-        ))
+    <MuiThemeProvider muiTheme={getMuiTheme({
+      palette: {
+        primary1Color: '#1C4B9C',
+        accent1Color: '#1C4B9C',
       }
-      <div className="row text-center" id="footer">
-        <p className="footer">
-          <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
-        </p>
-        <HorizontalIconList
-          icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
-        />
-      <p className="footer">by Michael Fix &copy; 2016</p>
+    })}>
+      <div>
+        <Slider />
+        {
+          chunk(projectOrder.map(id => PROJECTS[id]), 3).map((pair, index) => (
+            <div key={index} className="row work_row">
+              {
+                pair.map((planet, i) =>
+                  <PlanetCard
+                    key={i}
+                    {...planet}
+                  />
+                )
+              }
+            </div>
+          ))
+        }
+        <div className="row text-center" id="footer">
+          <p className="footer">
+            <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
+          </p>
+          <HorizontalIconList
+            icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
+          />
+        <p className="footer">by Michael Fix &copy; 2016</p>
+        </div>
       </div>
-    </div>
+    </MuiThemeProvider>
   )
 }
 
