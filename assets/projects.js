@@ -15,6 +15,13 @@ const {
 } = require('../assets/company_logos')
 
 module.exports =  {
+  alchemy: {
+    desc: 'Drag-and-drop file converter for your menubar, built with Electron.',
+    img: 'alchemy.png',
+    link: 'https://dawnlabs.github.io/alchemy/',
+    header: 'Alchemy',
+    technologies: [REACT, JS]
+  },
   squad: {
     desc: 'The most intuitive, simple, calendar for teams',
     img: 'squad.png',

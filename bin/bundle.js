@@ -34196,7 +34196,7 @@
 	    CSS = _require2.CSS,
 	    ATOM = _require2.ATOM;
 
-	var projectOrder = ['squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'resource_map', 'transcend', 'automaton'];
+	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'resource_map', 'transcend', 'automaton'];
 
 	var App = function App() {
 	  return React.createElement(
@@ -34262,6 +34262,13 @@
 	    REACT = _require.REACT;
 
 	module.exports = {
+	  alchemy: {
+	    desc: 'Drag-and-drop file converter for your menubar, built with Electron.',
+	    img: 'alchemy.png',
+	    link: 'https://dawnlabs.github.io/alchemy/',
+	    header: 'Alchemy',
+	    technologies: [REACT, JS]
+	  },
 	  squad: {
 	    desc: 'The most intuitive, simple, calendar for teams',
 	    img: 'squad.png',

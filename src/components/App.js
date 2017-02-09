@@ -15,6 +15,7 @@ const {
 } = require('../../assets/company_logos')
 
 const projectOrder = [
+  'alchemy',
   'squad',
   'squadbot',
   'librarify',
