@@ -38,42 +38,60 @@ const projectOrder = [
   // 'rideshare'
 ]
 
-const App = () => {
-  return (
-    <MuiThemeProvider muiTheme={getMuiTheme({
-      palette: {
-        primary1Color: '#1C4B9C',
-        accent1Color: '#1C4B9C',
-      }
-    })}>
-      <div>
-        <Slider />
-        {
-          chunk(projectOrder.map(id => PROJECTS[id]), 3).map((pair, index) => (
-            <div key={index} className="row work_row">
-              {
-                pair.map((planet, i) =>
-                  <PlanetCard
-                    key={i}
-                    {...planet}
-                  />
-                )
-              }
-            </div>
-          ))
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      value: 5
+    }
+  }
+
+  render() {
+    return (
+      <MuiThemeProvider muiTheme={getMuiTheme({
+        palette: {
+          primary1Color: '#1C4B9C',
+          accent1Color: '#1C4B9C',
         }
-        <div className="row text-center" id="footer">
-          <p className="footer">
-            <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
-          </p>
-          <HorizontalIconList
-            icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
+      })}>
+        <div>
+          <Slider
+            onChange={(value) => {
+              this.setState({
+                value: value * 10
+              })
+            }}
           />
-        <p className="footer">by Michael Fix &copy; 2016</p>
+          {
+            chunk(projectOrder.map(id => PROJECTS[id])
+                              .filter(p => Math.abs(this.state.value - p.value) <= 5), 3)
+              .map((pair, index) => (
+                <div key={index} className="row work_row">
+                  {
+                    pair.map((planet, i) =>
+                      <PlanetCard
+                        key={i}
+                        {...planet}
+                      />
+                    )
+                  }
+                </div>
+              )
+            )
+          }
+          <div className="row text-center" id="footer">
+            <p className="footer">
+              <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
+            </p>
+            <HorizontalIconList
+              icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
+            />
+          <p className="footer">by Michael Fix &copy; 2016</p>
+          </div>
         </div>
-      </div>
-    </MuiThemeProvider>
-  )
+      </MuiThemeProvider>
+    )
+  }
 }
 
 module.exports = App

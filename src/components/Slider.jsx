@@ -7,6 +7,15 @@ class Slider extends React.Component {
     this.state = {
       value: 0.5
     }
+    this.handleChange = this.handleChange.bind(this)
+    this.onChange = props.onChange
+  }
+
+  handleChange(event, value) {
+    this.setState({
+      value
+    })
+    this.onChange(value)
   }
 
   render() {
@@ -22,11 +31,7 @@ class Slider extends React.Component {
           sliderStyle={{ marginBottom: '0px' }}
           step={0.1}
           value={this.state.value}
-          onChange={(event, value) => {
-            this.setState({
-              value
-            })
-          }}
+          onChange={this.handleChange}
         />
       </div>
     )
