@@ -34196,7 +34196,7 @@
 	    CSS = _require2.CSS,
 	    ATOM = _require2.ATOM;
 
-	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'resource_map', 'transcend', 'automaton'];
+	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
 
 	var App = function App() {
 	  return React.createElement(
@@ -34259,9 +34259,17 @@
 	    INKSCAPE = _require.INKSCAPE,
 	    SASS = _require.SASS,
 	    ANDROID = _require.ANDROID,
-	    REACT = _require.REACT;
+	    REACT = _require.REACT,
+	    ATOM = _require.ATOM;
 
 	module.exports = {
+	  nature: {
+	    desc: 'Atom theme inspired by nature, built with Javascript and React in mind.',
+	    img: 'nature-syntax.png',
+	    link: 'https://atom.io/themes/nature-syntax',
+	    header: 'Nature Theme',
+	    technologies: [ATOM, SASS]
+	  },
 	  alchemy: {
 	    desc: 'Drag-and-drop file converter for your menubar, built with Electron.',
 	    img: 'alchemy.png',

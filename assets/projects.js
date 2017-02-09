@@ -11,10 +11,18 @@ const {
   INKSCAPE,
   SASS,
   ANDROID,
-  REACT
+  REACT,
+  ATOM
 } = require('../assets/company_logos')
 
 module.exports =  {
+  nature: {
+    desc: 'Atom theme inspired by nature, built with Javascript and React in mind.',
+    img: 'nature-syntax.png',
+    link: 'https://atom.io/themes/nature-syntax',
+    header: 'Nature Theme',
+    technologies: [ATOM, SASS]
+  },
   alchemy: {
     desc: 'Drag-and-drop file converter for your menubar, built with Electron.',
     img: 'alchemy.png',
