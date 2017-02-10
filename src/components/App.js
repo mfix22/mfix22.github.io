@@ -1,6 +1,8 @@
 const React = require('react')
 const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
 const getMuiTheme = require('material-ui/styles/getMuiTheme').default
+const FlipMove = require('react-flip-move')
+
 const PROJECTS = require('../../assets/projects')
 const { chunk } = require('../helpers/util')
 const PlanetCard = require('./PlanetCard')
@@ -52,23 +54,24 @@ class App extends React.Component {
               })
             }}
           />
-          {
-            chunk(projectOrder.map(id => PROJECTS[id])
-                              .filter(p => Math.abs(this.state.value - p.value) <= 4.5), 3)
-              .map((pair, index) => (
-                <div key={index} className="row work_row">
-                  {
-                    pair.map((planet, i) =>
-                      <PlanetCard
-                        key={i}
-                        {...planet}
-                      />
-                    )
-                  }
-                </div>
-              )
-            )
-          }
+        <div className="row">
+            <FlipMove duration={175} style={{ display: 'flex', flexFlow: 'row wrap' }}>
+              {
+                projectOrder.map(id => PROJECTS[id])
+                            .filter(p => Math.abs(this.state.value - p.value) <= 4.5)
+                            .map((planet, index) => (
+                              <div
+                                key={planet.header}
+                                style={{
+                                  flexBasis: '33%',
+                                }}
+                              >
+                                <PlanetCard {...planet} />
+                              </div>
+                            ))
+              }
+            </FlipMove>
+          </div>
         </div>
       </MuiThemeProvider>
     )
