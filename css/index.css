@@ -168,7 +168,8 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 16px; }
   .planet_container:hover .planet_caption {
     visibility: visible; }
 

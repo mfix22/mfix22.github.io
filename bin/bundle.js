@@ -43376,7 +43376,7 @@
 	    link: 'https://dawnlabs.github.io/alchemy/',
 	    header: 'Alchemy',
 	    technologies: [REACT, JS],
-	    value: 7
+	    value: 5
 	  },
 	  squad: {
 	    desc: 'The most intuitive, simple, calendar for teams',
@@ -43384,7 +43384,7 @@
 	    link: 'https://github.com/SquadCalendar/squad',
 	    header: 'Squad',
 	    technologies: [REACT, JS],
-	    value: 6
+	    value: 5
 	  },
 	  emily: {
 	    desc: 'Emily Hansel\'s Portfolio Website - Dancer & Choreographer',
