@@ -64,7 +64,7 @@ class App extends React.Component {
           />
           {
             chunk(projectOrder.map(id => PROJECTS[id])
-                              .filter(p => Math.abs(this.state.value - p.value) <= 5), 3)
+                              .filter(p => Math.abs(this.state.value - p.value) <= 4.5), 3)
               .map((pair, index) => (
                 <div key={index} className="row work_row">
                   {

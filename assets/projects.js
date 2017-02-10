@@ -22,7 +22,7 @@ module.exports =  {
     link: 'https://atom.io/themes/nature-syntax',
     header: 'Nature Theme',
     technologies: [ATOM, SASS],
-    value: 0
+    value: 1
   },
   alchemy: {
     desc: 'Drag-and-drop file converter for your menubar, built with Electron.',
@@ -38,7 +38,7 @@ module.exports =  {
     link: 'https://github.com/SquadCalendar/squad',
     header: 'Squad',
     technologies: [REACT, JS],
-    value: 9
+    value: 6
   },
   emily: {
     desc: 'Emily Hansel\'s Portfolio Website - Dancer & Choreographer',
@@ -54,7 +54,7 @@ module.exports =  {
     link : 'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503',
     header : 'US Patent 9321503 B2',
     technologies : [],
-    value: 10
+    value: 9
   },
   resource_map: {
     desc : 'Map of Madison, WI entrepreneurship ecosystem',
@@ -87,7 +87,7 @@ module.exports =  {
     link: 'http://bot.squadup.io',
     header : 'SquadBot',
     technologies : [SLACK, NODE, MONGO, JS],
-    value: 10
+    value: 8
   },
   automaton: {
     desc : 'Advertising that drives itself, custom site.',
