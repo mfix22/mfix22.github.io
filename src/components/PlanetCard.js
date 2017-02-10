@@ -1,7 +1,7 @@
 const React = require('react')
 const HorizontalIconList = require('./HorizontalIconList')
 const PlanetCard = ({ link, img, moon, header, desc, technologies }) => (
-  <div className="col-md-4 col-sm-6 col-xs-12">
+  <div className="col-md-4 col-sm-6 col-xs-12 planet_wrapper">
     <div className="planet_container">
       <a target="_blank" href={link}>
         <img className="planet" src={'img/' + img}/>

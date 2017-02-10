@@ -222,10 +222,16 @@
 }
 
 .footer{
-  color: $body-grey;
+  color: rgba(0,0,0,0.3);
   margin: 0;
-  font-size: 16px;
+  font-size: 10px;
   font-family: $font-code;
+}
+#footer {
+  margin-top: 24px;
+  .horizontal_list_item {
+    font-size: 12px;
+  }
 }
 
 .moon-orbit {

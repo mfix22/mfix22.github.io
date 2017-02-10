@@ -9,16 +9,6 @@ const Slider = require('./Slider')
 
 require('react-tap-event-plugin')()
 
-const {
-  REACT,
-  SASS,
-  BOOTSTRAP,
-  JS,
-  HTML,
-  CSS,
-  ATOM
-} = require('../../assets/company_logos')
-
 const projectOrder = [
   'alchemy',
   'squad',
@@ -79,15 +69,6 @@ class App extends React.Component {
               )
             )
           }
-          <div className="row text-center" id="footer">
-            <p className="footer">
-              <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
-            </p>
-            <HorizontalIconList
-              icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
-            />
-          <p className="footer">by Michael Fix &copy; 2016</p>
-          </div>
         </div>
       </MuiThemeProvider>
     )

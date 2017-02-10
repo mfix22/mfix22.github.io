@@ -52,12 +52,16 @@
 	var _require = __webpack_require__(32),
 	    render = _require.render;
 
+	var Footer = __webpack_require__(377);
+
 	__webpack_require__(178)();
 
 	// local modules
 	var App = __webpack_require__(193);
 
 	render(React.createElement(App, null), document.getElementById('root'));
+
+	render(React.createElement(Footer, null), document.getElementById('madewith'));
 
 /***/ },
 /* 1 */
@@ -34188,15 +34192,6 @@
 
 	__webpack_require__(371)();
 
-	var _require2 = __webpack_require__(344),
-	    REACT = _require2.REACT,
-	    SASS = _require2.SASS,
-	    BOOTSTRAP = _require2.BOOTSTRAP,
-	    JS = _require2.JS,
-	    HTML = _require2.HTML,
-	    CSS = _require2.CSS,
-	    ATOM = _require2.ATOM;
-
 	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
 
 	var App = function (_React$Component) {
@@ -34250,27 +34245,7 @@
 	                }, planet));
 	              })
 	            );
-	          }),
-	          React.createElement(
-	            'div',
-	            { className: 'row text-center', id: 'footer' },
-	            React.createElement(
-	              'p',
-	              { className: 'footer' },
-	              React.createElement('span', { className: 'octicon octicon-terminal' }),
-	              ' with ',
-	              React.createElement('i', { className: 'icon ion-coffee footer-icon' }),
-	              ' and'
-	            ),
-	            React.createElement(HorizontalIconList, {
-	              icons: [REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]
-	            }),
-	            React.createElement(
-	              'p',
-	              { className: 'footer' },
-	              'by Michael Fix \xA9 2016'
-	            )
-	          )
+	          })
 	        )
 	      );
 	    }
@@ -42050,7 +42025,7 @@
 	      technologies = _ref.technologies;
 	  return React.createElement(
 	    'div',
-	    { className: 'col-md-4 col-sm-6 col-xs-12' },
+	    { className: 'col-md-4 col-sm-6 col-xs-12 planet_wrapper' },
 	    React.createElement(
 	      'div',
 	      { className: 'planet_container' },
@@ -44838,6 +44813,48 @@
 	};
 
 	module.exports = keyOf;
+
+/***/ },
+/* 377 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var HorizontalIconList = __webpack_require__(347);
+
+	var _require = __webpack_require__(344),
+	    REACT = _require.REACT,
+	    SASS = _require.SASS,
+	    BOOTSTRAP = _require.BOOTSTRAP,
+	    JS = _require.JS,
+	    HTML = _require.HTML,
+	    CSS = _require.CSS,
+	    ATOM = _require.ATOM;
+
+	var Footer = function Footer() {
+	  return React.createElement(
+	    'div',
+	    { className: 'row text-center', id: 'footer' },
+	    React.createElement(
+	      'p',
+	      { className: 'footer' },
+	      React.createElement('span', { className: 'octicon octicon-terminal' }),
+	      ' with ',
+	      React.createElement('i', { className: 'icon ion-coffee footer-icon' }),
+	      ' and'
+	    ),
+	    React.createElement(HorizontalIconList, {
+	      icons: [REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]
+	    }),
+	    React.createElement(
+	      'p',
+	      { className: 'footer' },
+	      'by michael fix \xA9 2017'
+	    )
+	  );
+	};
+	module.exports = Footer;
 
 /***/ }
 /******/ ]);
