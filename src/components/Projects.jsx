@@ -1,11 +1,9 @@
-const React = require('react')
-const FlipMove = require('react-flip-move')
+import React from 'react'
+import FlipMove from 'react-flip-move'
 
-const PROJECTS = require('../../assets/projects')
-const { chunk } = require('../helpers/util')
-const PlanetCard = require('./PlanetCard')
-const HorizontalIconList = require('./HorizontalIconList')
-const Slider = require('./Slider')
+import PROJECTS from '../../assets/projects'
+import PlanetCard from './PlanetCard'
+import Slider from './Slider'
 
 const projectOrder = [
   'alchemy',
@@ -27,14 +25,14 @@ const projectOrder = [
 ]
 
 class Projects extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       value: 5
     }
   }
 
-  render() {
+  render () {
     return (
       <div>
         <Slider
@@ -44,7 +42,7 @@ class Projects extends React.Component {
             })
           }}
         />
-        <div className="row">
+        <div className='row'>
           <FlipMove duration={175} style={{ display: 'flex', flexFlow: 'row wrap' }}>
             {
               projectOrder.map(id => PROJECTS[id])

@@ -1,5 +1,5 @@
-const React = require('react')
-const POSTS = require('../../assets/posts')
+import React from 'react'
+import POSTS from '../../assets/posts'
 
 const postOrder = [
   'alchemy',
@@ -11,15 +11,15 @@ const postOrder = [
 ]
 
 const Posts = () => (
-  <div className="writing">
-    <u className="writing__link header">posts</u>
+  <div className='writing'>
+    <u className='writing__link header'>posts</u>
     {
       postOrder
         .map(key => POSTS[key])
         .map(post => (
           <a
-            target="_blank"
-            className="writing__link"
+            target='_blank'
+            className='writing__link'
             href={post.link}
             key={post.header}
           >
@@ -27,7 +27,7 @@ const Posts = () => (
           </a>
         ))
     }
-    <a target="_blank" className="writing__link" href="https://medium.com/@fixitup2">
+    <a target='_blank' className='writing__link' href='https://medium.com/@fixitup2'>
       ...
     </a>
   </div>

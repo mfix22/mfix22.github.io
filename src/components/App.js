@@ -15,15 +15,15 @@ const App = () => (
       accent1Color: '#1C4B9C',
     }
   })}>
-    <div className="main col-md-12 col-sm-12 col-xs-12" id="main">
-      <div className="row">
-        <div className="col-md-3 col-xs-12">
+    <div className='main col-md-12 col-sm-12 col-xs-12' id='main'>
+      <div className='row'>
+        <div className='col-md-3 col-xs-12'>
           <Bio />
         </div>
-        <div className="col-md-3 col-xs-12">
+        <div className='col-md-3 col-xs-12'>
           <Posts />
         </div>
-        <div className="col-md-6 col-xs-12">
+        <div className='col-md-6 col-xs-12'>
           <Projects />
         </div>
       </div>

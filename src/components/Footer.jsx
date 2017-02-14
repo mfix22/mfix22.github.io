@@ -1,4 +1,5 @@
-const React = require('react')
+import React from 'react'
+
 const HorizontalIconList = require('./HorizontalIconList')
 const {
   REACT,
@@ -11,14 +12,14 @@ const {
 } = require('../../assets/company_logos')
 
 const Footer = () => (
-  <div className="row text-center" id="footer">
-    <p className="footer">
-      <span className="octicon octicon-terminal" /> with <i className="icon ion-coffee footer-icon"></i> and
+  <div className='row text-center' id='footer'>
+    <p className='footer'>
+      <span className='octicon octicon-terminal' /> with <i className='icon ion-coffee footer-icon' /> and
     </p>
     <HorizontalIconList
       icons={[REACT, SASS, BOOTSTRAP, JS, HTML, CSS, ATOM]}
     />
-  <p className="footer">by michael fix &copy; 2017</p>
+    <p className='footer'>by michael fix &copy; 2017</p>
   </div>
 )
 module.exports = Footer
