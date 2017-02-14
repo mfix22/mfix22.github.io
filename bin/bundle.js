@@ -34164,14 +34164,6 @@
 
 	'use strict';
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 	var React = __webpack_require__(1);
 	var MuiThemeProvider = __webpack_require__(194).default;
 	var getMuiTheme = __webpack_require__(281).default;
@@ -34188,93 +34180,44 @@
 
 	var Posts = __webpack_require__(379);
 	var Bio = __webpack_require__(381);
+	var Projects = __webpack_require__(389);
 
 	__webpack_require__(382)();
 
-	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
-
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
-
-	  function App(props) {
-	    _classCallCheck(this, App);
-
-	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-	    _this.state = {
-	      value: 5
-	    };
-	    return _this;
-	  }
-
-	  _createClass(App, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      return React.createElement(
-	        MuiThemeProvider,
-	        { muiTheme: getMuiTheme({
-	            palette: {
-	              primary1Color: '#1C4B9C',
-	              accent1Color: '#1C4B9C'
-	            }
-	          }) },
+	var App = function App() {
+	  return React.createElement(
+	    MuiThemeProvider,
+	    { muiTheme: getMuiTheme({
+	        palette: {
+	          primary1Color: '#1C4B9C',
+	          accent1Color: '#1C4B9C'
+	        }
+	      }) },
+	    React.createElement(
+	      'div',
+	      { className: 'main col-md-12 col-sm-12 col-xs-12', id: 'main' },
+	      React.createElement(
+	        'div',
+	        { className: 'row' },
 	        React.createElement(
-	          'section',
-	          null,
-	          React.createElement(
-	            'div',
-	            { className: 'col-md-3 col-xs-12' },
-	            React.createElement(Bio, null)
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'col-md-3 col-xs-12' },
-	            React.createElement(Posts, null)
-	          ),
-	          React.createElement(
-	            'div',
-	            { className: 'col-md-6 col-xs-12' },
-	            React.createElement(Slider, {
-	              onChange: function onChange(value) {
-	                _this2.setState({
-	                  value: value * 10
-	                });
-	              }
-	            }),
-	            React.createElement(
-	              'div',
-	              { className: 'row' },
-	              React.createElement(
-	                FlipMove,
-	                { duration: 175, style: { display: 'flex', flexFlow: 'row wrap' } },
-	                projectOrder.map(function (id) {
-	                  return PROJECTS[id];
-	                }).filter(function (p) {
-	                  return Math.abs(_this2.state.value - p.value) <= 4.5;
-	                }).map(function (planet, index) {
-	                  return React.createElement(
-	                    'div',
-	                    {
-	                      key: planet.header,
-	                      style: {
-	                        flexBasis: '33%'
-	                      }
-	                    },
-	                    React.createElement(PlanetCard, planet)
-	                  );
-	                })
-	              )
-	            )
-	          )
+	          'div',
+	          { className: 'col-md-3 col-xs-12' },
+	          React.createElement(Bio, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-md-3 col-xs-12' },
+	          React.createElement(Posts, null)
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-md-6 col-xs-12' },
+	          React.createElement(Projects, null)
 	        )
-	      );
-	    }
-	  }]);
-
-	  return App;
-	}(React.Component);
+	      )
+	    )
+	  );
+	};
 
 	module.exports = App;
 
@@ -46501,6 +46444,96 @@
 	  );
 	};
 	module.exports = Footer;
+
+/***/ },
+/* 389 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(1);
+	var FlipMove = __webpack_require__(343);
+
+	var PROJECTS = __webpack_require__(351);
+
+	var _require = __webpack_require__(353),
+	    chunk = _require.chunk;
+
+	var PlanetCard = __webpack_require__(354);
+	var HorizontalIconList = __webpack_require__(355);
+	var Slider = __webpack_require__(356);
+
+	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
+
+	var Projects = function (_React$Component) {
+	  _inherits(Projects, _React$Component);
+
+	  function Projects(props) {
+	    _classCallCheck(this, Projects);
+
+	    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
+
+	    _this.state = {
+	      value: 5
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Projects, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(Slider, {
+	          onChange: function onChange(value) {
+	            _this2.setState({
+	              value: value * 10
+	            });
+	          }
+	        }),
+	        React.createElement(
+	          'div',
+	          { className: 'row' },
+	          React.createElement(
+	            FlipMove,
+	            { duration: 175, style: { display: 'flex', flexFlow: 'row wrap' } },
+	            projectOrder.map(function (id) {
+	              return PROJECTS[id];
+	            }).filter(function (p) {
+	              return Math.abs(_this2.state.value - p.value) <= 4.5;
+	            }).map(function (planet, index) {
+	              return React.createElement(
+	                'div',
+	                {
+	                  key: planet.header,
+	                  style: {
+	                    flexBasis: '33%'
+	                  }
+	                },
+	                React.createElement(PlanetCard, planet)
+	              );
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Projects;
+	}(React.Component);
+
+	module.exports = Projects;
 
 /***/ }
 /******/ ]);
