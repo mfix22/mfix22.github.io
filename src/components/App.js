@@ -1,17 +1,10 @@
-const React = require('react')
-const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
-const getMuiTheme = require('material-ui/styles/getMuiTheme').default
-const FlipMove = require('react-flip-move')
+import React from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
-const PROJECTS = require('../../assets/projects')
-const { chunk } = require('../helpers/util')
-const PlanetCard = require('./PlanetCard')
-const HorizontalIconList = require('./HorizontalIconList')
-const Slider = require('./Slider')
-
-const Posts = require('./Posts')
-const Bio = require('./Bio')
-const Projects = require('./Projects')
+import Posts from './Posts'
+import Bio from './Bio'
+import Projects from './Projects'
 
 require('react-tap-event-plugin')()
 
