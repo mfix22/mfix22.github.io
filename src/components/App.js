@@ -9,6 +9,8 @@ const PlanetCard = require('./PlanetCard')
 const HorizontalIconList = require('./HorizontalIconList')
 const Slider = require('./Slider')
 
+const Posts = require('./Posts')
+
 require('react-tap-event-plugin')()
 
 const projectOrder = [
@@ -46,33 +48,38 @@ class App extends React.Component {
           accent1Color: '#1C4B9C',
         }
       })}>
-        <div>
-          <Slider
-            onChange={(value) => {
-              this.setState({
-                value: value * 10
-              })
-            }}
-          />
-        <div className="row">
-            <FlipMove duration={175} style={{ display: 'flex', flexFlow: 'row wrap' }}>
-              {
-                projectOrder.map(id => PROJECTS[id])
-                            .filter(p => Math.abs(this.state.value - p.value) <= 4.5)
-                            .map((planet, index) => (
-                              <div
-                                key={planet.header}
-                                style={{
-                                  flexBasis: '33%',
-                                }}
-                              >
-                                <PlanetCard {...planet} />
-                              </div>
-                            ))
-              }
-            </FlipMove>
+        <section>
+          <div className="col-md-3 col-xs-12">
+            <Posts />
           </div>
-        </div>
+          <div className="col-md-6 col-xs-12">
+            <Slider
+              onChange={(value) => {
+                this.setState({
+                  value: value * 10
+                })
+              }}
+              />
+            <div className="row">
+              <FlipMove duration={175} style={{ display: 'flex', flexFlow: 'row wrap' }}>
+                {
+                  projectOrder.map(id => PROJECTS[id])
+                  .filter(p => Math.abs(this.state.value - p.value) <= 4.5)
+                  .map((planet, index) => (
+                    <div
+                      key={planet.header}
+                      style={{
+                        flexBasis: '33%',
+                      }}
+                      >
+                      <PlanetCard {...planet} />
+                    </div>
+                  ))
+                }
+              </FlipMove>
+            </div>
+          </div>
+        </section>
       </MuiThemeProvider>
     )
   }

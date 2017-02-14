@@ -64,8 +64,6 @@
 
 	render(React.createElement(Footer, null), document.getElementById('madewith'));
 
-	render(React.createElement(Posts, null), document.getElementById('posts'));
-
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
@@ -34458,6 +34456,8 @@
 	var HorizontalIconList = __webpack_require__(179);
 	var Slider = __webpack_require__(359);
 
+	var Posts = __webpack_require__(181);
+
 	__webpack_require__(382)();
 
 	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
@@ -34490,37 +34490,46 @@
 	            }
 	          }) },
 	        React.createElement(
-	          'div',
+	          'section',
 	          null,
-	          React.createElement(Slider, {
-	            onChange: function onChange(value) {
-	              _this2.setState({
-	                value: value * 10
-	              });
-	            }
-	          }),
 	          React.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'col-md-3 col-xs-12' },
+	            React.createElement(Posts, null)
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'col-md-6 col-xs-12' },
+	            React.createElement(Slider, {
+	              onChange: function onChange(value) {
+	                _this2.setState({
+	                  value: value * 10
+	                });
+	              }
+	            }),
 	            React.createElement(
-	              FlipMove,
-	              { duration: 175, style: { display: 'flex', flexFlow: 'row wrap' } },
-	              projectOrder.map(function (id) {
-	                return PROJECTS[id];
-	              }).filter(function (p) {
-	                return Math.abs(_this2.state.value - p.value) <= 4.5;
-	              }).map(function (planet, index) {
-	                return React.createElement(
-	                  'div',
-	                  {
-	                    key: planet.header,
-	                    style: {
-	                      flexBasis: '33%'
-	                    }
-	                  },
-	                  React.createElement(PlanetCard, planet)
-	                );
-	              })
+	              'div',
+	              { className: 'row' },
+	              React.createElement(
+	                FlipMove,
+	                { duration: 175, style: { display: 'flex', flexFlow: 'row wrap' } },
+	                projectOrder.map(function (id) {
+	                  return PROJECTS[id];
+	                }).filter(function (p) {
+	                  return Math.abs(_this2.state.value - p.value) <= 4.5;
+	                }).map(function (planet, index) {
+	                  return React.createElement(
+	                    'div',
+	                    {
+	                      key: planet.header,
+	                      style: {
+	                        flexBasis: '33%'
+	                      }
+	                    },
+	                    React.createElement(PlanetCard, planet)
+	                  );
+	                })
+	              )
 	            )
 	          )
 	        )

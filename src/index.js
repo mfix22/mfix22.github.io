@@ -18,8 +18,3 @@ render(
   <Footer />,
   document.getElementById('madewith')
 )
-
-render(
-  <Posts />,
-  document.getElementById('posts')
-)
