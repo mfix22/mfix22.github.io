@@ -10,6 +10,7 @@ const HorizontalIconList = require('./HorizontalIconList')
 const Slider = require('./Slider')
 
 const Posts = require('./Posts')
+const Bio = require('./Bio')
 
 require('react-tap-event-plugin')()
 
@@ -49,6 +50,9 @@ class App extends React.Component {
         }
       })}>
         <section>
+          <div className="col-md-3 col-xs-12">
+            <Bio />
+          </div>
           <div className="col-md-3 col-xs-12">
             <Posts />
           </div>
