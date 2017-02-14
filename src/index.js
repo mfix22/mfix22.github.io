@@ -2,6 +2,7 @@
 const React = require('react')
 const { render } = require('react-dom')
 const Footer = require('./components/Footer')
+const Posts = require('./components/Posts')
 
 require('./helpers/configure')()
 
@@ -16,4 +17,9 @@ render(
 render(
   <Footer />,
   document.getElementById('madewith')
+)
+
+render(
+  <Posts />,
+  document.getElementById('posts')
 )
