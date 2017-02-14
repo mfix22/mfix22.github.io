@@ -18,14 +18,8 @@ $ebony: rgb(11, 14, 30);
 $toolip-color: $ebony;
 $bluegrey: #1C4B9C;
 
-@font-face {
-    font-family:"Courier";
-    src: url("../fonts/cour.ttf") /* EOT file for IE */
-}
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
-
-$font-main: 'Ubuntu', sans-serif;
 $font-code: "Lucida Console", Monaco, monospace;
+$font-main: $font-code;
 
 @import 'reset';
 @import 'main';
