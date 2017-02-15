@@ -1,10 +1,10 @@
-module.exports =  {
+module.exports = {
   alchemy: {
     link: 'https://dawnlabs.github.io/blog/alchemy/',
     header: 'alchemy',
   },
   slippery: {
-    link: "https://medium.com/@fixitup2/slippery-616d2390aebb",
+    link: 'https://medium.com/@fixitup2/slippery-616d2390aebb',
     header: 'slippery ingredients'
   },
   purple: {
@@ -20,7 +20,7 @@ module.exports =  {
     header: 'track my summer of growth'
   },
   ram: {
-    link: 'https://medium.com/@fixitup2/random-access-messaging-743c897a9d24#.ezy36pelh',
+    link: 'https://medium.com/@fixitup2/random-access-messaging-743c897a9d24',
     header: 'random access messaging'
   }
 }
