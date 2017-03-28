@@ -6,6 +6,7 @@ import PlanetCard from './PlanetCard'
 import Slider from './Slider'
 
 const projectOrder = [
+  'gest',
   'alchemy',
   'squad',
   'squadbot',

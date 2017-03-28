@@ -16,6 +16,14 @@ const {
 } = require('../assets/company_logos')
 
 module.exports = {
+  gest: {
+    desc: 'A sensible GraphQL testing CLI - test your GraphQL schema locally and in the cloud',
+    img: 'gest.png',
+    link: 'https://github.com/mfix22/graphicli',
+    header: '`gest`',
+    technologies: [JS],
+    value: 9
+  },
   nature: {
     desc: 'Atom theme inspired by nature, built with Javascript and React in mind.',
     img: 'nature-syntax.png',
@@ -87,7 +95,7 @@ module.exports = {
     link: 'http://bot.squadup.io',
     header: 'SquadBot',
     technologies: [SLACK, NODE, MONGO, JS],
-    value: 8
+    value: 5
   },
   automaton: {
     desc: 'Advertising that drives itself, custom site.',

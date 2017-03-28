@@ -42176,7 +42176,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var projectOrder = ['alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
+	var projectOrder = ['gest', 'alchemy', 'squad', 'squadbot', 'librarify', 'tm', 'emily', 'what3words', 'bandwagon', 'transcend', 'nature', 'resource_map', 'automaton'];
 	
 	var Projects = function (_React$Component) {
 	  _inherits(Projects, _React$Component);
@@ -43668,6 +43668,14 @@
 	    ATOM = _require.ATOM;
 	
 	module.exports = {
+	  gest: {
+	    desc: 'A sensible GraphQL testing CLI - test your GraphQL schema locally and in the cloud',
+	    img: 'gest.png',
+	    link: 'https://github.com/mfix22/graphicli',
+	    header: '`gest`',
+	    technologies: [JS],
+	    value: 9
+	  },
 	  nature: {
 	    desc: 'Atom theme inspired by nature, built with Javascript and React in mind.',
 	    img: 'nature-syntax.png',
@@ -43739,12 +43747,12 @@
 	    link: 'http://bot.squadup.io',
 	    header: 'SquadBot',
 	    technologies: [SLACK, NODE, MONGO, JS],
-	    value: 8
+	    value: 5
 	  },
 	  automaton: {
 	    desc: 'Advertising that drives itself, custom site.',
 	    img: 'automaton.png',
-	    link: 'http://automatonads.com',
+	    link: 'https://github.com/mfix22/automaton-site',
 	    header: 'Automaton',
 	    technologies: [CSS, HTML, INKSCAPE, JQUERY, JS],
 	    value: 2
