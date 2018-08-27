@@ -10,13 +10,15 @@ import {
   Image as BaseImage,
   BlockLink,
   Link,
-  Truncate
+  Truncate,
+  Relative,
+  Absolute
 } from 'rebass'
 import Modal from './Modal'
 
 import Feed from 'feed-to-json-promise'
-const feed = new Feed()
 import writings from '../static/writings.json'
+const feed = new Feed()
 
 const VHS = styled(Flex)`
   font-family: 'Reenie Beanie', cursive;
@@ -30,6 +32,32 @@ const VHS = styled(Flex)`
 
 const Image = styled(BaseImage)`
   cursor: pointer;
+`
+
+const Frame = styled(Box)`
+  border: 4px solid #ab7036;
+  border-right-color: #503516;
+  border-bottom-color: #ab7036;
+  border-left-color: #7c5227;
+`
+
+const St = styled(Box)`
+  display: flex;
+  justify-content: center;
+  width: 0;
+  height: 0;
+
+  ${props => `
+    border-left: ${props.width || 40}px solid transparent;
+    border-right: ${props.width || 40}px solid transparent;
+    border-bottom: ${props.height || 12}px solid ${props.color};
+  `};
+`
+
+const Circle = styled(Box)`
+  width: 2px;
+  height: 2px;
+  border-radius: 99999px;
 `
 
 class IFrame extends React.Component {
@@ -98,23 +126,25 @@ class Books extends React.Component {
       return (
         <Flex alignItems="flex-end">
           {this.state.items.map((item, i) => (
-            <Border
-              key={item.guid}
-              bg={colors[i]}
-              p={1}
-              border={1}
-              borderColor="rgba(0,0,0, 0.5)"
-              css={{
-                height: 'auto',
-                maxHeight: '175px',
-                borderRadius: '2px',
-                writingMode: 'vertical-rl',
-                textOrientation: 'mixed',
-                fontFamily: "'Bitter', serif"
-              }}
-            >
-              <Truncate fontSize="12px">{item.title}</Truncate>
-            </Border>
+            <BlockLink href={item.link} target="_blank">
+              <Border
+                key={item.guid}
+                bg={colors[i]}
+                p={1}
+                border={1}
+                borderColor="rgba(0,0,0, 0.5)"
+                css={{
+                  height: 'auto',
+                  maxHeight: '175px',
+                  borderRadius: '2px',
+                  writingMode: 'vertical-rl',
+                  textOrientation: 'mixed',
+                  fontFamily: "'Bitter', serif"
+                }}
+              >
+                <Truncate fontSize={0}>{item.title}</Truncate>
+              </Border>
+            </BlockLink>
           ))}
         </Flex>
       )
@@ -149,9 +179,13 @@ const sections = [
           width: 72
         },
         portal: proj => (
-          <Link href={proj.link} target="_blank">
+          <BlockLink
+            href={proj.link}
+            target="_blank"
+            css={{ overflowY: 'hidden' }}
+          >
             <Image bg="black" src="/static/img/alchemy-ss.png" alt="Alchemy" />
-          </Link>
+          </BlockLink>
         ),
         link: 'https://dawnlabs.io/alchemy'
       },
@@ -210,10 +244,21 @@ const sections = [
     id: 'art',
     examples: [
       {
-        img: {
-          src: '/static/img/emily.png',
-          width: 64
-        },
+        Component: () => (
+          <Flex flexDirection="column" alignItems="center">
+            <Circle bg="#aaa" mb="-1px" />
+            <St color="black">
+              <St color="#78D1E8" mt="1px" />
+            </St>
+            <Frame mb={2}>
+              <Image
+                src="/static/img/emily.png"
+                width={72}
+                alt="Emily Hansel"
+              />
+            </Frame>
+          </Flex>
+        ),
         link: 'https://emilyhansel.me',
         portal: proj => (
           <Link href={proj.link}>
@@ -227,19 +272,38 @@ const sections = [
     id: 'misc',
     examples: [
       {
-        img: {
-          src: '/static/img/bandwagon.png',
-          width: 64
-        },
+        Component: proj => (
+          <BlockLink href={proj.link} target="_blank">
+            <Relative bg="black" p="2px">
+              <Absolute
+                top={24}
+                left={-1}
+                css={{ transform: 'rotate(-45deg)', fontFamily: 'monospace' }}
+              >
+                <Text fontSize={0} color="red">
+                  US Patent #20150321727
+                </Text>
+              </Absolute>
+              <Image src={proj.image} width={80} alt={proj.description} />
+            </Relative>
+          </BlockLink>
+        ),
+        image: '/static/img/bandwagon.png',
+        description: 'Band Wagon: Patent #US 20150321727 A1',
         link:
           'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503'
       },
       {
-        img: {
-          src: '/static/img/tm.png',
-          width: 64
-        },
-        link: 'http://transcenduw.com/'
+        Component: proj => (
+          <BlockLink href={proj.link} target="_blank">
+            <Relative bg="black" p="2px">
+              <Image src={proj.image} width={72} alt={proj.description} />
+            </Relative>
+          </BlockLink>
+        ),
+        image: '/static/img/tm.png',
+        description: 'Transcend Madison Innovation Competition',
+        link: 'https://transcenduw.com/'
       }
     ]
   }
@@ -263,13 +327,7 @@ class Project extends React.Component {
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
-        <Box
-          cursor="pointer"
-          onClick={this.select}
-          key={proj.link}
-          href={proj.link}
-          mr={4}
-        >
+        <Box onClick={this.select} key={proj.link} href={proj.link} mr={4}>
           {child}
           {this.state.clicked &&
             proj.portal &&
@@ -290,9 +348,9 @@ const Projects = () => {
       {sections.map(section => (
         <Flex
           key={section.id}
-          css={{ borderBottom: '14px solid #936948' }}
+          css={{ borderBottom: '12px solid #936948' }}
           pl={2}
-          mb={4}
+          mb={3}
           alignItems="flex-end"
         >
           <Box mr={6}>

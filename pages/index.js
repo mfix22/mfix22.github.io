@@ -25,7 +25,7 @@ class Index extends React.Component {
       <Box is="main" mt={3} pl={5}>
         <Flex justifyContent="center" alignItems="center">
           <Box width={1 / 2}>
-            <Heading mb={5} fontSize={96}>
+            <Heading mb={4} fontSize={96}>
               Hi, i'm Mike
             </Heading>
             <A>
