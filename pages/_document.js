@@ -163,7 +163,7 @@ export default class extends Document {
           <title>Mike Fix</title>
           {this.props.styleTags}
           <link
-            href="https://fonts.googleapis.com/css?family=Reenie+Beanie"
+            href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Bitter"
             rel="stylesheet"
           />
         </Head>

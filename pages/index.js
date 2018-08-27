@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Flex, Heading, Drawer, Overlay } from 'rebass'
 import styled from 'styled-components'
-import Feed from 'feed-to-json-promise'
 
 import Projects from '../components/Projects'
 
@@ -21,18 +20,6 @@ const B = styled(Flex)`
 `
 
 class Index extends React.Component {
-  static getInitialProps({ req }) {
-    if (!req) {
-      // const feed = new Feed()
-      // feed.load('https://medium.com/feed/@fixitup2')
-      //   .then(feed => {
-      //     console.log(feed)
-      //   }).catch(error => {
-      //     console.error(error)
-      //   })
-    }
-    return {}
-  }
   render() {
     return (
       <Box is="main" mt={3} pl={5}>

@@ -94,7 +94,6 @@ class Books extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     if (this.state.title) {
       return (
         <Flex alignItems="flex-end">
@@ -107,10 +106,11 @@ class Books extends React.Component {
               borderColor="rgba(0,0,0, 0.5)"
               css={{
                 height: 'auto',
-                maxHeight: '160px',
+                maxHeight: '175px',
                 borderRadius: '2px',
                 writingMode: 'vertical-rl',
-                textOrientation: 'mixed'
+                textOrientation: 'mixed',
+                fontFamily: "'Bitter', serif"
               }}
             >
               <Truncate fontSize="12px">{item.title}</Truncate>
@@ -215,7 +215,11 @@ const sections = [
           width: 64
         },
         link: 'https://emilyhansel.me',
-        portal: proj => <IFrame src={proj.link} width="100%" height="100%" />
+        portal: proj => (
+          <Link href={proj.link}>
+            <Image src="/static/img/emily.gif" alt="Emily Hansel dancing" />
+          </Link>
+        )
       }
     ]
   },
