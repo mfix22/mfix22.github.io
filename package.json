@@ -1,13 +1,11 @@
 {
-  "name": "me",
-  "version": "0.1.0",
-  "description": "Proof of my work life",
-  "main": "bin/bundle.js",
+  "name": "mfix22",
+  "version": "0.2.0",
+  "description": "Proof of me",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "sass": "sass --watch scss:css",
-    "serve": "python -m SimpleHTTPServer 8000"
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -17,38 +15,14 @@
     "portfolio"
   ],
   "author": "Michael Fix",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mfix22/me/issues"
-  },
-  "homepage": "https://github.com/mfix22/me",
+  "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-preset-react": "^6.5.0",
-    "bootstrap": "^3.3.7",
-    "classnames": "^2.2.5",
-    "jquery": "^3.1.0",
-    "material-ui": "^0.16.7",
-    "react": "^15.4.2",
-    "react-dom": "^15.1.0",
-    "react-flip-move": "^2.8.0",
-    "react-tap-event-plugin": "^2.0.1"
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-click-outside": "^3.0.1",
+    "react-dom": "^16.4.2",
+    "rebass": "^2.0.0-10",
+    "styled-components": "^3.4.5"
   },
-  "devDependencies": {
-    "css-loader": "^0.23.1",
-    "eslint": "^3.15.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-config-standard-react": "^4.2.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-promise": "^3.4.1",
-    "eslint-plugin-react": "^6.9.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "file-loader": "^0.9.0",
-    "node-sass": "^3.8.0",
-    "sass-loader": "^4.0.0",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.1"
-  }
+  "devDependencies": {}
 }
