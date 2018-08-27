@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Flex, Heading, Drawer, Overlay} from 'rebass'
+import { Box, Flex, Heading, Drawer, Overlay } from 'rebass'
 import styled from 'styled-components'
 import Feed from 'feed-to-json-promise'
 
@@ -30,20 +30,20 @@ class Index extends React.Component {
       //   }).catch(error => {
       //     console.error(error)
       //   })
-
-
     }
     return {}
   }
-  render () {
+  render() {
     return (
       <Box is="main" mt={3} pl={5}>
         <Flex justifyContent="center" alignItems="center">
-          <Box width={1/2}>
-            <Heading mb={5} fontSize={96}>Hi, i'm Mike</Heading>
-              <A>
-                <B id="portal" open={true} bg="black" />
-              </A>
+          <Box width={1 / 2}>
+            <Heading mb={5} fontSize={96}>
+              Hi, i'm Mike
+            </Heading>
+            <A>
+              <B id="portal" open={true} bg="black" />
+            </A>
           </Box>
           <Projects />
         </Flex>

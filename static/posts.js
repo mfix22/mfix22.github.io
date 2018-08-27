@@ -1,7 +1,7 @@
 module.exports = {
   alchemy: {
     link: 'https://dawnlabs.github.io/blog/alchemy/',
-    header: 'alchemy',
+    header: 'alchemy'
   },
   slippery: {
     link: 'https://medium.com/@fixitup2/slippery-616d2390aebb',
@@ -12,7 +12,8 @@ module.exports = {
     header: 'purple'
   },
   airbnb: {
-    link: 'https://medium.com/@fixitup2/airbnb-whims-part-1-why-it-matters-a54012a9cf3b',
+    link:
+      'https://medium.com/@fixitup2/airbnb-whims-part-1-why-it-matters-a54012a9cf3b',
     header: 'airbnb whims'
   },
   track: {

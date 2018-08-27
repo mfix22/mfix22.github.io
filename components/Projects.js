@@ -1,13 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import {Heading, Flex, Box, Text, Border, Image as BaseImage, BlockLink, Link, Truncate} from 'rebass'
-import Modal from './Modal';
+import {
+  Heading,
+  Flex,
+  Box,
+  Text,
+  Border,
+  Image as BaseImage,
+  BlockLink,
+  Link,
+  Truncate
+} from 'rebass'
+import Modal from './Modal'
 
 import Feed from 'feed-to-json-promise'
 const feed = new Feed()
 import writings from '../static/writings.json'
-
 
 const VHS = styled(Flex)`
   font-family: 'Reenie Beanie', cursive;
@@ -34,16 +43,16 @@ class IFrame extends React.Component {
   componentDidMount() {
     const component = this
     this.interval = setInterval(() => {
-      component.setState(({count}) => ({ count: (count + 1) % 3 }))
-    }, 300);
+      component.setState(({ count }) => ({ count: (count + 1) % 3 }))
+    }, 300)
   }
 
   componentWillUnmount() {
     clearInterval(this.interval)
   }
 
-  render () {
-    const {count} = this.state
+  render() {
+    const { count } = this.state
     return (
       <Flex justifyContent="center" alignItems="center" width="100%">
         {this.state.loading && (
@@ -56,12 +65,12 @@ class IFrame extends React.Component {
         <iframe
           style={{ display: this.state.loading ? 'none' : 'block' }}
           {...this.props}
-          onLoad={this.onLoad} />
+          onLoad={this.onLoad}
+        />
       </Flex>
     )
   }
 }
-
 
 const colors = [
   '#463730',
@@ -73,29 +82,38 @@ const colors = [
   '#7B7554',
   '#475B63',
   '#FFAD69',
-  '#53599A',
+  '#53599A'
 ]
 class Books extends React.Component {
   state = writings
-  componentDidMount(){
+  componentDidMount() {
     // TODO
     // feed.load('https://medium.com/feed/@fixitup2')
     //   .then(feed => this.setState(feed))
     //   .catch(console.error)
   }
 
-  render () {
-    console.log(this.state);
+  render() {
+    console.log(this.state)
     if (this.state.title) {
       return (
         <Flex alignItems="flex-end">
           {this.state.items.map((item, i) => (
             <Border
               key={item.guid}
-              bg={colors[i]} p={1} border={1} borderColor="rgba(0,0,0, 0.5)" css={{height: 'auto', maxHeight: '160px', borderRadius: '2px', writingMode: 'vertical-rl', textOrientation: 'mixed'}}>
-              <Truncate fontSize="12px">
-                {item.title}
-              </Truncate>
+              bg={colors[i]}
+              p={1}
+              border={1}
+              borderColor="rgba(0,0,0, 0.5)"
+              css={{
+                height: 'auto',
+                maxHeight: '160px',
+                borderRadius: '2px',
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed'
+              }}
+            >
+              <Truncate fontSize="12px">{item.title}</Truncate>
             </Border>
           ))}
         </Flex>
@@ -127,7 +145,7 @@ const sections = [
       {
         img: {
           src: '/static/img/alchemy.png',
-          css: {marginBottom: '-11px'},
+          css: { marginBottom: '-11px' },
           width: 72
         },
         portal: proj => (
@@ -141,7 +159,7 @@ const sections = [
         img: {
           src: '/static/img/tonic.png',
           width: 64,
-          css: {marginBottom: '-7px'},
+          css: { marginBottom: '-7px' }
         },
         link: 'https://github.com/mfix22/tonic'
       }
@@ -156,7 +174,13 @@ const sections = [
           <VHS bg="black" py={1} pr={2} pl={3}>
             <Flex p={1} bg="#fdfdfc" color="black" alignItems="center">
               <Text>GraphQL Summit (2018)</Text>
-              <Image ml={1} width={10} css={{display: 'inline-block'}} src="https://graphql.org/img/logo.svg" alt="GraphQL" />
+              <Image
+                ml={1}
+                width={10}
+                css={{ display: 'inline-block' }}
+                src="https://graphql.org/img/logo.svg"
+                alt="GraphQL"
+              />
             </Flex>
           </VHS>
         ),
@@ -191,13 +215,7 @@ const sections = [
           width: 64
         },
         link: 'https://emilyhansel.me',
-        portal: (proj) => (
-          <IFrame
-            src={proj.link}
-            width="100%"
-            height="100%"
-          />
-        )
+        portal: proj => <IFrame src={proj.link} width="100%" height="100%" />
       }
     ]
   },
@@ -209,14 +227,15 @@ const sections = [
           src: '/static/img/bandwagon.png',
           width: 64
         },
-        link: 'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503',
+        link:
+          'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503'
       },
       {
         img: {
           src: '/static/img/tm.png',
           width: 64
         },
-        link: 'http://transcenduw.com/',
+        link: 'http://transcenduw.com/'
       }
     ]
   }
@@ -227,22 +246,33 @@ class Project extends React.Component {
     clicked: false
   }
 
-  select = () => this.setState({clicked: true})
-  unselect = () => this.setState({clicked: false})
+  select = () => this.setState({ clicked: true })
+  unselect = () => this.setState({ clicked: false })
 
-  render () {
+  render() {
     const proj = this.props
-    const child = proj.img
-      ? <Image {...proj.img} />
-      : <proj.Component {...proj} />
+    const child = proj.img ? (
+      <Image {...proj.img} />
+    ) : (
+      <proj.Component {...proj} />
+    )
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
-        <Box cursor="pointer" onClick={this.select} key={proj.link} href={proj.link} mr={4} >
+        <Box
+          cursor="pointer"
+          onClick={this.select}
+          key={proj.link}
+          href={proj.link}
+          mr={4}
+        >
           {child}
-          {this.state.clicked && proj.portal && (
-            ReactDOM.createPortal(proj.portal(proj), document.getElementById('portal'))
-          )}
+          {this.state.clicked &&
+            proj.portal &&
+            ReactDOM.createPortal(
+              proj.portal(proj),
+              document.getElementById('portal')
+            )}
         </Box>
       </Modal>
     )
@@ -251,14 +281,22 @@ class Project extends React.Component {
 
 const Projects = () => {
   return (
-    <Flex width={1/2} flexDirection="column" alignItems="flex-end">
+    <Flex width={1 / 2} flexDirection="column" alignItems="flex-end">
       {/* Old borders: #C5A48A */}
       {sections.map(section => (
-        <Flex key={section.id} css={{borderBottom: '14px solid #936948'}} pl={2} mb={4} alignItems="flex-end">
+        <Flex
+          key={section.id}
+          css={{ borderBottom: '14px solid #936948' }}
+          pl={2}
+          mb={4}
+          alignItems="flex-end"
+        >
           <Box mr={6}>
             <Text fontSize={5}>{section.id}</Text>
           </Box>
-          {section.examples.map(proj => <Project key={proj.link} {...proj} />)}
+          {section.examples.map(proj => (
+            <Project key={proj.link} {...proj} />
+          ))}
         </Flex>
       ))}
     </Flex>

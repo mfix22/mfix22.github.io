@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
-import {Provider} from 'rebass'
+import { Provider } from 'rebass'
 
 injectGlobal`
 html,
@@ -147,9 +147,11 @@ body {
 `
 
 export default class extends Document {
-  static getInitialProps ({ renderPage }) {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    )
     const styleTags = sheet.getStyleElement()
     return { ...page, styleTags }
   }
@@ -160,7 +162,10 @@ export default class extends Document {
         <Head>
           <title>Mike Fix</title>
           {this.props.styleTags}
-          <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Reenie+Beanie"
+            rel="stylesheet"
+          />
         </Head>
         <Provider>
           <body>

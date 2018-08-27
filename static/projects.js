@@ -17,7 +17,8 @@ const {
 
 module.exports = {
   gest: {
-    desc: 'A sensible GraphQL testing CLI - test your GraphQL schema locally and in the cloud',
+    desc:
+      'A sensible GraphQL testing CLI - test your GraphQL schema locally and in the cloud',
     img: 'gest.png',
     link: 'https://github.com/mfix22/graphicli',
     header: '`gest`',
@@ -25,7 +26,8 @@ module.exports = {
     value: 9
   },
   nature: {
-    desc: 'Atom theme inspired by nature, built with Javascript and React in mind.',
+    desc:
+      'Atom theme inspired by nature, built with Javascript and React in mind.',
     img: 'nature-syntax.png',
     link: 'https://atom.io/themes/nature-syntax',
     header: 'Nature Theme',
@@ -49,7 +51,7 @@ module.exports = {
     value: 5
   },
   emily: {
-    desc: 'Emily Hansel\'s Portfolio Website - Dancer & Choreographer',
+    desc: "Emily Hansel's Portfolio Website - Dancer & Choreographer",
     img: 'emily.png',
     link: 'http://emilyhansel.me',
     header: 'Portfolio Sites',
@@ -57,9 +59,11 @@ module.exports = {
     value: 2
   },
   bandwagon: {
-    desc: 'Invention known at the Bandwagon Bike Trailer. This collapsible bike trailer can transport higher volumes while still storing easily. This project was completed alongside Katrina L. Ruedinger during freshman year at UW Madison.',
+    desc:
+      'Invention known at the Bandwagon Bike Trailer. This collapsible bike trailer can transport higher volumes while still storing easily. This project was completed alongside Katrina L. Ruedinger during freshman year at UW Madison.',
     img: 'bandwagon.png',
-    link: 'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503',
+    link:
+      'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503',
     header: 'US Patent 9321503 B2',
     technologies: [],
     value: 9
