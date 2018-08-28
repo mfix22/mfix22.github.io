@@ -41,7 +41,7 @@ const Frame = styled(Box)`
   border-left-color: #7c5227;
 `
 
-const St = styled(Box)`
+const Triangle = styled(Box)`
   display: flex;
   justify-content: center;
   width: 0;
@@ -247,9 +247,9 @@ const sections = [
         Component: () => (
           <Flex flexDirection="column" alignItems="center">
             <Circle bg="#aaa" mb="-1px" />
-            <St color="black">
-              <St color="#78D1E8" mt="1px" />
-            </St>
+            <Triangle color="black">
+              <Triangle color="#78D1E8" mt="1px" />
+            </Triangle>
             <Frame mb={2}>
               <Image
                 src="/static/img/emily.png"

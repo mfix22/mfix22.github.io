@@ -1,19 +1,30 @@
 import React from 'react'
-import { Box, Flex, Heading, Drawer, Overlay } from 'rebass'
+import {
+  Box,
+  Flex,
+  Heading,
+  Drawer,
+  Overlay,
+  Link,
+  Image,
+  Absolute
+} from 'rebass'
 import styled from 'styled-components'
 
 import Projects from '../components/Projects'
 
-const A = styled(Flex)`
+const Grey = styled(Flex)`
   border-radius: 4px;
   height: 350px;
+  /* #272729 */
   background: #aaa;
   justify-content: center;
   align-items: center;
   padding: 16px;
+  z-index: 9999;
 `
 
-const B = styled(Flex)`
+const Black = styled(Flex)`
   border-radius: 1px;
   width: 100%;
   height: 100%;
@@ -26,11 +37,27 @@ class Index extends React.Component {
         <Flex justifyContent="center" alignItems="center">
           <Box width={1 / 2}>
             <Heading mb={4} fontSize={96}>
-              Hi, i'm Mike
+              <Link href={null} color="white" textDecoration="none">
+                Hi, i'm Mike
+              </Link>
             </Heading>
-            <A>
-              <B id="portal" open={true} bg="black" />
-            </A>
+            <Flex flexDirection="column" css={{ position: 'relative' }}>
+              <Grey>
+                <Black id="portal" open={true} bg="black" />
+              </Grey>
+              <Absolute
+                left="50%"
+                top="100%"
+                mt="-5px"
+                css={{ transform: 'translateX(-50%)' }}
+              >
+                <Image
+                  width={215}
+                  src="/static/img/computer.png"
+                  alt="Computer Stand"
+                />
+              </Absolute>
+            </Flex>
           </Box>
           <Projects />
         </Flex>
