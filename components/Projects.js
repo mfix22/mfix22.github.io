@@ -136,6 +136,7 @@ class Books extends React.Component {
                 css={{
                   height: 'auto',
                   maxHeight: '175px',
+                  minHeight: '100px',
                   borderRadius: '2px',
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
@@ -244,34 +245,6 @@ const sections = [
     ]
   },
   {
-    id: 'art',
-    examples: [
-      {
-        Component: () => (
-          <Flex flexDirection="column" alignItems="center">
-            <Circle bg="#aaa" mb="-1px" />
-            <Triangle color="black">
-              <Triangle color="#78D1E8" mt="1px" />
-            </Triangle>
-            <Frame mb={2}>
-              <Image
-                src="/static/img/emily.png"
-                width={72}
-                alt="Emily Hansel"
-              />
-            </Frame>
-          </Flex>
-        ),
-        link: 'https://emilyhansel.me',
-        portal: proj => (
-          <Link href={proj.link}>
-            <Image src="/static/img/emily.gif" alt="Emily Hansel dancing" />
-          </Link>
-        )
-      }
-    ]
-  },
-  {
     id: 'misc',
     examples: [
       {
@@ -315,6 +288,29 @@ const sections = [
         image: '/static/img/tm.png',
         description: 'Transcend Madison Innovation Competition',
         link: 'https://transcenduw.com/'
+      },
+      {
+        Component: () => (
+          <Flex flexDirection="column" alignItems="center">
+            <Circle bg="#aaa" mb="-1px" />
+            <Triangle color="black">
+              <Triangle color="#78D1E8" mt="1px" />
+            </Triangle>
+            <Frame mb={4}>
+              <Image
+                src="/static/img/emily.png"
+                width={72}
+                alt="Emily Hansel"
+              />
+            </Frame>
+          </Flex>
+        ),
+        link: 'https://emilyhansel.me',
+        portal: proj => (
+          <Link href={proj.link}>
+            <Image src="/static/img/emily.gif" alt="Emily Hansel dancing" />
+          </Link>
+        )
       }
     ]
   }
