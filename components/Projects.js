@@ -14,8 +14,8 @@ import {
   Relative,
   Absolute
 } from 'rebass'
+import {Modal} from 'actionsack'
 
-import Modal from './Modal'
 import Books from './Books'
 
 const VHS = styled(Flex)`
@@ -191,7 +191,7 @@ const sections = [
     ]
   },
   {
-    id: 'misc',
+    id: 'misc.',
     examples: [
       {
         Component: proj => (
@@ -236,27 +236,21 @@ const sections = [
         link: 'https://transcenduw.com/'
       },
       {
-        Component: () => (
+        Component: proj => (
           <Flex flexDirection="column" alignItems="center">
             <Circle bg="#aaa" mb="-2px" />
             <Triangle color="black">
               <Triangle color="#78D1E8" mt="1px" />
             </Triangle>
             <Frame mb={4}>
-              <Image
-                src="/static/img/emily.png"
-                width={72}
-                alt="Emily Hansel"
-              />
+              <BlockLink href={proj.link} target="_blank">
+                {/* TODO */}
+                <div style={{ width: 72, height: 72, background: 'white'}} />
+              </BlockLink>
             </Frame>
           </Flex>
         ),
-        link: 'https://emilyhansel.me',
-        portal: proj => (
-          <Link href={proj.link}>
-            <Image src="/static/img/emily.gif" alt="Emily Hansel dancing" />
-          </Link>
-        )
+        link: 'https://emilyhansel.me'
       }
     ]
   }
