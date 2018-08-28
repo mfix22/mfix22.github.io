@@ -144,6 +144,10 @@ body {
 * {
   box-sizing: border-box;
 }
+
+img:not([alt]) {
+  border: 2px solid red !important;
+}
 `
 
 export default class extends Document {

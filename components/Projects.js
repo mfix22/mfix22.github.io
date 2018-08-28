@@ -53,9 +53,10 @@ const Triangle = styled(Box)`
 `
 
 const Circle = styled(Box)`
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   border-radius: 99999px;
+  z-index: 100;
 `
 
 class IFrame extends React.Component {
@@ -105,14 +106,16 @@ const sections = [
       {
         img: {
           src: 'https://carbon.now.sh/static/brand/icon.png',
-          width: 64
+          width: 64,
+          alt:
+            'Carbon - the easiest way to create and share beautiful images of your source code'
         },
         link: 'https://carbon.now.sh',
         portal: () => (
           <IFrame
-            src="https://carbon.now.sh/embed"
+            src="https://carbon.now.sh/embed?bg=rgba(80%2C227%2C194%2C1)&readonly=false&t=panda-syntax&wt=bw&l=javascript&pv=50px&ph=32px&code=%257B%250A%2520%2520title%253A%2520%27Carbon%27%252C%250A%2520%2520description%253A%2520%27Create%2520and%2520share%2520beautiful%2520images%2520of%2520your%2520code%27%252C%250A%2520%2520site%253A%2520%27https%253A%252F%252Fcarbon.now.sh%27%252C%250A%2520%2520repo%253A%2520%27https%253A%252F%252Fgithub.com%252Fdawnlabs%252Fcarbon%27%252C%250A%2520%2520author%253A%2520%27%2540dawnlabs%27%250A%257D"
             width="100%"
-            height="101%"
+            height="100%"
             frameBorder="0"
           />
         )
@@ -121,7 +124,8 @@ const sections = [
         img: {
           src: '/static/img/alchemy.png',
           css: { marginBottom: '-11px' },
-          width: 72
+          width: 72,
+          alt: 'Alchemy - desktop image merger and converter'
         },
         portal: proj => (
           <BlockLink
@@ -138,7 +142,8 @@ const sections = [
         img: {
           src: '/static/img/tonic.png',
           width: 64,
-          css: { marginBottom: '-7px' }
+          css: { marginBottom: '-7px' },
+          alt: 'Tonic - a bot that eases the burden of OSS maintainers'
         },
         link: 'https://github.com/mfix22/tonic'
       }
@@ -233,7 +238,7 @@ const sections = [
       {
         Component: () => (
           <Flex flexDirection="column" alignItems="center">
-            <Circle bg="#aaa" mb="-1px" />
+            <Circle bg="#aaa" mb="-2px" />
             <Triangle color="black">
               <Triangle color="#78D1E8" mt="1px" />
             </Triangle>

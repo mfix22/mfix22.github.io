@@ -23,10 +23,11 @@ const Grey = styled(Flex)`
   justify-content: center;
   align-items: center;
   padding: 16px;
-  z-index: 9999;
+  z-index: 2;
 `
 
 const Black = styled(Flex)`
+  background: black;
   border-radius: 1px;
   width: 100%;
   height: 100%;
@@ -45,7 +46,7 @@ class Index extends React.Component {
             </Heading>
             <Flex flexDirection="column" css={{ position: 'relative' }}>
               <Grey>
-                <Black id="portal" open={true} bg="black" />
+                <Black id="portal" />
               </Grey>
               <Absolute
                 left="50%"
@@ -59,12 +60,12 @@ class Index extends React.Component {
                   alt="Computer Stand"
                 />
               </Absolute>
-              <Absolute bottom="-100px" right="100px">
+              <Absolute bottom="-100px" left="100px" zIndex="3">
                 <BlockLink
                   href="https://www.buymeacoffee.com/fix"
                   target="_blank"
                 >
-                  <Coffee width={100} />
+                  <Coffee width={110} />
                 </BlockLink>
               </Absolute>
             </Flex>
