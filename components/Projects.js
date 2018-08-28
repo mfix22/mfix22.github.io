@@ -14,11 +14,9 @@ import {
   Relative,
   Absolute
 } from 'rebass'
-import Modal from './Modal'
 
-import Feed from 'feed-to-json-promise'
-import writings from '../static/writings.json'
-const feed = new Feed()
+import Modal from './Modal'
+import Books from './Books'
 
 const VHS = styled(Flex)`
   font-family: 'Reenie Beanie', cursive;
@@ -97,63 +95,6 @@ class IFrame extends React.Component {
         />
       </Flex>
     )
-  }
-}
-
-const colors = [
-  '#463730',
-  '#1F5673',
-  '#759FBC',
-  '#90C3C8',
-  '#9C9BC6',
-  '#50723C',
-  '#7B7554',
-  '#475B63',
-  '#FFAD69',
-  '#53599A'
-]
-class Books extends React.Component {
-  state = writings
-  componentDidMount() {
-    // TODO
-    // feed.load('https://medium.com/feed/@fixitup2')
-    //   .then(feed => this.setState(feed))
-    //   .catch(console.error)
-  }
-
-  render() {
-    if (this.state.title) {
-      return (
-        <Flex alignItems="flex-end">
-          {this.state.items.map((item, i) => (
-            <BlockLink href={item.link} target="_blank">
-              <Border
-                key={item.guid}
-                bg={colors[i]}
-                p={1}
-                border={1}
-                borderColor="rgba(0,0,0, 0.5)"
-                css={{
-                  height: 'auto',
-                  maxHeight: '175px',
-                  minHeight: '100px',
-                  borderRadius: '2px',
-                  writingMode: 'vertical-rl',
-                  textOrientation: 'mixed',
-                  fontFamily: "'Bitter', serif",
-                  '&:hover': {
-                    transform: 'translateY(-4px)'
-                  }
-                }}
-              >
-                <Truncate fontSize={0}>{item.title}</Truncate>
-              </Border>
-            </BlockLink>
-          ))}
-        </Flex>
-      )
-    }
-    return null
   }
 }
 
