@@ -139,7 +139,10 @@ class Books extends React.Component {
                   borderRadius: '2px',
                   writingMode: 'vertical-rl',
                   textOrientation: 'mixed',
-                  fontFamily: "'Bitter', serif"
+                  fontFamily: "'Bitter', serif",
+                  '&:hover': {
+                    transform: 'translateY(-4px)'
+                  }
                 }}
               >
                 <Truncate fontSize={0}>{item.title}</Truncate>
@@ -220,9 +223,9 @@ const sections = [
         ),
         portal: () => (
           <IFrame
+            src="https://www.youtube.com/embed/d0xMqeVhlhQ?autoplay=0"
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/d0xMqeVhlhQ?autoplay=0"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen={true}
@@ -295,11 +298,19 @@ const sections = [
       },
       {
         Component: proj => (
-          <BlockLink href={proj.link} target="_blank">
-            <Relative bg="black" p="2px">
-              <Image src={proj.image} width={72} alt={proj.description} />
-            </Relative>
-          </BlockLink>
+          <Relative bg="black" p="2px">
+            <Image src={proj.image} width={72} alt={proj.description} />
+          </Relative>
+        ),
+        portal: () => (
+          <IFrame
+            src="https://www.youtube.com/embed/yQlxCwhH9-s"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen={true}
+          />
         ),
         image: '/static/img/tm.png',
         description: 'Transcend Madison Innovation Competition',
