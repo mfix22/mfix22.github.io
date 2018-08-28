@@ -7,11 +7,13 @@ import {
   Overlay,
   Link,
   Image,
-  Absolute
+  Absolute,
+  BlockLink
 } from 'rebass'
 import styled from 'styled-components'
 
 import Projects from '../components/Projects'
+import Coffee from '../components/Coffee'
 
 const Grey = styled(Flex)`
   border-radius: 4px;
@@ -56,6 +58,14 @@ class Index extends React.Component {
                   src="/static/img/computer.png"
                   alt="Computer Stand"
                 />
+              </Absolute>
+              <Absolute bottom="-100px" right="100px">
+                <BlockLink
+                  href="https://www.buymeacoffee.com/fix"
+                  target="_blank"
+                >
+                  <Coffee width={100} />
+                </BlockLink>
               </Absolute>
             </Flex>
           </Box>

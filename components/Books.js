@@ -47,9 +47,8 @@ class Books extends React.Component {
       return (
         <Flex alignItems="flex-end">
           {this.state.items.map((item, i) => (
-            <BlockLink href={item.link} target="_blank">
+            <BlockLink key={item.guid} href={item.link} target="_blank">
               <Book
-                key={item.guid}
                 bg={colors[i]}
                 p={1}
                 border={1}

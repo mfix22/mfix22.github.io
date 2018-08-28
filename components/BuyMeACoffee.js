@@ -54,7 +54,7 @@ const BuyMeACoffee = props => {
       <a
         className="bmc-button"
         target="_blank"
-        href="https://www.buymeacoffee.com/fix"
+        href={`https://www.buymeacoffee.com/${props.username}`}
       >
         <img
           src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg"
