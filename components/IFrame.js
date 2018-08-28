@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text } from 'rebass'
+import { Text, Embed } from 'rebass'
 
 class IFrame extends React.Component {
   state = {
@@ -23,20 +23,18 @@ class IFrame extends React.Component {
   render() {
     const { count } = this.state
     return (
-      <Flex justifyContent="center" alignItems="center" width="100%">
+      <Embed>
         {this.state.loading && (
-          <Box>
-            <Text textAlign="center" fontWeight="bold">
-              {'.'.repeat(count + 1)}
-            </Text>
-          </Box>
+          <Text textAlign="center" fontWeight="bold">
+            {'.'.repeat(count + 1)}
+          </Text>
         )}
         <iframe
           style={{ display: this.state.loading ? 'none' : 'block' }}
           {...this.props}
           onLoad={this.onLoad}
         />
-      </Flex>
+      </Embed>
     )
   }
 }
