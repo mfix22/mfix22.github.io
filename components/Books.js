@@ -20,6 +20,7 @@ const colors = [
 ]
 
 const Book = styled(Border)`
+  transition: all 50ms ease-in-out;
   height: auto;
   max-height: 175px;
   min-height: 100px;
