@@ -17,49 +17,16 @@ import {
 } from 'rebass'
 import { Modal } from 'actionsack'
 
-import Books from './Books'
-import IFrame from './IFrame'
+import {
+  VHS,
+  Image,
+  Frame,
+  Triangle,
+  Circle
+} from './styled'
 
-const VHS = styled(Flex)`
-  font-family: 'Reenie Beanie', cursive;
-  font-display: swap;
-  cursor: pointer;
-  height: 24px;
-  font-size: 18px;
-  vertical-align: middle;
-  border-radius: 1px;
-`
-
-const Image = styled(BaseImage)`
-  cursor: pointer;
-`
-
-const Frame = styled(Box)`
-  border: 4px solid #ab7036;
-  border-right-color: #503516;
-  border-bottom-color: #ab7036;
-  border-left-color: #7c5227;
-`
-
-const Triangle = styled(Box)`
-  display: flex;
-  justify-content: center;
-  width: 0;
-  height: 0;
-
-  ${props => `
-    border-left: ${props.width || 40}px solid transparent;
-    border-right: ${props.width || 40}px solid transparent;
-    border-bottom: ${props.height || 12}px solid ${props.color};
-  `};
-`
-
-const Circle = styled(Box)`
-  width: 3px;
-  height: 3px;
-  border-radius: 99999px;
-  z-index: 100;
-`
+import Books from '../Books'
+import IFrame from '../IFrame'
 
 const sections = [
   {
