@@ -12,11 +12,13 @@ import {
   Link,
   Truncate,
   Relative,
-  Absolute
+  Absolute,
+  Embed
 } from 'rebass'
-import {Modal} from 'actionsack'
+import { Modal } from 'actionsack'
 
 import Books from './Books'
+import IFrame from './IFrame'
 
 const VHS = styled(Flex)`
   font-family: 'Reenie Beanie', cursive;
@@ -58,46 +60,6 @@ const Circle = styled(Box)`
   border-radius: 99999px;
   z-index: 100;
 `
-
-class IFrame extends React.Component {
-  state = {
-    loading: true,
-    count: 0
-  }
-
-  onLoad = () => this.setState({ loading: false })
-
-  componentDidMount() {
-    const component = this
-    this.interval = setInterval(() => {
-      component.setState(({ count }) => ({ count: (count + 1) % 3 }))
-    }, 300)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval)
-  }
-
-  render() {
-    const { count } = this.state
-    return (
-      <Flex justifyContent="center" alignItems="center" width="100%">
-        {this.state.loading && (
-          <Box>
-            <Text textAlign="center" fontWeight="bold">
-              {'.'.repeat(count + 1)}
-            </Text>
-          </Box>
-        )}
-        <iframe
-          style={{ display: this.state.loading ? 'none' : 'block' }}
-          {...this.props}
-          onLoad={this.onLoad}
-        />
-      </Flex>
-    )
-  }
-}
 
 const sections = [
   {
@@ -245,7 +207,7 @@ const sections = [
             <Frame mb={4}>
               <BlockLink href={proj.link} target="_blank">
                 {/* TODO */}
-                <div style={{ width: 72, height: 72, background: 'white'}} />
+                <div style={{ width: 72, height: 72, background: 'white' }} />
               </BlockLink>
             </Frame>
           </Flex>
