@@ -134,8 +134,7 @@ body {
   text-rendering: optimizeLegibility;
   background: #78D1E8;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
   font-style: normal;
   text-transform: initial;
   letter-spacing: initial;
