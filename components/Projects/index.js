@@ -33,12 +33,13 @@ const sections = [
     id: 'tools',
     examples: [
       {
-        img: {
-          src: 'https://carbon.now.sh/static/brand/icon.png',
-          width: 64,
-          alt:
-            'Carbon - the easiest way to create and share beautiful images of your source code'
-        },
+        Component: () => (
+          <Image
+            src="https://carbon.now.sh/static/brand/icon.png"
+            width={64}
+            alt="Carbon - the easiest way to create and share beautiful images of your source code"
+          />
+        ),
         link: 'https://carbon.now.sh',
         portal: () => (
           <IFrame
@@ -56,7 +57,7 @@ const sections = [
             width={54}
             alt='Alchemy - desktop image merger and converter'
           />
-      ),
+        ),
         portal: proj => (
           <BlockLink
             href={proj.link}
@@ -69,12 +70,14 @@ const sections = [
         link: 'https://dawnlabs.io/alchemy'
       },
       {
-        img: {
-          src: '/static/img/tonic.png',
-          width: 64,
-          css: { marginBottom: '-7px' },
-          alt: 'Tonic - a bot that eases the burden of OSS maintainers'
-        },
+        Component: () => (
+          <Image
+            src="/static/img/tonic.png"
+            width={64}
+            css={{ marginBottom: '-7px' }}
+            alt="Tonic - a bot that eases the burden of OSS maintainers"
+          />
+        ),
         link: 'https://github.com/mfix22/tonic'
       }
     ]
@@ -196,11 +199,7 @@ class Project extends React.Component {
 
   render() {
     const proj = this.props
-    const child = proj.img ? (
-      <Image {...proj.img} />
-    ) : (
-      <proj.Component {...proj} />
-    )
+    const child = <proj.Component {...proj} />
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
