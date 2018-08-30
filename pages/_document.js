@@ -1,7 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
 import { Provider } from 'rebass'
-import {AltCheck} from 'visualint'
+import { AltCheck } from 'visualint'
 
 injectGlobal`
 html,

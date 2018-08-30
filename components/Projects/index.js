@@ -50,12 +50,13 @@ const sections = [
         )
       },
       {
-        img: {
-          src: '/static/img/alchemy.png',
-          css: { marginBottom: '-11px' },
-          width: 72,
-          alt: 'Alchemy - desktop image merger and converter'
-        },
+        Component: () => (
+          <Image
+            src='/static/img/alchemy-3.png'
+            width={54}
+            alt='Alchemy - desktop image merger and converter'
+          />
+      ),
         portal: proj => (
           <BlockLink
             href={proj.link}
