@@ -2,6 +2,8 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
 import { Provider } from 'rebass'
 
+import AltCheck from '../packages/visualint/alt'
+
 injectGlobal`
 html,
 body,
@@ -143,10 +145,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
-img:not([alt]) {
-  border: 2px solid red !important;
-}
 `
 
 export default class extends Document {
@@ -172,7 +170,9 @@ export default class extends Document {
         </Head>
         <Provider>
           <body>
-            <Main />
+            <AltCheck>
+              <Main />
+            </AltCheck>
             <NextScript />
             <script>
               {/*
