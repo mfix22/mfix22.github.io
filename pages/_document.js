@@ -146,6 +146,12 @@ body {
 }
 `
 
+const theme = {
+  colors: {
+    mint: '#00ffa7'
+  }
+}
+
 export default class extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -167,14 +173,14 @@ export default class extends Document {
             rel="stylesheet"
           />
         </Head>
-        <Provider>
-          <body>
-            <AltCheck>
-              <Main />
-            </AltCheck>
-            <NextScript />
-            <script>
-              {/*
+        <body>
+          <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js" />
+          <AltCheck>
+            <Main />
+          </AltCheck>
+          <NextScript />
+          <script>
+            {/*
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -182,9 +188,8 @@ export default class extends Document {
                 ga('create', 'UA-83432320-2', 'auto');
                 ga('send', 'pageview');
               */}
-            </script>
-          </body>
-        </Provider>
+          </script>
+        </body>
       </html>
     )
   }

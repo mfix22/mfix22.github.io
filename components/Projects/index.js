@@ -2,18 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import {
-  Heading,
   Flex,
   Box,
   Text,
-  Border,
-  Image as BaseImage,
   BlockLink,
   Link,
-  Truncate,
   Relative,
-  Absolute,
-  Embed
+  Absolute
 } from 'rebass'
 import { Modal } from 'actionsack'
 
@@ -203,7 +198,7 @@ class Project extends React.Component {
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
-        <Box onClick={this.select} key={proj.link} href={proj.link} mr={4}>
+        <Box onClick={this.select} mr={4}>
           {child}
           {this.state.clicked &&
             proj.portal &&

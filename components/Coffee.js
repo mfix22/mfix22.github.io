@@ -1,5 +1,6 @@
 import React from 'react'
 
+// TODO convert to components
 const Coffee = props => {
   return (
     <svg id="Layer_1" viewBox="0 0 162 132" {...props}>
