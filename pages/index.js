@@ -33,6 +33,7 @@ const relative = { position: 'relative' }
 class Index extends React.Component {
   state = {}
   updatePortal = portal => this.setState({ portal })
+  reset = this.updatePortal.bind(this, null)
 
   render() {
     const Screen = this.state.portal || DefaultScreen
@@ -43,7 +44,7 @@ class Index extends React.Component {
           <Flex justifyContent="center" alignItems="center">
             <Box width={1 / 2}>
               <Heading mb={4} fontSize={96}>
-                <Link href={null} color="white" textDecoration="none">
+                <Link onClick={this.reset} color="white" textDecoration="none">
                   Hi, i'm Mike
                 </Link>
               </Heading>

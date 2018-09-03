@@ -9,7 +9,6 @@ import {
   Relative,
   Absolute
 } from 'rebass'
-import { Modal } from 'actionsack'
 
 import {
   VHS,
@@ -176,17 +175,14 @@ const sections = [
 
 class Project extends React.Component {
   select = () => this.props.updatePortal(this.props.portal)
-  unselect = () => this.props.updatePortal(null)
 
   render() {
     const { Component } = this.props
 
     return (
-      <Modal open={true} onClickAway={this.unselect}>
-        <Box onClick={this.select} mr={4}>
-          <Component />
-        </Box>
-      </Modal>
+      <Box onClick={this.select} mr={4}>
+        <Component />
+      </Box>
     )
   }
 }
