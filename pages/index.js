@@ -53,12 +53,7 @@ class Index extends React.Component {
                     <Screen />
                   </Black>
                 </Grey>
-                <Absolute
-                  left="50%"
-                  top="100%"
-                  mt="-5px"
-                  css={translate50}
-                >
+                <Absolute left="50%" top="100%" mt="-5px" css={translate50}>
                   <Image
                     width={215}
                     src="/static/img/computer.png"

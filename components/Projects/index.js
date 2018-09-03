@@ -34,7 +34,6 @@ const sections = [
             alt="Carbon - the easiest way to create and share beautiful images of your source code"
           />
         ),
-        link: 'https://carbon.now.sh',
         portal: () => (
           <IFrame
             src="https://carbon.now.sh/embed?bg=rgba(80%2C227%2C194%2C1)&readonly=false&t=panda-syntax&wt=bw&l=javascript&pv=50px&ph=32px&code=%257B%250A%2520%2520title%253A%2520%27Carbon%27%252C%250A%2520%2520description%253A%2520%27Create%2520and%2520share%2520beautiful%2520images%2520of%2520your%2520code%27%252C%250A%2520%2520site%253A%2520%27https%253A%252F%252Fcarbon.now.sh%27%252C%250A%2520%2520repo%253A%2520%27https%253A%252F%252Fgithub.com%252Fdawnlabs%252Fcarbon%27%252C%250A%2520%2520author%253A%2520%27%2540dawnlabs%27%250A%257D"
@@ -120,8 +119,8 @@ const sections = [
     id: 'misc.',
     examples: [
       {
-        Component: proj => (
-          <BlockLink href={proj.link} target="_blank">
+        Component: () => (
+          <BlockLink href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503" target="_blank">
             <Relative bg="black" p="2px">
               <Absolute
                 top={24}
@@ -132,19 +131,15 @@ const sections = [
                   US Patent #20150321727
                 </Text>
               </Absolute>
-              <Image src={proj.image} width={80} alt={proj.description} />
+              <Image src="/static/img/bandwagon.png" width={80} alt="Band Wagon: Patent #US 20150321727 A1" />
             </Relative>
           </BlockLink>
-        ),
-        image: '/static/img/bandwagon.png',
-        description: 'Band Wagon: Patent #US 20150321727 A1',
-        link:
-          'http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503'
+        )
       },
       {
-        Component: proj => (
+        Component: () => (
           <Relative bg="black" p="2px">
-            <Image src={proj.image} width={72} alt={proj.description} />
+            <Image src="/static/img/tm.png" width={72} alt="Transcend Madison Innovation Competition" />
           </Relative>
         ),
         portal: () => (
@@ -157,26 +152,23 @@ const sections = [
             allowFullScreen={true}
           />
         ),
-        image: '/static/img/tm.png',
-        description: 'Transcend Madison Innovation Competition',
         link: 'https://transcenduw.com/'
       },
       {
-        Component: proj => (
+        Component: () => (
           <Flex flexDirection="column" alignItems="center">
             <Circle bg="#aaa" mb="-2px" />
             <Triangle color="black">
               <Triangle color="#78D1E8" mt="1px" />
             </Triangle>
             <Frame mb={4}>
-              <BlockLink href={proj.link} target="_blank">
+              <BlockLink href="https://emilyhansel.me" target="_blank">
                 {/* TODO */}
                 <div style={{ width: 72, height: 72, background: 'white' }} />
               </BlockLink>
             </Frame>
           </Flex>
-        ),
-        link: 'https://emilyhansel.me'
+        )
       }
     ]
   }
@@ -187,12 +179,12 @@ class Project extends React.Component {
   unselect = () => this.props.updatePortal(null)
 
   render() {
-    const proj = this.props
+    const { Component } = this.props
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
         <Box onClick={this.select} mr={4}>
-          <proj.Component {...proj} />
+          <Component />
         </Box>
       </Modal>
     )
@@ -214,8 +206,8 @@ const Projects = props => {
           <Box mr={6}>
             <Text fontSize={5}>{section.id}</Text>
           </Box>
-          {section.examples.map(proj => (
-            <Project key={proj.link} updatePortal={props.updatePortal} {...proj} />
+          {section.examples.map((proj, i) => (
+            <Project key={i} updatePortal={props.updatePortal} {...proj} />
           ))}
         </Flex>
       ))}
