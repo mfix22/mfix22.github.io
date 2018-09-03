@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import {
   Flex,
@@ -53,16 +52,15 @@ const sections = [
             alt='Alchemy - desktop image merger and converter'
           />
         ),
-        portal: proj => (
+        portal: () => (
           <BlockLink
-            href={proj.link}
+            href="https://dawnlabs.io/alchemy"
             target="_blank"
             css={{ overflowY: 'hidden' }}
           >
             <Image bg="black" src="/static/img/alchemy-ss.png" alt="Alchemy" />
           </BlockLink>
-        ),
-        link: 'https://dawnlabs.io/alchemy'
+        )
       },
       {
         Component: () => (
@@ -185,34 +183,23 @@ const sections = [
 ]
 
 class Project extends React.Component {
-  state = {
-    clicked: false
-  }
-
-  select = () => this.setState({ clicked: true })
-  unselect = () => this.setState({ clicked: false })
+  select = () => this.props.updatePortal(this.props.portal)
+  unselect = () => this.props.updatePortal(null)
 
   render() {
     const proj = this.props
-    const child = <proj.Component {...proj} />
 
     return (
       <Modal open={true} onClickAway={this.unselect}>
         <Box onClick={this.select} mr={4}>
-          {child}
-          {this.state.clicked &&
-            proj.portal &&
-            ReactDOM.createPortal(
-              proj.portal(proj),
-              document.getElementById('portal')
-            )}
+          <proj.Component {...proj} />
         </Box>
       </Modal>
     )
   }
 }
 
-const Projects = () => {
+const Projects = props => {
   return (
     <Flex width={1 / 2} flexDirection="column" alignItems="flex-end">
       {/* Old borders: #C5A48A */}
@@ -228,7 +215,7 @@ const Projects = () => {
             <Text fontSize={5}>{section.id}</Text>
           </Box>
           {section.examples.map(proj => (
-            <Project key={proj.link} {...proj} />
+            <Project key={proj.link} updatePortal={props.updatePortal} {...proj} />
           ))}
         </Flex>
       ))}

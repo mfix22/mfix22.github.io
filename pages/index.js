@@ -27,14 +27,16 @@ const theme = {
   }
 }
 
-class RenderLast extends React.Component {
-  render() {
-    return React.Children.toArray(this.props.children).slice(-1)
-  }
-}
+const translate50 = { transform: 'translateX(-50%)' }
+const relative = { position: 'relative' }
 
 class Index extends React.Component {
+  state = {}
+  updatePortal = portal => this.setState({ portal })
+
   render() {
+    const Screen = this.state.portal || DefaultScreen
+
     return (
       <Provider theme={theme}>
         <Box is="main" mt={3} pl={5}>
@@ -45,17 +47,17 @@ class Index extends React.Component {
                   Hi, i'm Mike
                 </Link>
               </Heading>
-              <Flex flexDirection="column" css={{ position: 'relative' }}>
+              <Flex flexDirection="column" css={relative}>
                 <Grey>
-                  <Black id="portal">
-                    <DefaultScreen />
+                  <Black>
+                    <Screen />
                   </Black>
                 </Grey>
                 <Absolute
                   left="50%"
                   top="100%"
                   mt="-5px"
-                  css={{ transform: 'translateX(-50%)' }}
+                  css={translate50}
                 >
                   <Image
                     width={215}
@@ -73,7 +75,7 @@ class Index extends React.Component {
                 </Absolute>
               </Flex>
             </Box>
-            <Projects />
+            <Projects updatePortal={this.updatePortal} />
           </Flex>
         </Box>
       </Provider>
