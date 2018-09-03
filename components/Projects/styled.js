@@ -17,6 +17,7 @@ export const VHS = styled(Flex)`
 `
 
 export const Image = styled(BaseImage)`
+  max-width: ${props => props.maxWidth || 'none'};
   cursor: pointer;
 `
 

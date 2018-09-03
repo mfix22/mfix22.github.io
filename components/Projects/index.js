@@ -56,7 +56,7 @@ const sections = [
             target="_blank"
             css={{ overflowY: 'hidden' }}
           >
-            <Image bg="black" src="/static/img/alchemy-ss.png" alt="Alchemy" />
+            <Image bg="black" src="/static/img/alchemy-ss.png" alt="Alchemy" maxWidth="100%" />
           </BlockLink>
         )
       },
@@ -130,7 +130,11 @@ const sections = [
                   US Patent #20150321727
                 </Text>
               </Absolute>
-              <Image src="/static/img/bandwagon.png" width={80} alt="Band Wagon: Patent #US 20150321727 A1" />
+              <Image
+                src="/static/img/bandwagon.png"
+                width={80}
+                alt="Band Wagon: Patent #US 20150321727 A1"
+              />
             </Relative>
           </BlockLink>
         )
@@ -138,7 +142,11 @@ const sections = [
       {
         Component: () => (
           <Relative bg="black" p="2px">
-            <Image src="/static/img/tm.png" width={72} alt="Transcend Madison Innovation Competition" />
+            <Image
+              src="/static/img/transcend.png"
+              width={72}
+              alt="Transcend Madison Innovation Competition"
+            />
           </Relative>
         ),
         portal: () => (
