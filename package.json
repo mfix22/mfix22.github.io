@@ -4,9 +4,11 @@
   "description": "Proof of me",
   "scripts": {
     "build": "next build",
+    "export": "next export",
     "dev": "next",
     "start": "next start",
-    "prettier": "prettier --no-semi --single-quote --write **/*.{js,json}"
+    "prettier": "prettier --no-semi --single-quote --write **/*.{js,json}",
+    "publish": "next build && next export && touch out/.nojekyll && git add out/&& git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "repository": {
     "type": "git",
