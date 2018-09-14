@@ -178,7 +178,7 @@ const sections = [
             <Frame mb={4}>
               <BlockLink title="Link to Emily Hansel's portfolio site" href="https://emilyhansel.me" target="_blank">
                 {/* TODO */}
-                <Flex color="black" bg="white" css={{width: "72px", height:"72px"}} />
+                <Flex color="black" bg="#fafaa7" css={{width: "72px", height:"72px"}} />
               </BlockLink>
             </Frame>
           </Flex>
