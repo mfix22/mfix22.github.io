@@ -63,6 +63,7 @@ class Index extends React.Component {
                 </Absolute>
                 <Absolute bottom="-100px" left="100px" zIndex="3">
                   <BlockLink
+                    title="Buy me a coffee link"
                     href="https://www.buymeacoffee.com/fix"
                     target="_blank"
                   >

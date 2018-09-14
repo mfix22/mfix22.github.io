@@ -31,6 +31,7 @@ const sections = [
             src="https://carbon.now.sh/static/brand/icon.png"
             width={64}
             alt="Carbon - the easiest way to create and share beautiful images of your source code"
+            css={{borderRadius: '6px'}}
           />
         ),
         portal: () => (
@@ -175,9 +176,9 @@ const sections = [
               <Triangle color="#78D1E8" mt="1px" />
             </Triangle>
             <Frame mb={4}>
-              <BlockLink href="https://emilyhansel.me" target="_blank">
+              <BlockLink title="Link to Emily Hansel's portfolio site" href="https://emilyhansel.me" target="_blank">
                 {/* TODO */}
-                <div style={{ width: 72, height: 72, background: 'white' }} />
+                <Flex color="black" bg="white" css={{width: "72px", height:"72px"}} />
               </BlockLink>
             </Frame>
           </Flex>
