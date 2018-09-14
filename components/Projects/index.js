@@ -62,12 +62,18 @@ const sections = [
       },
       {
         Component: () => (
-          <Image
-            src="/static/img/tonic.png"
-            width={64}
-            css={{ marginBottom: '-7px' }}
-            alt="Tonic - a bot that eases the burden of OSS maintainers"
-          />
+          <BlockLink
+            href="https://github.com/mfix22/tonic"
+            target="_blank"
+            css={{ overflowY: 'hidden' }}
+          >
+            <Image
+              src="/static/img/tonic.png"
+              width={64}
+              css={{ marginBottom: '-7px' }}
+              alt="Tonic - a bot that eases the burden of OSS maintainers"
+            />
+          </BlockLink>
         ),
         link: 'https://github.com/mfix22/tonic'
       }

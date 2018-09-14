@@ -22,7 +22,7 @@ const theme = {
   },
   fonts: {
     sans:
-      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
+      '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
     mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', ')
   }
 }
