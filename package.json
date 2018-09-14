@@ -4,6 +4,7 @@
   "description": "Proof of me",
   "scripts": {
     "build": "next build",
+    "export": "next export -o public",
     "dev": "next",
     "start": "next start",
     "prettier": "prettier --no-semi --single-quote --write **/*.{js,json}"
