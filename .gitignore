@@ -1,7 +1,0 @@
-.DS_Store
-*.css.map
-.sass-cache
-node_modules
-*.log
-*.map
-.next
