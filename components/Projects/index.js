@@ -1,22 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Flex,
-  Box,
-  Text,
-  BlockLink,
-  Link,
-  Relative,
-  Absolute
-} from 'rebass'
+import { Flex, Box, Text, BlockLink, Link, Relative, Absolute } from 'rebass'
 
-import {
-  VHS,
-  Image,
-  Frame,
-  Triangle,
-  Circle
-} from './styled'
+import { VHS, Image, Frame, Triangle, Circle } from './styled'
 
 import Books from '../Books'
 import IFrame from '../IFrame'
@@ -31,7 +17,7 @@ const sections = [
             src="https://carbon.now.sh/static/brand/icon.png"
             width={64}
             alt="Carbon - the easiest way to create and share beautiful images of your source code"
-            css={{borderRadius: '6px'}}
+            css={{ borderRadius: '6px' }}
           />
         ),
         portal: () => (
@@ -46,9 +32,9 @@ const sections = [
       {
         Component: () => (
           <Image
-            src='/static/img/alchemy-3.png'
+            src="/static/img/alchemy-3.png"
             width={54}
-            alt='Alchemy - desktop image merger and converter'
+            alt="Alchemy - desktop image merger and converter"
           />
         ),
         portal: () => (
@@ -63,11 +49,7 @@ const sections = [
       },
       {
         Component: () => (
-          <BlockLink
-            href="https://github.com/mfix22/tonic"
-            target="_blank"
-            css={{ overflowY: 'hidden' }}
-          >
+          <BlockLink href="https://reporanger.com" target="_blank" css={{ overflowY: 'hidden' }}>
             <Image
               src="/static/img/tonic.png"
               width={64}
@@ -76,7 +58,7 @@ const sections = [
             />
           </BlockLink>
         ),
-        link: 'https://github.com/mfix22/tonic'
+        link: 'https://reporanger.com'
       }
     ]
   },
@@ -126,7 +108,10 @@ const sections = [
     examples: [
       {
         Component: () => (
-          <BlockLink href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503" target="_blank">
+          <BlockLink
+            href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503"
+            target="_blank"
+          >
             <Relative bg="black" p="2px">
               <Absolute
                 top={24}
@@ -176,9 +161,13 @@ const sections = [
               <Triangle color="#78D1E8" mt="1px" />
             </Triangle>
             <Frame mb={4}>
-              <BlockLink title="Link to Emily Hansel's portfolio site" href="https://emilyhansel.me" target="_blank">
+              <BlockLink
+                title="Link to Emily Hansel's portfolio site"
+                href="https://emilyhansel.me"
+                target="_blank"
+              >
                 {/* TODO */}
-                <Flex color="black" bg="#fafaa7" css={{width: "72px", height:"72px"}} />
+                <Flex color="black" bg="#fafaa7" css={{ width: '72px', height: '72px' }} />
               </BlockLink>
             </Frame>
           </Flex>
