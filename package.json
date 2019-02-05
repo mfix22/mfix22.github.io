@@ -8,7 +8,8 @@
     "dev": "next",
     "start": "next start",
     "prettier": "prettier --no-semi --single-quote --write **/*.{js,json}",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out/"
+    "deploy": "next build && next export && touch out/.nojekyll && git add out/",
+    "prod": "git subtree push --prefix out origin master"
   },
   "repository": {
     "type": "git",
