@@ -198,7 +198,7 @@ const Projects = props => {
       {sections.map(section => (
         <Flex
           key={section.id}
-          css={{ borderBottom: '12px solid #936948' }}
+          css={{ borderBottom: '12px solid #936948', borderBottomLeftRadius: '6px' }}
           pl={2}
           mb={3}
           alignItems="flex-end"
