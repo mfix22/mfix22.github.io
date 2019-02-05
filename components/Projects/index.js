@@ -158,7 +158,7 @@ const sections = [
           <Flex flexDirection="column" alignItems="center">
             <Circle bg="#aaa" mb="-2px" />
             <Triangle color="black">
-              <Triangle color="#78D1E8" mt="1px" />
+              <Triangle color="#112335" mt="1px" />
             </Triangle>
             <Frame mb={4}>
               <BlockLink
