@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Text,
-  Box,
-  Flex,
-  Link,
-} from 'rebass'
+import { Text, Box, Flex, Link } from 'rebass'
 import styled from 'styled-components'
 
 export const Grey = styled(Flex)`
@@ -27,7 +22,7 @@ export const Black = styled(Flex)`
 
 export const LI = styled.li`
   margin-bottom: ${props => props.theme.space[1]}px;
-  cursor: ${props => props.onClick ? 'pointer' : null};
+  cursor: ${props => (props.onClick ? 'pointer' : null)};
   &:before {
     color: ${props => props.theme.colors.mint};
     content: '➜ ';
@@ -65,21 +60,33 @@ class Home extends React.Component {
           Things i like:
         </Text>
         <ul>
-          <LI>Drinking coffee with others</LI>
+          <LI>
+            <Link color="inherit" href="https://goo.gl/maps/VsJW2cLXMcGCWrgs5">
+              Drinking coffee with others
+            </Link>
+          </LI>
           <LI>Skiing, Rock climbing</LI>
           <LI>Open Source Software (OSS)</LI>
           <LI>JavaScript + GraphQL</LI>
-          {!this.state.more && (<LI onClick={() => this.setState({ more: true })}>More...</LI>)}
+          {!this.state.more && <LI onClick={() => this.setState({ more: true })}>More...</LI>}
           {this.state.more && (
             <React.Fragment>
               <LI>Event Programming / Organizing</LI>
               <LI>Music from Kendrick Lamar, Dessa, Jackson Browne</LI>
               <LI>Kurt Vonnegut books</LI>
-              <LI><Link color="inherit" href="https://fieldnotesbrand.com/">Field Notes</Link></LI>
+              <LI>
+                <Link color="inherit" href="https://fieldnotesbrand.com/">
+                  Field Notes
+                </Link>
+              </LI>
               <LI>Digital / Interactive / Open Art</LI>
               <LI>Financing / Sustaining OSS</LI>
               <LI>Micro-grants</LI>
-              <LI><Link color="inherit" href="http://cheeseboardcollective.coop/">Pizza</Link></LI>
+              <LI>
+                <Link color="inherit" href="http://cheeseboardcollective.coop/">
+                  Pizza
+                </Link>
+              </LI>
             </React.Fragment>
           )}
         </ul>
@@ -91,14 +98,8 @@ class Home extends React.Component {
           !)
         </Text>
         <Text>
-          <Icon
-            name="logo-twitter"
-            href="https://twitter.com/fixitup2"
-          />
-          <Icon
-            name="logo-github"
-            href="https://github.com/mfix22"
-          />
+          <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
+          <Icon name="logo-github" href="https://github.com/mfix22" />
           <Icon name="mail" href="mailto:mike@dawnlabs.io" />
         </Text>
       </Terminal>
