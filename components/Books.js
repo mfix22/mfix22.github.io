@@ -1,10 +1,8 @@
 import React from 'react'
 import { Flex, BlockLink, Truncate, Border } from 'rebass'
 import styled from 'styled-components'
-import Feed from 'feed-to-json-promise'
 
 import writings from '../static/writings.json'
-const feed = new Feed()
 
 const colors = [
   '#463730',

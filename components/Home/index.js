@@ -50,14 +50,15 @@ class Home extends React.Component {
     return (
       <Terminal px={4} py={3} fontSize={2} mb={2}>
         <Text mb={3}>
-          Hey 👋, I&#39;m a partner at{' '}
+          Hey 👋, i&#39;m a partner at{' '}
           <Link color="mint" href="https://dawnlabs.io">
             dawn
           </Link>
-          . We are an ambitious studio, dedicated to thoughtful creation.
-        </Text>
-        <Text fontSize={3} mb={2}>
-          Things i like:
+          . You may know me as the co-creator of{' '}
+          <Link color="mint" href="https://carbon.now.sh">
+            Carbon
+          </Link>
+          . Here are a few things i really like:
         </Text>
         <ul>
           <LI>
@@ -68,31 +69,31 @@ class Home extends React.Component {
           <LI>Skiing, Rock climbing</LI>
           <LI>Open Source Software (OSS)</LI>
           <LI>JavaScript + GraphQL</LI>
+          <LI>Music from Kendrick Lamar, Dessa, Jackson Browne</LI>
           {!this.state.more && <LI onClick={() => this.setState({ more: true })}>More...</LI>}
           {this.state.more && (
             <React.Fragment>
-              <LI>Event Programming / Organizing</LI>
-              <LI>Music from Kendrick Lamar, Dessa, Jackson Browne</LI>
               <LI>Kurt Vonnegut books</LI>
               <LI>
                 <Link color="inherit" href="https://fieldnotesbrand.com/">
                   Field Notes
                 </Link>
               </LI>
-              <LI>Digital / Interactive / Open Art</LI>
               <LI>Financing / Sustaining OSS</LI>
+              <LI>Digital / Interactive / Open Art</LI>
               <LI>Micro-grants</LI>
               <LI>
                 <Link color="inherit" href="http://cheeseboardcollective.coop/">
                   Pizza
                 </Link>
               </LI>
+              <LI>Event Programming / Organizing</LI>
             </React.Fragment>
           )}
         </ul>
         <Text fontSize={0} mt={3} mb={3}>
           (If you want to chat about any of these things,{' '}
-          <Link color="mint" href="mailto:mike@dawnlabs.io">
+          <Link color="mint" href="mailto:mrfix84@gmail.com">
             let&#39;s grab a coffee
           </Link>
           !)
@@ -100,7 +101,7 @@ class Home extends React.Component {
         <Text>
           <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
           <Icon name="logo-github" href="https://github.com/mfix22" />
-          <Icon name="mail" href="mailto:mike@dawnlabs.io" />
+          <Icon name="mail" href="mailto:mrfix84@gmail.com" />
         </Text>
       </Terminal>
     )
