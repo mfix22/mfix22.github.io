@@ -129,23 +129,23 @@ function (_React$Component) {
           lineNumber: 52
         },
         __self: this
-      }, "Hey \uD83D\uDC4B, i'm a partner at", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+      }, "Hey \uD83D\uDC4B, i'm Mike. You may know me as the creator of", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         color: "mint",
-        href: "https://dawnlabs.io",
+        href: "https://carbon.now.sh",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 54
         },
         __self: this
-      }, "dawn"), ". You may know me as the co-creator of", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+      }, "Carbon"), ' ', "and", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         color: "mint",
-        href: "https://carbon.now.sh",
+        href: "https://reporanger.com",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 58
         },
         __self: this
-      }, "Carbon"), ". Here are a few things i really like"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+      }, "Ranger"), ' ', "Here are a few things i really like:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 63
@@ -232,13 +232,13 @@ function (_React$Component) {
           lineNumber: 82
         },
         __self: this
-      }, "Digital / Interactive / Open Art"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+      }, "Financing / Sustaining OSS"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 83
         },
         __self: this
-      }, "Financing / Sustaining OSS"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+      }, "Digital / Interactive / Open Art"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 84
@@ -323,4 +323,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.925e98969a608e47d7b5.hot-update.js.map
+//# sourceMappingURL=index.js.31050d368a9b2fe8263e.hot-update.js.map
