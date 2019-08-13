@@ -129,40 +129,32 @@ function (_React$Component) {
           lineNumber: 52
         },
         __self: this
-      }, "Hey \uD83D\uDC4B, i'm a partner at", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+      }, "Hey \uD83D\uDC4B, i'm Mike. You may know me as the creator of", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         color: "mint",
-        href: "https://dawnlabs.io",
+        href: "https://carbon.now.sh",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 54
         },
         __self: this
-      }, "dawn"), ". You may know me as the co-creator of", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
+      }, "Carbon"), ' ', "and", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
         color: "mint",
-        href: "https://carbon.now.sh",
+        href: "https://reporanger.com",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 58
         },
         __self: this
-      }, "Carbon"), ". Here are a few things i really like"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Text"], {
-        fontSize: 3,
-        mb: 2,
+      }, "Ranger"), ". Here are a few things i really like:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 63
         },
         __self: this
-      }, "Things i like:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
@@ -170,28 +162,34 @@ function (_React$Component) {
         href: "https://goo.gl/maps/VsJW2cLXMcGCWrgs5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 65
         },
         __self: this
       }, "Drinking coffee with others")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 69
         },
         __self: this
       }, "Skiing, Rock climbing"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 70
         },
         __self: this
       }, "Open Source Software (OSS)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 71
         },
         __self: this
-      }, "JavaScript + GraphQL"), !this.state.more && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+      }, "JavaScript + GraphQL"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }, "Music from Kendrick Lamar, Dessa, Jackson Browne"), !this.state.more && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         onClick: function onClick() {
           return _this2.setState({
             more: true
@@ -199,37 +197,25 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 73
         },
         __self: this
       }, "More..."), this.state.more && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      }, "Event Programming / Organizing"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      }, "Music from Kendrick Lamar, Dessa, Jackson Browne"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 76
         },
         __self: this
       }, "Kurt Vonnegut books"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 77
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
@@ -237,31 +223,31 @@ function (_React$Component) {
         href: "https://fieldnotesbrand.com/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 78
         },
         __self: this
       }, "Field Notes")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
-      }, "Digital / Interactive / Open Art"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 82
         },
         __self: this
       }, "Financing / Sustaining OSS"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 83
+        },
+        __self: this
+      }, "Digital / Interactive / Open Art"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
         },
         __self: this
       }, "Micro-grants"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 85
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
@@ -269,16 +255,22 @@ function (_React$Component) {
         href: "http://cheeseboardcollective.coop/",
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, "Pizza")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LI, {
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 90
         },
         __self: this
-      }, "Pizza")))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Text"], {
+      }, "Event Programming / Organizing"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Text"], {
         fontSize: 0,
         mt: 3,
         mb: 3,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 94
         },
         __self: this
       }, "(If you want to chat about any of these things,", ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Link"], {
@@ -286,13 +278,13 @@ function (_React$Component) {
         href: "mailto:mrfix84@gmail.com",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 96
         },
         __self: this
       }, "let's grab a coffee"), "!)"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Text"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 101
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
@@ -300,7 +292,7 @@ function (_React$Component) {
         href: "https://twitter.com/fixitup2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 102
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
@@ -308,7 +300,7 @@ function (_React$Component) {
         href: "https://github.com/mfix22",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 103
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
@@ -316,7 +308,7 @@ function (_React$Component) {
         href: "mailto:mrfix84@gmail.com",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 104
         },
         __self: this
       })));
@@ -331,4 +323,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.473294b357b34b9bd589.hot-update.js.map
+//# sourceMappingURL=index.js.0ce22b56a98f0cadb35c.hot-update.js.map
