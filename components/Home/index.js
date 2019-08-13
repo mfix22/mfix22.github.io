@@ -50,13 +50,13 @@ class Home extends React.Component {
     return (
       <Terminal px={4} py={3} fontSize={2} mb={2}>
         <Text mb={3}>
-          Hey 👋, i&#39;m a partner at{' '}
-          <Link color="mint" href="https://dawnlabs.io">
-            dawn
-          </Link>
-          . You may know me as the co-creator of{' '}
+          Hey 👋, i&#39;m Mike. You may know me as the creator of{' '}
           <Link color="mint" href="https://carbon.now.sh">
             Carbon
+          </Link>{' '}
+          and{' '}
+          <Link color="mint" href="https://reporanger.com">
+            Ranger
           </Link>
           . Here are a few things i really like:
         </Text>
