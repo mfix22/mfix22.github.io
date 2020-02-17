@@ -1,83 +1,53 @@
 import React from 'react'
-import {
-  Box,
-  Text,
-  Flex,
-  Heading,
-  Link,
-  Image,
-  Absolute,
-  BlockLink,
-  Provider
-} from 'rebass'
-import styled from 'styled-components'
+import { Box, Text, Flex, Heading, Link, Provider } from 'rebass'
 
-import Projects from '../components/Projects'
-import Coffee from '../components/Coffee'
-import DefaultScreen, { Grey, Black, Terminal } from '../components/Home'
+import DefaultScreen from '../components/Home'
 
 const theme = {
   colors: {
     mint: '#00ffa7'
   },
   fonts: {
-    sans:
-      '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
+    sans: '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
     mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', ')
   }
 }
 
-const translate50 = { transform: 'translateX(-50%)' }
 const relative = { position: 'relative' }
 
-class Index extends React.Component {
-  state = {}
-  updatePortal = portal => this.setState({ portal })
-  reset = this.updatePortal.bind(this, null)
+function Icon(props) {
+  return (
+    <Link color="mint" href={props.href} mr={2} target="_blank">
+      <ion-icon name={props.name} />
+    </Link>
+  )
+}
 
-  render() {
-    const Screen = this.state.portal || DefaultScreen
-
-    return (
-      <Provider theme={theme}>
-        <Box is="main" mt={3} pl={5}>
-          <Flex justifyContent="center" alignItems="center">
-            <Box width={1 / 2}>
-              <Heading mb={4} fontSize={96}>
-                <Link onClick={this.reset} color="white" textDecoration="none">
-                  Hi, i'm Mike
+function Index() {
+  return (
+    <Provider theme={theme}>
+      <Box is="main" mt={3} pl={5}>
+        <Flex alignItems="center">
+          <Box>
+            <Heading mt={4} mb={3} fontSize={96}>
+              <Flex alignItems="center" justifyContent="space-between">
+                <Link href="#" color="white" style={{ textDecoration: 'none' }}>
+                  Mike Fix
                 </Link>
-              </Heading>
-              <Flex flexDirection="column" css={relative}>
-                <Grey>
-                  <Black>
-                    <Screen />
-                  </Black>
-                </Grey>
-                <Absolute left="50%" top="100%" mt="-5px" css={translate50}>
-                  <Image
-                    width={215}
-                    src="/static/img/computer.png"
-                    alt="Computer Stand"
-                  />
-                </Absolute>
-                <Absolute bottom="-100px" left="100px" zIndex="3">
-                  <BlockLink
-                    title="Buy me a coffee link"
-                    href="https://www.buymeacoffee.com/fix"
-                    target="_blank"
-                  >
-                    <Coffee width={110} />
-                  </BlockLink>
-                </Absolute>
+                <Text fontSize={4} mr={3}>
+                  <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
+                  <Icon name="logo-github" href="https://github.com/mfix22" />
+                </Text>
               </Flex>
-            </Box>
-            <Projects updatePortal={this.updatePortal} />
-          </Flex>
-        </Box>
-      </Provider>
-    )
-  }
+            </Heading>
+            <Flex flexDirection="column" css={relative}>
+              <DefaultScreen />
+            </Flex>
+          </Box>
+        </Flex>
+      </Box>
+    </Provider>
+  )
 }
 
 export default Index
