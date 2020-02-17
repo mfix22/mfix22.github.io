@@ -112,12 +112,24 @@ function Index() {
       lineNumber: 34
     },
     __self: this
-  }, "Mike Fix"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+    style: {
+      display: 'inline'
+    },
+    bg: "mint",
+    pt: "12px",
+    pb: "-8px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "M"), "ike Fix"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     fontSize: 4,
     mr: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Icon, {
@@ -125,7 +137,7 @@ function Index() {
     href: "https://twitter.com/fixitup2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 41
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Icon, {
@@ -133,20 +145,20 @@ function Index() {
     href: "https://github.com/mfix22",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_StyledFlex, {
     flexDirection: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Home__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 47
     },
     __self: this
   }))))));
@@ -162,4 +174,4 @@ var _StyledFlex = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["default
 /***/ })
 
 })
-//# sourceMappingURL=index.js.794cd2848bb90a6e8296.hot-update.js.map
+//# sourceMappingURL=index.js.da2f486a7bc0d525886e.hot-update.js.map
