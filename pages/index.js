@@ -5,7 +5,7 @@ import DefaultScreen from '../components/Home'
 
 const theme = {
   colors: {
-    mint: '#00ffa7'
+    mint: '#00f1ff'
   },
   fonts: {
     sans: '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',

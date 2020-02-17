@@ -64,7 +64,7 @@ export default function Home() {
         </Link>
         .
         <br />
-        Here are a few things i'm into:
+        Here are a few things I'm into:
       </Text>
       <ul>
         <LI>
@@ -103,7 +103,10 @@ export default function Home() {
       </ul>
       <Text fontSize={0} mt={3} mb={3}>
         (If you want to chat about any of these things,{' '}
-        <Link color="mint" href="mailto:mrfix84@gmail.com">
+        <Link
+          color="mint"
+          href="mailto:mrfix84@gmail.com?subject=Let's%20grab%20coffee!&body=Hey%20Mike%2C%0AI%20saw%20the%20offer%20to%20grab%20coffee%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!"
+        >
           let&#39;s grab a coffee
         </Link>
         !)
