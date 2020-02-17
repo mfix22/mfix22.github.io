@@ -61,7 +61,7 @@ function Home() {
       setMore = _React$useState2[1];
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Terminal, {
-    px: 4,
+    px: 5,
     py: 3,
     fontSize: 2,
     mb: 2,
@@ -114,7 +114,7 @@ function Home() {
       lineNumber: 66
     },
     __self: this
-  }), "Here are a few things i like:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+  }), "Here are a few things I'm into:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
@@ -238,7 +238,7 @@ function Home() {
     __self: this
   }, "(If you want to chat about any of these things,", ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
     color: "mint",
-    href: "mailto:mrfix84@gmail.com",
+    href: "mailto:mrfix84@gmail.com?subject=Let's%20grab%20coffee!&body=Hey%20Mike%2C%0AI%20saw%20the%20offer%20to%20grab%20coffee%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 106
@@ -250,19 +250,19 @@ function Home() {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 115
     },
     __self: this
   }, "Projects"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 118
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 119
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -271,13 +271,13 @@ function Home() {
     href: "https://carbon.now.sh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 120
     },
     __self: this
   }, "Carbon")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -286,13 +286,13 @@ function Home() {
     href: "https://reporanger.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 125
     },
     __self: this
   }, "Ranger")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 129
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -301,13 +301,13 @@ function Home() {
     href: "https://dawnlabs.io/alchemy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 130
     },
     __self: this
   }, "Alchemy")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -316,13 +316,13 @@ function Home() {
     href: "https://transcenduw.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 135
     },
     __self: this
   }, "Transcend")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 139
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -331,7 +331,7 @@ function Home() {
     href: "http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 140
     },
     __self: this
   }, "Band Wagon"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -340,13 +340,13 @@ function Home() {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 150
     },
     __self: this
   }, "Articles"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 153
     },
     __self: this
   }, _static_writings_json__WEBPACK_IMPORTED_MODULE_4__.items.map(function (item) {
@@ -354,7 +354,7 @@ function Home() {
       key: item.guid,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 155
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Link, {
@@ -363,7 +363,7 @@ function Home() {
       color: "inherit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153
+        lineNumber: 156
       },
       __self: this
     }, item.title));
@@ -373,4 +373,4 @@ function Home() {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.00b2a6cb66a2b988dc05.hot-update.js.map
+//# sourceMappingURL=index.js.f8409653a9a5a69c0b3f.hot-update.js.map
