@@ -32,9 +32,6 @@ var theme = {
     mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', ')
   }
 };
-var relative = {
-  position: 'relative'
-};
 var Link = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(rebass__WEBPACK_IMPORTED_MODULE_2__["Link"]).withConfig({
   displayName: "pages__Link",
   componentId: "yy02qt-0"
@@ -42,7 +39,7 @@ var Link = Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(reb
 var LI = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].li.withConfig({
   displayName: "pages__LI",
   componentId: "yy02qt-1"
-})(["margin-bottom:", "px;cursor:", ";display:flex;&:before{content:'\u261B ';margin-right:", "px;}"], function (props) {
+})(["margin-bottom:", "px;cursor:", ";display:flex;align-items:center;&:before{content:'\u261B ';font-size:16px;margin-right:", "px;}"], function (props) {
   return props.theme.space[2];
 }, function (props) {
   return props.onClick ? 'pointer' : null;
@@ -204,13 +201,13 @@ function Home() {
       lineNumber: 89
     },
     __self: this
-  }, "Financing / Sustaining OSS"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
+  }, "Financing, maintaining, sustaining OSS"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     },
     __self: this
-  }, "Digital / Interactive / Open Art"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
+  }, "Digital, interactive, open art"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 91
@@ -498,4 +495,4 @@ function Index() {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.ee78094823849a399d2f.hot-update.js.map
+//# sourceMappingURL=index.js.3937d0e4517f4d8e7e64.hot-update.js.map
