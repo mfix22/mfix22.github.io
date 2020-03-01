@@ -25,8 +25,10 @@ const LI = styled.li`
   margin-bottom: ${props => props.theme.space[2]}px;
   cursor: ${props => (props.onClick ? 'pointer' : null)};
   display: flex;
+  align-items: center;
   &:before {
     content: '☛ ';
+    font-size: ${props => props.theme.fontSizes[0]}px;
     margin-right: ${props => props.theme.space[2]}px;
   }
 `
@@ -84,8 +86,8 @@ function Home() {
                 Field Notes
               </Link>
             </LI>
-            <LI>Financing / Sustaining OSS</LI>
-            <LI>Digital / Interactive / Open Art</LI>
+            <LI>Financing, maintaining, sustaining OSS</LI>
+            <LI>Digital, interactive, open art</LI>
             <LI>Micro-grants</LI>
             <LI>
               <Link color="inherit" href="http://cheeseboardcollective.coop/">
