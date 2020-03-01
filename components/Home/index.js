@@ -30,10 +30,12 @@ export const Black = styled(Flex)`
 `
 
 export const LI = styled.li`
-  margin-bottom: ${props => props.theme.space[1]}px;
+  margin-bottom: ${props => props.theme.space[2]}px;
   cursor: ${props => (props.onClick ? 'pointer' : null)};
+  display: flex;
   &:before {
     content: '☛ ';
+    margin-right: ${props => props.theme.space[2]}px;
   }
 `
 
@@ -47,7 +49,7 @@ export default function Home() {
   const [more, setMore] = React.useState(false)
 
   return (
-    <Terminal px={4} py={3} fontSize={2} mb={2}>
+    <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
       <Text mb={4} lineHeight={1.5}>
         Hey 👋. I'm currently working as a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
@@ -75,8 +77,8 @@ export default function Home() {
         <LI>Skiing, rock climbing</LI>
         <LI>Open-source software</LI>
         <LI>
-          JavaScript +{' '}
-          <Link color="inherit" href="https://www.youtube.com/watch?v=d0xMqeVhlhQ">
+          JavaScript +
+          <Link ml={2} color="inherit" href="https://www.youtube.com/watch?v=d0xMqeVhlhQ">
             GraphQL
           </Link>
         </LI>

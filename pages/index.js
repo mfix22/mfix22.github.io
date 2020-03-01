@@ -26,15 +26,15 @@ function Icon(props) {
 function Index() {
   return (
     <Provider theme={theme}>
-      <Box is="main" mt={3} pl={5}>
+      <Box is="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
         <Flex alignItems="center">
           <Box>
-            <Heading mt={4} mb={3} fontSize={96}>
+            <Heading mt={4} mb={3} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
               <Flex alignItems="center" justifyContent="space-between">
                 <Link href="#" color="white" style={{ textDecoration: 'none' }}>
                   Mike Fix
                 </Link>
-                <Text fontSize={4} mr={3}>
+                <Text fontSize={[3, 3, 4]} mr={3}>
                   <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
                   <Icon name="logo-github" href="https://github.com/mfix22" />
                 </Text>
