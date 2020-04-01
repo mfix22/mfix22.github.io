@@ -143,6 +143,7 @@ body {
 
 * {
   box-sizing: border-box;
+  outline-color: #ff81eb;
 }
 `
 
