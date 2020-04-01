@@ -1,7 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
-import { Provider } from 'rebass'
-import { AltCheck } from 'visualint'
 
 injectGlobal`
 html,
@@ -147,12 +145,6 @@ body {
 }
 `
 
-const theme = {
-  colors: {
-    mint: '#00ffa7'
-  }
-}
-
 export default class extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -174,9 +166,7 @@ export default class extends Document {
         </Head>
         <body>
           <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js" />
-          <AltCheck>
-            <Main />
-          </AltCheck>
+          <Main />
           <NextScript />
           <script>
             {/*

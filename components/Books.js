@@ -2,7 +2,7 @@ import React from 'react'
 import { Flex, BlockLink, Truncate, Border } from 'rebass'
 import styled from 'styled-components'
 
-import writings from '../static/writings.json'
+import writings from './writings.json'
 
 const colors = [
   '#463730',
@@ -47,12 +47,7 @@ class Books extends React.Component {
         <Flex alignItems="flex-end">
           {this.state.items.map((item, i) => (
             <BlockLink key={item.guid} href={item.link} target="_blank">
-              <Book
-                bg={colors[i]}
-                p={1}
-                border={1}
-                borderColor="rgba(0,0,0, 0.5)"
-              >
+              <Book bg={colors[i]} p={1} border={1} borderColor="rgba(0,0,0, 0.5)">
                 <Truncate fontSize={0}>{item.title}</Truncate>
               </Book>
             </BlockLink>

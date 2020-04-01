@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Text, Flex, Heading, Link as BaseLink, Provider } from 'rebass'
 import styled from 'styled-components'
 
-import writings from '../static/writings.json'
+import writings from '../components/writings.json'
 
 const theme = {
   colors: {
