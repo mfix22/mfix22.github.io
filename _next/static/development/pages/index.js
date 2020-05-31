@@ -16870,46 +16870,37 @@ function Home() {
       lineNumber: 72
     },
     __self: this
-  }, "Open-source software"), __jsx(LI, {
+  }, "Financing, maintaining, sustaining open-source software"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
     },
     __self: this
-  }, "JavaScript +", __jsx(Link, {
-    ml: 2,
-    color: "inherit",
-    href: "https://www.youtube.com/watch?v=d0xMqeVhlhQ",
+  }, "Music by Kendrick Lamar, Dessa, Vince Staples, & The Roots"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 74
     },
     __self: this
-  }, "GraphQL")), __jsx(LI, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, "Music by Kendrick Lamar, Dessa, & Vince Staples"), !more ? __jsx(LI, {
+  }, "When the beat drops in the middle of a rap verse"), !more ? __jsx(LI, {
     onClick: function onClick() {
       return setMore(true);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 76
     },
     __self: this
   }, "More\u2026") : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 78
     },
     __self: this
   }, __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 79
     },
     __self: this
   }, __jsx(Link, {
@@ -16917,31 +16908,19 @@ function Home() {
     href: "https://fieldnotesbrand.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 80
     },
     __self: this
   }, "Field Notes")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
-    },
-    __self: this
-  }, "Financing, maintaining, sustaining OSS"), __jsx(LI, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 84
     },
     __self: this
   }, "Digital, interactive, open art"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, "Micro-grants"), __jsx(LI, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 85
     },
     __self: this
   }, __jsx(Link, {
@@ -16949,10 +16928,31 @@ function Home() {
     href: "http://cheeseboardcollective.coop/",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 86
+    },
+    __self: this
+  }, "Pizza")), __jsx(LI, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90
+    },
+    __self: this
+  }, "Micro-grants"), __jsx(LI, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, "JavaScript &", __jsx(Link, {
+    ml: 2,
+    color: "inherit",
+    href: "https://www.youtube.com/watch?v=d0xMqeVhlhQ",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 93
     },
     __self: this
-  }, "Pizza")))), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
+  }, "GraphQL")))), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     fontSize: 0,
     mt: 3,
     mb: 3,
