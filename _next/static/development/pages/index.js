@@ -16876,7 +16876,7 @@ function Home() {
       lineNumber: 73
     },
     __self: this
-  }, "Music by Kendrick Lamar, Dessa, Vince Staples, & The Roots"), __jsx(LI, {
+  }, "Music by Kendrick Lamar, Dessa, Jackson Browne, Vince Staples & The Roots"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
