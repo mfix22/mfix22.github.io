@@ -6,12 +6,12 @@ import writings from '../components/writings.json'
 
 const theme = {
   colors: {
-    mint: '#00f1ff'
+    mint: '#00f1ff',
   },
   fonts: {
     sans: '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
-    mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', ')
-  }
+    mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', '),
+  },
 }
 
 const Link = styled(BaseLink)`
@@ -22,20 +22,20 @@ const Link = styled(BaseLink)`
 `
 
 const LI = styled.li`
-  margin-bottom: ${props => props.theme.space[2]}px;
-  cursor: ${props => (props.onClick ? 'pointer' : null)};
+  margin-bottom: ${(props) => props.theme.space[2]}px;
+  cursor: ${(props) => (props.onClick ? 'pointer' : null)};
   display: flex;
   align-items: center;
   &:before {
     content: '☛ ';
-    font-size: ${props => props.theme.fontSizes[0]}px;
-    margin-right: ${props => props.theme.space[2]}px;
+    font-size: ${(props) => props.theme.fontSizes[0]}px;
+    margin-right: ${(props) => props.theme.space[2]}px;
   }
 `
 
 const Terminal = styled(Box)`
   display: block;
-  font-family: ${props => props.theme.fonts.mono};
+  font-family: ${(props) => props.theme.fonts.mono};
   overflow: auto;
 `
 
@@ -69,14 +69,9 @@ function Home() {
           </Link>
         </LI>
         <LI>Skiing, rock climbing</LI>
-        <LI>Open-source software</LI>
-        <LI>
-          JavaScript +
-          <Link ml={2} color="inherit" href="https://www.youtube.com/watch?v=d0xMqeVhlhQ">
-            GraphQL
-          </Link>
-        </LI>
-        <LI>Music by Kendrick Lamar, Dessa, & Vince Staples</LI>
+        <LI>Financing, maintaining, sustaining open-source software</LI>
+        <LI>Music by Kendrick Lamar, Dessa, Vince Staples, & The Roots</LI>
+        <LI>When the beat drops in the middle of a rap verse</LI>
         {!more ? (
           <LI onClick={() => setMore(true)}>More…</LI>
         ) : (
@@ -86,12 +81,17 @@ function Home() {
                 Field Notes
               </Link>
             </LI>
-            <LI>Financing, maintaining, sustaining OSS</LI>
             <LI>Digital, interactive, open art</LI>
-            <LI>Micro-grants</LI>
             <LI>
               <Link color="inherit" href="http://cheeseboardcollective.coop/">
                 Pizza
+              </Link>
+            </LI>
+            <LI>Micro-grants</LI>
+            <LI>
+              JavaScript &
+              <Link ml={2} color="inherit" href="https://www.youtube.com/watch?v=d0xMqeVhlhQ">
+                GraphQL
               </Link>
             </LI>
           </React.Fragment>
@@ -147,7 +147,7 @@ function Home() {
         Articles
       </Text>
       <ul>
-        {writings.items.map(item => (
+        {writings.items.map((item) => (
           <LI key={item.guid}>
             <Link href={item.link} target="_blank" color="inherit">
               {item.title}
