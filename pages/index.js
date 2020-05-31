@@ -70,7 +70,7 @@ function Home() {
         </LI>
         <LI>Skiing, rock climbing</LI>
         <LI>Financing, maintaining, sustaining open-source software</LI>
-        <LI>Music by Kendrick Lamar, Dessa, Vince Staples, & The Roots</LI>
+        <LI>Music by Kendrick Lamar, Dessa, Jackson Browne, Vince Staples & The Roots</LI>
         <LI>When the beat drops in the middle of a rap verse</LI>
         {!more ? (
           <LI onClick={() => setMore(true)}>More…</LI>
