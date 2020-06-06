@@ -136,7 +136,7 @@ function Home() {
           <Link
             target="_blank"
             color="inherit"
-            href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503"
+            href="https://patents.google.com/patent/US9321503B2/en"
           >
             Band Wagon
           </Link>
