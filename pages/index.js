@@ -44,7 +44,7 @@ function Home() {
 
   return (
     <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
-      <Text mb={4} lineHeight={1.5}>
+      <Text mb={3} lineHeight={1.5}>
         Hey 👋. I'm currently working as a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
@@ -60,6 +60,7 @@ function Home() {
         </Link>
         .
         <br />
+        <br />
         Here are a few things I'm into:
       </Text>
       <ul>
@@ -68,10 +69,10 @@ function Home() {
             Drinking coffee with others
           </Link>
         </LI>
-        <LI>Skiing, rock climbing</LI>
+        <LI>Rock climbing, skiing</LI>
         <LI>Financing, maintaining, sustaining open-source software</LI>
-        <LI>Music by Kendrick Lamar, Dessa, Jackson Browne, Vince Staples & The Roots</LI>
-        <LI>When the beat drops in the middle of a rap verse</LI>
+        <LI>Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples & The Roots</LI>
+        {/* <LI>When the beat drops in the middle of a rap verse</LI> */}
         {!more ? (
           <LI onClick={() => setMore(true)}>More…</LI>
         ) : (
@@ -97,7 +98,7 @@ function Home() {
           </React.Fragment>
         )}
       </ul>
-      <Text fontSize={0} mt={3} mb={3}>
+      <Text fontSize={0} mt={3}>
         (If you want to chat about any of these things,{' '}
         <Link
           color="mint"
@@ -144,9 +145,27 @@ function Home() {
       </ul>
 
       <Text mt={5} mb={2} fontSize={3}>
-        Articles
+        Around the web
       </Text>
       <ul>
+        <LI>
+          <Link href="https://changelog.com/podcast/410" target="_blank" color="inherit">
+            The Changelog – Episode #410
+            <br />
+            <small>Bringing beauty to the world of code sharing</small>
+          </Link>
+        </LI>
+        <LI>
+          <Link
+            href="https://www.designsystems.com/white-labeling-putting-the-design-system-in-users-hands/"
+            target="_blank"
+            color="inherit"
+          >
+            White-labeling: Putting the design system in users' hands
+            <br />
+            Designsystems.com
+          </Link>
+        </LI>
         {writings.items.map((item) => (
           <LI key={item.guid}>
             <Link href={item.link} target="_blank" color="inherit">
