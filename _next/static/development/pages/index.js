@@ -16795,7 +16795,7 @@ function Home() {
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
-    mb: 4,
+    mb: 3,
     lineHeight: 1.5,
     __source: {
       fileName: _jsxFileName,
@@ -16838,16 +16838,22 @@ function Home() {
       lineNumber: 62
     },
     __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
   }), "Here are a few things I'm into:"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: this
   }, __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }, __jsx(Link, {
@@ -16855,52 +16861,46 @@ function Home() {
     href: "https://goo.gl/maps/VsJW2cLXMcGCWrgs5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }, "Drinking coffee with others")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
-    },
-    __self: this
-  }, "Skiing, rock climbing"), __jsx(LI, {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 72
     },
     __self: this
-  }, "Financing, maintaining, sustaining open-source software"), __jsx(LI, {
+  }, "Rock climbing, skiing"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 73
     },
     __self: this
-  }, "Music by Kendrick Lamar, Dessa, Jackson Browne, Vince Staples & The Roots"), __jsx(LI, {
+  }, "Financing, maintaining, sustaining open-source software"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74
     },
     __self: this
-  }, "When the beat drops in the middle of a rap verse"), !more ? __jsx(LI, {
+  }, "Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples & The Roots"), !more ? __jsx(LI, {
     onClick: function onClick() {
       return setMore(true);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: this
   }, "More\u2026") : __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   }, __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 80
     },
     __self: this
   }, __jsx(Link, {
@@ -16908,19 +16908,19 @@ function Home() {
     href: "https://fieldnotesbrand.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }, "Field Notes")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 85
     },
     __self: this
   }, "Digital, interactive, open art"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
     },
     __self: this
   }, __jsx(Link, {
@@ -16928,19 +16928,19 @@ function Home() {
     href: "http://cheeseboardcollective.coop/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 87
     },
     __self: this
   }, "Pizza")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 91
     },
     __self: this
   }, "Micro-grants"), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 92
     },
     __self: this
   }, "JavaScript &", __jsx(Link, {
@@ -16949,16 +16949,15 @@ function Home() {
     href: "https://www.youtube.com/watch?v=d0xMqeVhlhQ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 94
     },
     __self: this
   }, "GraphQL")))), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
     fontSize: 0,
     mt: 3,
-    mb: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 101
     },
     __self: this
   }, "(If you want to chat about any of these things,", ' ', __jsx(Link, {
@@ -16966,7 +16965,7 @@ function Home() {
     href: "mailto:mrfix84@gmail.com?subject=Let's%20grab%20coffee!&body=Hey%20Mike%2C%0AI%20saw%20the%20offer%20to%20grab%20coffee%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, "let's grab a coffee"), "!)"), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -16975,19 +16974,19 @@ function Home() {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: this
   }, "Projects"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
   }, __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 116
     },
     __self: this
   }, __jsx(Link, {
@@ -16996,13 +16995,13 @@ function Home() {
     href: "https://carbon.now.sh",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 117
     },
     __self: this
   }, "Carbon")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 121
     },
     __self: this
   }, __jsx(Link, {
@@ -17011,13 +17010,13 @@ function Home() {
     href: "https://reporanger.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, "Ranger")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 126
     },
     __self: this
   }, __jsx(Link, {
@@ -17026,13 +17025,13 @@ function Home() {
     href: "https://dawnlabs.io/alchemy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, "Alchemy")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, __jsx(Link, {
@@ -17041,22 +17040,22 @@ function Home() {
     href: "https://transcenduw.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, "Transcend")), __jsx(LI, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, __jsx(Link, {
     target: "_blank",
     color: "inherit",
-    href: "http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=9321503.PN.&OS=PN/9321503&RS=PN/9321503",
+    href: "https://patents.google.com/patent/US9321503B2/en",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }, "Band Wagon"))), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -17065,21 +17064,69 @@ function Home() {
     fontSize: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
-  }, "Articles"), __jsx("ul", {
+  }, "Around the web"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 150
     },
     __self: this
-  }, _components_writings_json__WEBPACK_IMPORTED_MODULE_4__.items.map(function (item) {
+  }, __jsx(LI, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
+  }, __jsx(Link, {
+    href: "https://changelog.com/podcast/410",
+    target: "_blank",
+    color: "inherit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 152
+    },
+    __self: this
+  }, "The Changelog \u2013 Episode #410", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }), __jsx("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }, "Bringing beauty to the world of code sharing"))), __jsx(LI, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158
+    },
+    __self: this
+  }, __jsx(Link, {
+    href: "https://www.designsystems.com/white-labeling-putting-the-design-system-in-users-hands/",
+    target: "_blank",
+    color: "inherit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159
+    },
+    __self: this
+  }, "White-labeling: Putting the design system in users' hands", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 165
+    },
+    __self: this
+  }), "Designsystems.com")), _components_writings_json__WEBPACK_IMPORTED_MODULE_4__.items.map(function (item) {
     return __jsx(LI, {
       key: item.guid,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 170
       },
       __self: this
     }, __jsx(Link, {
@@ -17088,7 +17135,7 @@ function Home() {
       color: "inherit",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 171
       },
       __self: this
     }, item.title));
@@ -17103,14 +17150,14 @@ function Icon(props) {
     target: "_blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 183
     },
     __self: this
   }, __jsx("ion-icon", {
     name: props.name,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 184
     },
     __self: this
   }));
@@ -17121,7 +17168,7 @@ function Index() {
     theme: theme,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 191
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Box"], {
@@ -17130,20 +17177,20 @@ function Index() {
     pl: [0, 0, 5],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173
+      lineNumber: 192
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
     alignItems: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 193
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Box"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 194
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Heading"], {
@@ -17153,7 +17200,7 @@ function Index() {
     pl: [3, 3, 0],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 195
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
@@ -17161,7 +17208,7 @@ function Index() {
     justifyContent: "space-between",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 196
     },
     __self: this
   }, __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -17172,7 +17219,7 @@ function Index() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 197
     },
     __self: this
   }, "Mike Fix"), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Text"], {
@@ -17180,7 +17227,7 @@ function Index() {
     mr: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 200
     },
     __self: this
   }, __jsx(Icon, {
@@ -17188,7 +17235,7 @@ function Index() {
     href: "https://twitter.com/fixitup2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 201
     },
     __self: this
   }), __jsx(Icon, {
@@ -17196,20 +17243,20 @@ function Index() {
     href: "https://github.com/mfix22",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 202
     },
     __self: this
   })))), __jsx(rebass__WEBPACK_IMPORTED_MODULE_2__["Flex"], {
     flexDirection: "column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 206
     },
     __self: this
   }, __jsx(Home, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 207
     },
     __self: this
   }))))));
