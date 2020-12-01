@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Text, Flex, Heading, Link as BaseLink, Provider } from 'rebass'
 import styled from 'styled-components'
+import NextLink from 'next/link'
 
 import writings from '../components/writings.json'
 
@@ -173,6 +174,19 @@ function Home() {
             </Link>
           </LI>
         ))}
+      </ul>
+
+      <Text mt={5} mb={2} fontSize={3}>
+        Art
+      </Text>
+      <ul>
+        <LI>
+          <NextLink href="/blocks">
+            <Link href="/blocks" color="inherit">
+              Blocks #1
+            </Link>
+          </NextLink>
+        </LI>
       </ul>
     </Terminal>
   )
