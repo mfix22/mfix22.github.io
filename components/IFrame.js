@@ -1,11 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Flex, Text, Embed } from 'rebass'
+import { Flex, Text, Embed } from 'rebass/styled-components'
 
 class IFrame extends React.Component {
   state = {
     loading: true,
-    count: 0
+    count: 0,
   }
 
   onLoad = () => this.setState({ loading: false })
@@ -36,7 +35,7 @@ class IFrame extends React.Component {
           css={{
             width: '100%',
             height: '100%',
-            display: loading ? 'none' : 'block'
+            display: loading ? 'none' : 'block',
           }}
         >
           <iframe {...this.props} onLoad={this.onLoad} />

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Box, Text, Flex, Heading, Link as BaseLink, Provider } from 'rebass'
-import styled from 'styled-components'
+import { Box, Text, Flex, Heading, Link as BaseLink } from 'rebass/styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+import merge from 'lodash.merge'
+import preset from '@rebass/preset'
 import NextLink from 'next/link'
 
 import writings from '../components/writings.json'
 
-const theme = {
+const theme = merge(preset, {
   colors: {
     mint: '#00f1ff',
   },
@@ -13,7 +15,7 @@ const theme = {
     sans: '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
     mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', '),
   },
-}
+})
 
 const Link = styled(BaseLink)`
   &:hover {
@@ -202,11 +204,11 @@ function Icon(props) {
 
 function Index() {
   return (
-    <Provider theme={theme}>
-      <Box is="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
+    <ThemeProvider theme={theme}>
+      <Box as="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
         <Flex alignItems="center">
           <Box>
-            <Heading mt={4} mb={3} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
+            <Heading fontFamily="sans" mt={4} mb={3} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
               <Flex alignItems="center" justifyContent="space-between">
                 <BaseLink href="#" color="white" style={{ textDecoration: 'none' }}>
                   Mike Fix
@@ -223,7 +225,7 @@ function Index() {
           </Box>
         </Flex>
       </Box>
-    </Provider>
+    </ThemeProvider>
   )
 }
 

@@ -1,20 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Box, Flex } from 'rebass'
+import { Box, Flex } from 'rebass/styled-components'
 
 const range = (l, fn) => Array.from({ length: l }, fn)
 
 const ran = (max, min = 0) => Math.floor(Math.random() * (max - min + 1)) + min
 
 const color = () => '#' + ran(16777215).toString(16)
-
-const Cell = styled.div.attrs({
-  style: ({ width, height, bg }) => ({
-    width,
-    height,
-    background: bg,
-  }),
-})``
 
 const Slider = styled.input.attrs({
   type: 'range',
@@ -50,7 +42,7 @@ export const RandomGrid = ({ width = 500, height = 500, size, count, colorCount 
       {grid.map((row, i) => (
         <Flex key={i}>
           {row.map((cell, j) => (
-            <Cell width={width / size} height={height / size} bg={cell} key={j} />
+            <Box width={width / size} sx={{ height: height / size }} bg={cell} key={j} />
           ))}
         </Flex>
       ))}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, BlockLink, Truncate, Border } from 'rebass'
+import { Flex, BlockLink, Truncate, Border } from 'rebass/styled-components'
 import styled from 'styled-components'
 
 import writings from './writings.json'
@@ -14,7 +14,7 @@ const colors = [
   '#7B7554',
   '#475B63',
   '#FFAD69',
-  '#53599A'
+  '#53599A',
 ]
 
 const Book = styled(Border)`

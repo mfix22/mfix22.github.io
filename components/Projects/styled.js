@@ -1,10 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  Flex,
-  Box,
-  Image as BaseImage
-} from 'rebass'
+import { Flex, Box, Image as BaseImage } from 'rebass/styled-components'
 
 export const VHS = styled(Flex)`
   font-family: 'Reenie Beanie', cursive;
@@ -17,7 +13,7 @@ export const VHS = styled(Flex)`
 `
 
 export const Image = styled(BaseImage)`
-  max-width: ${props => props.maxWidth || 'none'};
+  max-width: ${(props) => props.maxWidth || 'none'};
   cursor: pointer;
 `
 
@@ -34,7 +30,7 @@ export const Triangle = styled(Box)`
   width: 0;
   height: 0;
 
-  ${props => `
+  ${(props) => `
     border-left: ${props.width || 40}px solid transparent;
     border-right: ${props.width || 40}px solid transparent;
     border-bottom: ${props.height || 12}px solid ${props.color};
