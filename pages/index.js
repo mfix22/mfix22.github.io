@@ -47,7 +47,7 @@ function Home() {
   return (
     <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
       <Text mb={3} lineHeight={1.5}>
-        is currently working as a software engineer at{' '}
+        Hey there 👋. I'm currently working as a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
         </Link>
@@ -201,39 +201,13 @@ function Icon(props) {
   )
 }
 
-const Wave = styled(Text)`
-  > span {
-    display: inline-block;
-    animation: none 0.4s ease-in-out 0s infinite alternate;
-  }
-  &:hover > span {
-    animation-name: rotate;
-  }
-  @keyframes rotate {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(90deg);
-    }
-  }
-  @media (prefers-reduced-motion) {
-    animation: none;
-  }
-`
-
 function Index() {
   return (
     <ThemeProvider theme={theme}>
       <Box as="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
         <Flex alignItems="center">
           <Box>
-            <Text mt={4} lineHeight={1.5} fontFamily="mono">
-              <Wave>
-                Hey there <span>👋</span>
-              </Wave>
-            </Text>
-            <Heading fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
+            <Heading mt={4} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
               <Flex alignItems="center" justifyContent="space-between">
                 <BaseLink href="#" color="white" style={{ textDecoration: 'none' }}>
                   Mike Fix
