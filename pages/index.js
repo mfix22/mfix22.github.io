@@ -204,10 +204,10 @@ function Icon(props) {
 const Wave = styled(Text)`
   > span {
     display: inline-block;
-    animation: rotate 0.4s ease-in-out 0s 0 alternate forwards running;
+    animation: none 0.4s ease-in-out 0s infinite alternate;
   }
   &:hover > span {
-    animation-iteration-count: infinite;
+    animation-name: rotate;
   }
   @keyframes rotate {
     from {
