@@ -8,14 +8,6 @@
   },
   "items": [
     {
-      "title": "Start to finish with Hasura’s GraphQL Engine",
-      "link": "https://blog.hasura.io/start-to-finish-with-hasuras-graphql-engine-6a3399a02195?source=rss-c413a9843cab------2",
-      "date": "Wed, 08 Aug 2018 16:58:16 GMT",
-      "guid": "https://medium.com/p/6a3399a02195",
-      "categories": ["graphql", "postgres", "hasura"],
-      "media": []
-    },
-    {
       "title": "Experimental GraphQL",
       "link": "https://medium.com/open-graphql/experimental-graphql-73a433543331?source=rss-c413a9843cab------2",
       "date": "Wed, 16 May 2018 00:14:21 GMT",

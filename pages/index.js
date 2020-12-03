@@ -12,7 +12,6 @@ const theme = merge(preset, {
     mint: '#00f1ff',
   },
   fonts: {
-    sans: '"Josefin Sans", "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
     mono: ['Consolas', 'Menlo', 'Courier', 'monospace'].join(', '),
   },
 })
@@ -48,7 +47,7 @@ function Home() {
   return (
     <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
       <Text mb={3} lineHeight={1.5}>
-        Hey 👋. I'm currently working as a software engineer at{' '}
+        is currently working as a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
         </Link>
@@ -202,18 +201,44 @@ function Icon(props) {
   )
 }
 
+const Wave = styled(Text)`
+  > span {
+    display: inline-block;
+    animation: rotate 0.4s ease-in-out 0s 0 alternate forwards running;
+  }
+  &:hover > span {
+    animation-iteration-count: infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+`
+
 function Index() {
   return (
     <ThemeProvider theme={theme}>
       <Box as="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
         <Flex alignItems="center">
           <Box>
-            <Heading fontFamily="sans" mt={4} mb={3} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
+            <Text mt={4} lineHeight={1.5} fontFamily="mono">
+              <Wave>
+                Hey there <span>👋</span>
+              </Wave>
+            </Text>
+            <Heading fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
               <Flex alignItems="center" justifyContent="space-between">
                 <BaseLink href="#" color="white" style={{ textDecoration: 'none' }}>
                   Mike Fix
                 </BaseLink>
-                <Text fontSize={[3, 3, 4]} mr={3}>
+                <Text fontSize={[3, 3, 4]} mt={3} mr={3}>
                   <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
                   <Icon name="logo-github" href="https://github.com/mfix22" />
                 </Text>
