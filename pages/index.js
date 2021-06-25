@@ -71,10 +71,9 @@ function Home() {
             Drinking coffee with others
           </Link>
         </LI>
-        <LI>Rock climbing, skiing</LI>
-        <LI>Financing, maintaining, sustaining open-source software</LI>
+        <LI>Climbing, skiing</LI>
         <LI>Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples & The Roots</LI>
-        {/* <LI>When the beat drops in the middle of a rap verse</LI> */}
+        <LI>Financing, maintaining, sustaining open-source software</LI>
         {!more ? (
           <LI onClick={() => setMore(true)}>More…</LI>
         ) : (
