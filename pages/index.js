@@ -25,7 +25,7 @@ const Link = styled(BaseLink)`
 `
 
 const LI = styled.li`
-  margin-bottom: ${(props) => props.theme.space[2]}px;
+  margin-bottom: 12px;
   cursor: ${(props) => (props.onClick ? 'pointer' : null)};
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ const LI = styled.li`
   }
 `
 
-const Terminal = styled(Box)`
+const Content = styled(Box)`
   display: block;
   font-family: ${(props) => props.theme.fonts.mono};
   overflow: auto;
@@ -46,14 +46,17 @@ function Home() {
   const [more, setMore] = React.useState(false)
 
   return (
-    <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
+    <Content px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
       <Text lineHeight={1.5}>
-        Hey there 👋. I'm currently working as a software engineer at{' '}
+        Hey there 👋. Currently, I’m a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
         </Link>
-        , but
-        <br /> you may know me from my work on{' '}
+        ,
+        <br />
+        working on the Dashboard, Docs, and Open Source,
+        <br />
+        but you may know me from my work on{' '}
         <Link color="mint" href="https://carbon.now.sh">
           Carbon
         </Link>{' '}
@@ -64,7 +67,7 @@ function Home() {
         .
       </Text>
       <Text mt={5} mb={3} fontSize={3}>
-        A few things I'm into
+        A few things I’m into
       </Text>
       <ul>
         <LI>
@@ -166,7 +169,7 @@ function Home() {
             target="_blank"
             color="inherit"
           >
-            White-labeling: Putting the design system in users' hands
+            White-labeling: Putting the design system in users’ hands
             <br />
             Designsystems.com
           </Link>
@@ -192,7 +195,7 @@ function Home() {
           </NextLink>
         </LI>
       </ul>
-    </Terminal>
+    </Content>
   )
 }
 
