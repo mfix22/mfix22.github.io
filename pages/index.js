@@ -88,7 +88,6 @@ function Home() {
                 Field Notes
               </Link>
             </LI>
-            <LI>Digital, interactive, open art</LI>
             <LI>
               <Link color="inherit" href="http://cheeseboardcollective.coop/">
                 Pizza
