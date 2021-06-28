@@ -20,6 +20,7 @@ const Link = styled(BaseLink)`
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     text-decoration: none;
+    cursor: pointer;
   }
 `
 
@@ -46,7 +47,7 @@ function Home() {
 
   return (
     <Terminal px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
-      <Text mb={3} lineHeight={1.5}>
+      <Text lineHeight={1.5}>
         Hey there 👋. I'm currently working as a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
@@ -61,9 +62,9 @@ function Home() {
           Ranger
         </Link>
         .
-        <br />
-        <br />
-        Here are a few things I'm into:
+      </Text>
+      <Text mt={5} mb={3} fontSize={3}>
+        A few things I'm into
       </Text>
       <ul>
         <LI>
@@ -72,10 +73,14 @@ function Home() {
           </Link>
         </LI>
         <LI>Climbing, skiing</LI>
-        <LI>Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples & The Roots</LI>
+        <LI>Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples, and The Roots</LI>
         <LI>Financing, maintaining, sustaining open-source software</LI>
         {!more ? (
-          <LI onClick={() => setMore(true)}>More…</LI>
+          <LI>
+            <Link color="inherit" onClick={() => setMore(true)}>
+              More…
+            </Link>
+          </LI>
         ) : (
           <React.Fragment>
             <LI>
@@ -110,7 +115,7 @@ function Home() {
         )
       </Text>
 
-      <Text mt={5} mb={2} fontSize={3}>
+      <Text mt={5} mb={3} fontSize={3}>
         Projects
       </Text>
       <ul>
@@ -145,7 +150,7 @@ function Home() {
         </LI>
       </ul>
 
-      <Text mt={5} mb={2} fontSize={3}>
+      <Text mt={5} mb={3} fontSize={3}>
         Around the web
       </Text>
       <ul>
@@ -176,7 +181,7 @@ function Home() {
         ))}
       </ul>
 
-      <Text mt={5} mb={2} fontSize={3}>
+      <Text mt={5} mb={3} fontSize={3}>
         Art
       </Text>
       <ul>
