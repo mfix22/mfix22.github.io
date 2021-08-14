@@ -208,6 +208,9 @@ function Icon(props) {
 }
 
 function Index() {
+  React.useEffect(() => {
+    console.log('✌️')
+  }, [])
   return (
     <ThemeProvider theme={theme}>
       <Box as="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
