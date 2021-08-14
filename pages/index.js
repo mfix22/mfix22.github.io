@@ -207,10 +207,8 @@ function Icon(props) {
   )
 }
 
-function Index() {
-  React.useEffect(() => {
-    console.log('✌️')
-  }, [])
+export default function Index() {
+  React.useEffect(() => console.log('✌️'), [])
   return (
     <ThemeProvider theme={theme}>
       <Box as="main" mt={[0, 0, 3]} pl={[0, 0, 5]}>
@@ -236,5 +234,3 @@ function Index() {
     </ThemeProvider>
   )
 }
-
-export default Index
