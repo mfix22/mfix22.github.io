@@ -199,14 +199,6 @@ function Home() {
   )
 }
 
-function Icon(props) {
-  return (
-    <BaseLink color="mint" href={props.href} mr={2} target="_blank">
-      <ion-icon name={props.name} />
-    </BaseLink>
-  )
-}
-
 export default function Index() {
   React.useEffect(() => console.log('✌️'), [])
   return (
@@ -215,21 +207,25 @@ export default function Index() {
         <Flex alignItems="center">
           <Box>
             <Heading mt={4} fontSize={[61, 61, 96]} pl={[3, 3, 0]}>
-              <Flex alignItems="center" justifyContent="space-between">
-                <BaseLink href="#" color="white" style={{ textDecoration: 'none' }}>
-                  Mike Fix
-                </BaseLink>
-                <Text fontSize={[3, 3, 4]} mt={3} mr={3}>
-                  <Icon name="logo-twitter" href="https://twitter.com/fixitup2" />
-                  <Icon name="logo-github" href="https://github.com/mfix22" />
-                </Text>
-              </Flex>
+              <BaseLink href="#" color="white" style={{ textDecoration: 'none' }}>
+                Mike Fix
+              </BaseLink>
             </Heading>
             <Flex flexDirection="column">
               <Home />
             </Flex>
           </Box>
         </Flex>
+        <Box as="nav" sx={{ position: 'fixed', top: '0.5rem', right: '1rem' }}>
+          <Text fontSize={[3, 3, 4]} mt={3} mr={3}>
+            <BaseLink color="mint" href="https://twitter.com/fixitup2" mr={2} target="_blank">
+              <ion-icon name="logo-twitter" />
+            </BaseLink>
+            <BaseLink color="mint" href="https://github.com/mfix22" mr={2} target="_blank">
+              <ion-icon name="logo-github" />
+            </BaseLink>
+          </Text>
+        </Box>
       </Box>
     </ThemeProvider>
   )
