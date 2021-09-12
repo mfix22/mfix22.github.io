@@ -77,7 +77,7 @@ function Home() {
         </LI>
         <LI>Climbing, skiing</LI>
         <LI>Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples, and The Roots</LI>
-        <LI>Financing, maintaining, sustaining open-source software</LI>
+        <LI>Sustainable open source</LI>
         {!more ? (
           <LI>
             <Link color="inherit" onClick={() => setMore(true)}>
