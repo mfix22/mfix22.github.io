@@ -237,7 +237,14 @@ export default function Index() {
             </Flex>
           </Box>
         </Flex>
-        <Box as="nav" sx={{ position: 'fixed', top: '1.5rem', right: '2rem' }}>
+        <Box
+          as="nav"
+          sx={{
+            position: ['absolute', 'absolute', 'fixed'],
+            top: ['3.5rem', '3rem', 3],
+            right: 3,
+          }}
+        >
           <Text fontSize={[3, 3, 4]}>
             <Icon href="https://twitter.com/fixitup2" name="logo-twitter" />
             <Icon href="https://github.com/mfix22" name="logo-github" />
