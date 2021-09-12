@@ -199,6 +199,27 @@ function Home() {
   )
 }
 
+function Icon(props) {
+  return (
+    <Link
+      href={props.href}
+      color="mint"
+      target="_blank"
+      mr={1}
+      sx={{
+        borderRadius: '50%',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '40px',
+        height: '40px',
+      }}
+    >
+      <ion-icon name={props.name} />
+    </Link>
+  )
+}
+
 export default function Index() {
   React.useEffect(() => console.log('✌️'), [])
   return (
@@ -216,14 +237,10 @@ export default function Index() {
             </Flex>
           </Box>
         </Flex>
-        <Box as="nav" sx={{ position: 'fixed', top: '0.5rem', right: '1rem' }}>
-          <Text fontSize={[3, 3, 4]} mt={3} mr={3}>
-            <BaseLink color="mint" href="https://twitter.com/fixitup2" mr={2} target="_blank">
-              <ion-icon name="logo-twitter" />
-            </BaseLink>
-            <BaseLink color="mint" href="https://github.com/mfix22" mr={2} target="_blank">
-              <ion-icon name="logo-github" />
-            </BaseLink>
+        <Box as="nav" sx={{ position: 'fixed', top: '1.5rem', right: '2rem' }}>
+          <Text fontSize={[3, 3, 4]}>
+            <Icon href="https://twitter.com/fixitup2" name="logo-twitter" />
+            <Icon href="https://github.com/mfix22" name="logo-github" />
           </Text>
         </Box>
       </Box>
