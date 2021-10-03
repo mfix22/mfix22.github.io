@@ -46,17 +46,13 @@ function Home() {
   const [more, setMore] = React.useState(false)
 
   return (
-    <Content px={['24px', '24px', 4]} py={3} fontSize={2} mb={2}>
+    <Content px={['24px', '24px', 4]} py={3} fontSize={2} mb={2} maxWidth="680px">
       <Text lineHeight={1.5}>
         Hey there 👋. Currently, I’m a software engineer at{' '}
         <Link color="mint" href="https://stripe.com/">
           Stripe
         </Link>
-        ,
-        <br />
-        working on the Dashboard, Docs, and Open Source,
-        <br />
-        but you may know me from my work on{' '}
+        , working on the Dashboard, Docs, and Open Source, but you may know me from my work on{' '}
         <Link color="mint" href="https://carbon.now.sh">
           Carbon
         </Link>{' '}
