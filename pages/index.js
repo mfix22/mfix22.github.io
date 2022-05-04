@@ -52,7 +52,7 @@ function Home() {
         <Link color="mint" href="https://stripe.com/">
           Stripe
         </Link>
-        , working on the Dashboard, Docs, and Open Source, but you may know me from my work on{' '}
+        , working on Open Source and various frontends, but you may know me from my work on{' '}
         <Link color="mint" href="https://carbon.now.sh">
           Carbon
         </Link>{' '}
@@ -106,7 +106,7 @@ function Home() {
         (If you want to chat about any of these things,{' '}
         <Link
           color="mint"
-          href="mailto:?subject=Let's%20chat!&body=Hey%20Mike%2C%0D%0AI%20saw%20the%20offer%20to%20chat%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!"
+          href="mailto:mrfix84@gmail.com?subject=Let's%20chat!&body=Hey%20Mike%2C%0D%0AI%20saw%20the%20offer%20to%20chat%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!"
         >
           hit me up
         </Link>
