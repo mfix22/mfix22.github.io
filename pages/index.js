@@ -153,6 +153,15 @@ function Home() {
       </Text>
       <ul>
         <LI>
+          <Link
+            href="https://fixfix.substack.com/p/heuristics-for-good-documentation"
+            target="_blank"
+            color="inherit"
+          >
+            Heuristics for good documentation
+          </Link>
+        </LI>
+        <LI>
           <Link href="https://changelog.com/podcast/410" target="_blank" color="inherit">
             The Changelog – Episode #410
             <br />
