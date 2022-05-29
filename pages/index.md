@@ -48,6 +48,10 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b?source=rss-c413a9843cab------2)
 - [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a?source=rss-c413a9843cab------2)
 
+{% comment %}
+
 ## Art {% .gap %}
 
 - [Blocks](/blocks)
+
+{% /comment %}

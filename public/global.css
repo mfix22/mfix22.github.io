@@ -1,5 +1,6 @@
 :root {
   --mint: #00f1ff;
+  --pink: #ff81eb;
 }
 
 html,
@@ -141,7 +142,12 @@ body {
 
 * {
   box-sizing: border-box;
-  outline-color: #ff81eb;
+  outline-color: var(--pink);
+}
+
+::selection {
+  color: white;
+  background: var(--pink);
 }
 
 /* ———————————————————————————————————————————————————— */

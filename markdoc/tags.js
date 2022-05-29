@@ -1,6 +1,8 @@
 import { Tag } from '@markdoc/markdoc'
 import { List } from '../components/List'
 
+export { comment } from '@markdoc/next.js/tags'
+
 export const list = {
   render: List,
   attributes: {
