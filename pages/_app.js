@@ -1,151 +1,47 @@
-import { createGlobalStyle } from 'styled-components'
 import Head from 'next/head'
 
-const GlobalStyle = createGlobalStyle`
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-weight: inherit;
-  font-family: inherit;
-  font-style: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+function Icon(props) {
+  return (
+    <a
+      href={props.href}
+      target="_blank"
+      mr={1}
+      style={{
+        color: 'var(--mint)',
+        borderRadius: '50%',
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '40px',
+        height: '40px',
+      }}
+    >
+      <ion-icon name={props.name} />
+    </a>
+  )
 }
 
-html,
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background: #112335;
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
-  font-style: normal;
-  text-transform: initial;
-  letter-spacing: initial;
-}
-
-* {
-  box-sizing: border-box;
-  outline-color: #ff81eb;
-}
-`
+import '../public/global.css'
 
 export default function App({ Component, pageProps }) {
+  let children
+  if (pageProps.markdoc) {
+    children = (
+      <>
+        <nav>
+          <Icon href="https://twitter.com/fixitup2" name="logo-twitter" />
+          <Icon href="https://github.com/mfix22" name="logo-github" />
+        </nav>
+        <main mt={[0, 0, 3]} pl={[0, 0, 5]}>
+          <h1>{pageProps.markdoc.frontmatter.title}</h1>
+          <Component {...pageProps} />
+        </main>
+      </>
+    )
+  } else {
+    children = <Component {...pageProps} />
+  }
+
   return (
     <>
       <Head>
@@ -156,8 +52,7 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js" />
-      <GlobalStyle />
-      <Component {...pageProps} />
+      {children}
     </>
   )
 }

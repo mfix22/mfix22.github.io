@@ -21,6 +21,8 @@
   "author": "Michael Fix",
   "license": "MIT",
   "dependencies": {
+    "@markdoc/markdoc": "^0.1.2",
+    "@markdoc/next.js": "^0.1.4",
     "@rebass/preset": "^4.0.5",
     "lodash.merge": "^4.6.2",
     "next": "^11.0.1",
