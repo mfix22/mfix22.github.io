@@ -38,15 +38,15 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [White-labeling: Putting the design system in users’ hands
   \
   Designsystems.com](https://www.designsystems.com/white-labeling-putting-the-design-system-in-users-hands/)
-- [Experimental GraphQL](https://medium.com/open-graphql/experimental-graphql-73a433543331?source=rss-c413a9843cab------2)
-- [Ode to Regular Expressions](https://medium.com/@fixitup2/ode-to-regular-expressions-344a95be962c?source=rss-c413a9843cab------2)
-- [GraphQL on the Edge](https://quickbooks-engineering.intuit.com/graphql-on-the-edge-12b6d60064b0?source=rss-c413a9843cab------2)
-- [If the 4th wall could talk](https://medium.com/@fixitup2/if-the-4th-wall-could-talk-8bce109d90cc?source=rss-c413a9843cab------2)
-- [A sensible approach to GraphQL; a case study](https://medium.com/@fixitup2/a-sensible-approach-to-graphql-a-case-study-e29ba1ffe323?source=rss-c413a9843cab------2)
-- [Random Access Messaging](https://medium.com/@fixitup2/random-access-messaging-743c897a9d24?source=rss-c413a9843cab------2)
-- [Slippery Ingredients](https://medium.com/@fixitup2/slippery-616d2390aebb?source=rss-c413a9843cab------2)
-- [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b?source=rss-c413a9843cab------2)
-- [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a?source=rss-c413a9843cab------2)
+- [Experimental GraphQL](https://medium.com/open-graphql/experimental-graphql-73a433543331)
+- [Ode to Regular Expressions](https://medium.com/@fixitup2/ode-to-regular-expressions-344a95be962c)
+- [GraphQL on the Edge](https://quickbooks-engineering.intuit.com/graphql-on-the-edge-12b6d60064b0)
+- [If the 4th wall could talk](https://medium.com/@fixitup2/if-the-4th-wall-could-talk-8bce109d90cc)
+- [A sensible approach to GraphQL; a case study](https://medium.com/@fixitup2/a-sensible-approach-to-graphql-a-case-study-e29ba1ffe323)
+- [Random Access Messaging](https://medium.com/@fixitup2/random-access-messaging-743c897a9d24)
+- [Slippery Ingredients](https://medium.com/@fixitup2/slippery-616d2390aebb)
+- [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b)
+- [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a)
 
 {% comment %}
 
