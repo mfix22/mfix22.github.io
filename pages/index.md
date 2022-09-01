@@ -10,7 +10,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
 - Climbing, skiing
-- Music by Dessa, Kendrick Lamar, Jackson Browne, Vince Staples, and The Roots
+- Music by Dessa, Kendrick Lamar, Jackson Browne, and Vince Staples
 - Sustainable open source
 - [Field Notes](https://fieldnotesbrand.com)
 - [Pizza](http://cheeseboardcollective.coop)
@@ -21,13 +21,14 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 (If you want to chat about any of these things, [hit me up](mailto:mrfix84@gmail.com?subject=Let's%20chat!&body=Hey%20Mike%2C%0D%0AI%20saw%20the%20offer%20to%20chat%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!)) {% .small %}
 
-## Projects {% .gap %}
+## Work {% .gap %}
 
-- [Carbon](https://carbon.now.sh)
-- [Ranger](https://reporanger.com)
-- [Alchemy](https://dawnlabs.io/alchemy)
-- [Transcend](https://transcenduw.com)
-- [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
+- Creator & maintainer of&nbsp;[Carbon](https://carbon.now.sh)
+- Scout & alum of&nbsp;[Contrary Capital](https://contrary.com)
+- Creator & maintainer of&nbsp;[Ranger](https://reporanger.com)
+- Creator of&nbsp;[Alchemy](https://dawnlabs.io/alchemy)
+- President of&nbsp;[Transcend](https://transcenduw.com)
+- Inventor of&nbsp;[Band Wagon](https://patents.google.com/patent/US9321503B2/en)
 
 ## Around the web {% .gap %}
 
