@@ -221,16 +221,18 @@ a:hover {
   cursor: pointer;
 }
 
-li {
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
+ul {
+  list-style-type: '☛';
+  margin-left: 1ch;
 }
 
-li::before {
-  content: '☛';
-  font-size: 12px;
-  margin-right: 8px;
+li {
+  margin-bottom: 12px;
+  padding-inline-start: 1ch;
+}
+
+li::marker {
+  font-size: 14px;
 }
 
 li a {

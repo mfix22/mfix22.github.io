@@ -15,7 +15,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [Field Notes](https://fieldnotesbrand.com)
 - [Pizza](http://cheeseboardcollective.coop)
 - Micro-grants
-- JavaScript &&nbsp;[GraphQL](https://www.youtube.com/watch?v=d0xMqeVhlhQ)
+- JavaScript & [GraphQL](https://www.youtube.com/watch?v=d0xMqeVhlhQ)
 
 {% /list %}
 
@@ -23,12 +23,12 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 ## Work {% .gap %}
 
-- Creator & maintainer of&nbsp;[Carbon](https://carbon.now.sh)
-- Scout & alum of&nbsp;[Contrary Capital](https://contrary.com)
-- Creator & maintainer of&nbsp;[Ranger](https://reporanger.com)
-- Creator of&nbsp;[Alchemy](https://dawnlabs.io/alchemy)
-- President of&nbsp;[Transcend](https://transcenduw.com)
-- Inventor of&nbsp;[Band Wagon](https://patents.google.com/patent/US9321503B2/en)
+- Creator & maintainer of [Carbon](https://carbon.now.sh)
+- Scout & alum of [Contrary Capital](https://contrary.com)
+- Creator & maintainer of [Ranger](https://reporanger.com)
+- Creator of [Alchemy](https://dawnlabs.io/alchemy)
+- President of [Transcend](https://transcenduw.com)
+- Inventor of [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
 
 ## Around the web {% .gap %}
 
