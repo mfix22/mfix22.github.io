@@ -3,6 +3,10 @@ title: Observations
 subtitle: by Mike Fix
 ---
 
+{% comment %}
+Mundane fait divers
+{% /comment %}
+
 {% list max=10 %}
 
 - After three missed attempts, a women saunters away, her trash still a foot from the trash can.
