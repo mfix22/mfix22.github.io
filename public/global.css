@@ -239,6 +239,15 @@ li a {
   color: inherit;
 }
 
+li p {
+  margin-bottom: 0.24rem;
+}
+
+li em {
+  font-size: x-small;
+  line-height: 1;
+}
+
 @media screen and (max-width: 1000px) {
   nav {
     position: fixed;
