@@ -23,6 +23,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 ## Work {% .gap %}
 
+- Head of Open Source & frontend engineer at [Stripe](https://stripe.com)
 - Creator & maintainer of [Carbon](https://carbon.now.sh)
 - Scout & alum of [Contrary Capital](https://contrary.com)
 - Creator & maintainer of [Ranger](https://reporanger.com)
