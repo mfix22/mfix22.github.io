@@ -9,7 +9,7 @@ Mundane fait divers
 
 {% list max=10 %}
 
-- A teenager is riding the bus home from school—Gen Z beyond the shadow of a doubt. He gets a call:
+- A teenager is riding the bus home from school. He gets a call:
 
   "No I can't, I have therapy."  
   ...  
