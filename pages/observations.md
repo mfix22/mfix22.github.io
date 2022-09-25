@@ -12,13 +12,13 @@ Mundane fait divers
 - A young man is riding the bus home from school—Gen Z beyond the shadow of a doubt. He gets a call:
 
   "No I can't, I have therapy."  
-  …  
+  ...  
   "Well, sure. Come by later."
 
   He hangs up and immediately makes another call:
 
   "Can the guys come by for 30 minutes? They are in the neighborhood."  
-  …  
+  ...  
   "For sure, for sure, thanks. Love you."
 
   He flips his flip phone shut.
