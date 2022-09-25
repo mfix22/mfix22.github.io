@@ -243,6 +243,7 @@ li strong {
   display: inline-block;
   font-size: x-small;
   margin-bottom: 1.5rem;
+  color: var(--mint)
 }
 
 @media screen and (max-width: 1000px) {
