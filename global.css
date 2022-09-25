@@ -239,13 +239,10 @@ li a {
   color: inherit;
 }
 
-li p {
-  margin-bottom: 0.24rem;
-}
-
-li em {
+li strong {
+  display: inline-block;
   font-size: x-small;
-  line-height: 1;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1000px) {
