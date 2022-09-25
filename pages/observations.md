@@ -9,11 +9,11 @@ Mundane fait divers
 
 {% list max=10 %}
 
-- A man bicycles down the street, shouting “bueno, bueno” into his phone, emphatically gesturing with both hands at once.
-  
+- A man bicycles down the street, shouting “bueno” into his phone, emphatically gesturing with both hands at once.
+
   September 14, 2022 — Dublin, Ireland
 
-- After three missed attempts, a women saunters away, her trash still a foot from the trash can.
+- After three missed attempts, a woman saunters away, her trash still a foot from the trash can.
 
   September 4, 2022 — San Francisco, CA, USA
 
