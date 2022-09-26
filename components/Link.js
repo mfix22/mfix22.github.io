@@ -8,7 +8,7 @@ export function Link(props) {
     <NextLink {...props} passHref>
       <a
         target={target}
-        rel={target === '_blank' ? 'noreferrer' : undefined}
+        rel={target === '_blank' ? 'noreferrer noopener' : undefined}
         className={props.className}
       >
         {props.children}
