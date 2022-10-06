@@ -247,13 +247,29 @@ li strong {
 }
 
 @media screen and (max-width: 1000px) {
+  main {
+    max-width: 85vw;
+    padding: 2rem 0 2rem 2rem;
+  }
   nav {
     position: fixed;
   }  
 }
 
 @media screen and (max-width: 600px) {
+  main {
+    max-width: 100vw;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  nav {
+    position: relative;
+    float: right;
+    padding-top: 8px;
+  }
+  article {
+    padding: 0 1rem;
+  }
   h1 {
-    font-size: 61px
+    font-size: 60px
   }  
 }
