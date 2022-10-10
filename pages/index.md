@@ -58,3 +58,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [Blocks](/blocks)
 
 {% /comment %}
+
+## Around the world {% .gap %}
+
+{% map /%}

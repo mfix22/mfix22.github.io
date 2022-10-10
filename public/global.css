@@ -246,6 +246,12 @@ li strong {
   color: var(--mint)
 }
 
+.pulse {
+  fill: var(--pink);
+  /* transform: scale(2); */
+  width: 4px;
+}
+
 @media screen and (max-width: 1000px) {
   main {
     max-width: 85vw;
