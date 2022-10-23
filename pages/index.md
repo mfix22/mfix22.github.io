@@ -33,6 +33,9 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 ## Around the web {% .gap %}
 
+- [Corporate strategies for sustainable open source investment
+  \
+  Open Source Summit Europe](https://youtu.be/tjtmqrzibZU)
 - [Driving across Ireland](https://fixfix.substack.com/p/driving-across-ireland)
 - [Heuristics for good documentation](https://fixfix.substack.com/p/heuristics-for-good-documentation)
 - [The Changelog – Episode #410
