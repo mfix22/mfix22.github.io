@@ -10,7 +10,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
 - Climbing, skiing
-- Music by Dessa, Kendrick Lamar, Jackson Browne, and Vince Staples
+- Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
 - Sustainable open source
 - [Field Notes](https://fieldnotesbrand.com)
 - [Pizza](http://cheeseboardcollective.coop)
