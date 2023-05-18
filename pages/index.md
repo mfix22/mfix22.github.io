@@ -7,7 +7,6 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 ## A few things I’m into {% .gap %}
 
 {% list max=4 %}
-
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
 - Climbing, skiing
 - Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
@@ -16,7 +15,6 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [Pizza](http://cheeseboardcollective.coop)
 - Micro-grants
 - JavaScript & [GraphQL](https://www.youtube.com/watch?v=d0xMqeVhlhQ)
-
 {% /list %}
 
 (If you want to chat about any of these things, [hit me up](mailto:mrfix84@gmail.com?subject=Let's%20chat!&body=Hey%20Mike%2C%0D%0AI%20saw%20the%20offer%20to%20chat%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!)) {% .small %}
@@ -24,15 +22,14 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 ## Work {% .gap %}
 
 - Head of Open Source & frontend engineer at [Stripe](https://stripe.com)
-- Creator & maintainer of [Carbon](https://carbon.now.sh)
+- Creator & maintainer of [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com)
 - Scout & alum of [Contrary Capital](https://contrary.com)
-- Creator & maintainer of [Ranger](https://reporanger.com)
-- Creator of [Alchemy](https://dawnlabs.io/alchemy)
 - President of [Transcend](https://transcenduw.com)
 - Inventor of [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
 
 ## Around the web {% .gap %}
 
+{% list max=5 %}
 - [Corporate strategies for sustainable open source investment
   \
   Open Source Summit Europe](https://youtu.be/tjtmqrzibZU)
@@ -53,11 +50,10 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - [Slippery Ingredients](https://medium.com/@fixitup2/slippery-616d2390aebb)
 - [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b)
 - [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a)
+{% /list %}
 
 {% comment %}
-
 ## Art {% .gap %}
 
 - [Blocks](/blocks)
-
 {% /comment %}
