@@ -30,6 +30,9 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 ## Around the web {% .gap %}
 
 {% list max=5 %}
+- [Scaling an open source sponsorship program
+  \
+  Open Source Summit North America](https://youtu.be/SfhAlLa8fMs)
 - [Corporate strategies for sustainable open source investment
   \
   Open Source Summit Europe](https://youtu.be/tjtmqrzibZU)
