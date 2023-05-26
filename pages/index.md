@@ -11,9 +11,9 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 - Climbing, skiing
 - Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
 - Sustainable open source
+- Lending
 - [Field Notes](https://fieldnotesbrand.com)
 - [Pizza](http://cheeseboardcollective.coop)
-- Micro-grants
 - JavaScript & [GraphQL](https://www.youtube.com/watch?v=d0xMqeVhlhQ)
 {% /list %}
 
