@@ -14,7 +14,6 @@ Hey there 👋. Currently, I’m doing software engineering at [Stripe](https://
 - Lending
 - [Field Notes](https://fieldnotesbrand.com)
 - [Pizza](http://cheeseboardcollective.coop)
-- JavaScript & [GraphQL](https://www.youtube.com/watch?v=d0xMqeVhlhQ)
 {% /list %}
 
 (If you want to chat about any of these things, [hit me up](mailto:mrfix84@gmail.com?subject=Let's%20chat!&body=Hey%20Mike%2C%0D%0AI%20saw%20the%20offer%20to%20chat%20on%20your%20website%2C%20and%20I%20thought%20I'd%20take%20you%20up%20on%20it!)) {% .small %}
