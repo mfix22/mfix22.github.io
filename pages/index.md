@@ -2,7 +2,7 @@
 title: Mike Fix
 ---
 
-Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.com), working on Open Source and various frontends, but you may know me from my work on [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
+Hey there 👋. Currently, I’m doing software engineering at [Stripe](https://stripe.com), working on open source and various frontends, but you may know me from my work on [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
 
 ## A few things I’m into {% .gap %}
 
@@ -21,7 +21,7 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 
 ## Work {% .gap %}
 
-- Head of Open Source & frontend engineer at [Stripe](https://stripe.com)
+- Head of open source & frontend engineer at [Stripe](https://stripe.com)
 - Creator & maintainer of [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com)
 - Scout & alum of [Contrary Capital](https://contrary.com)
 - President of [Transcend](https://transcenduw.com)
@@ -32,21 +32,22 @@ Hey there 👋. Currently, I’m a software engineer at [Stripe](https://stripe.
 {% list max=5 %}
 - [Scaling an open source sponsorship program
   \
-  Open Source Summit North America](https://youtu.be/SfhAlLa8fMs)
+  Open Source Summit — North America](https://youtu.be/SfhAlLa8fMs) {% badge %}Talk{% /badge %}
 - [Corporate strategies for sustainable open source investment
   \
-  Open Source Summit Europe](https://youtu.be/tjtmqrzibZU)
+  Open Source Summit — Europe](https://youtu.be/tjtmqrzibZU) {% badge %}Talk{% /badge %}
 - [Driving across Ireland](https://fixfix.substack.com/p/driving-across-ireland)
 - [Heuristics for good documentation](https://fixfix.substack.com/p/heuristics-for-good-documentation)
 - [The Changelog – Episode #410
   \
-  Bringing beauty to the world of code sharing](https://changelog.com/podcast/410)
+  Bringing beauty to the world of code sharing](https://changelog.com/podcast/410) {% badge %}Podcast{% /badge %}
 - [White-labeling: Putting the design system in users’ hands
   \
   Designsystems.com](https://www.designsystems.com/white-labeling-putting-the-design-system-in-users-hands/)
 - [Experimental GraphQL](https://medium.com/open-graphql/experimental-graphql-73a433543331)
 - [Ode to Regular Expressions](https://medium.com/@fixitup2/ode-to-regular-expressions-344a95be962c)
 - [GraphQL on the Edge](https://quickbooks-engineering.intuit.com/graphql-on-the-edge-12b6d60064b0)
+- [GraphQL on the Edge](https://www.youtube.com/watch?v=d0xMqeVhlhQ) {% badge %}Talk{% /badge %}
 - [If the 4th wall could talk](https://medium.com/@fixitup2/if-the-4th-wall-could-talk-8bce109d90cc)
 - [A sensible approach to GraphQL; a case study](https://medium.com/@fixitup2/a-sensible-approach-to-graphql-a-case-study-e29ba1ffe323)
 - [Random Access Messaging](https://medium.com/@fixitup2/random-access-messaging-743c897a9d24)

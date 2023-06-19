@@ -1,6 +1,7 @@
 :root {
   --mint: #00f1ff;
   --pink: #ff81eb;
+  --background: #112335;
 }
 
 html,
@@ -229,6 +230,7 @@ ul {
 li {
   margin-bottom: 12px;
   padding-inline-start: 1ch;
+  line-height: 1.5;
 }
 
 li::marker {

@@ -1,7 +1,12 @@
-import { Tag } from '@markdoc/markdoc'
-import { List } from '../components/List'
+import { Tag } from "@markdoc/markdoc"
+import { Badge } from "../components/Badge"
+import { List } from "../components/List"
 
-export { comment } from '@markdoc/next.js/tags'
+export { comment } from "@markdoc/next.js/tags"
+
+export const badge = {
+  render: Badge,
+}
 
 export const list = {
   render: List,
@@ -10,6 +15,10 @@ export const list = {
   },
   transform(node, config) {
     const children = node.transformChildren(config)
-    return new Tag(this.render, node.transformAttributes(config), children[0].children)
+    return new Tag(
+      this.render,
+      node.transformAttributes(config),
+      children[0].children
+    )
   },
 }
