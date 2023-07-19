@@ -6,14 +6,14 @@ Hey there 👋. Currently, I’m doing software engineering at [Stripe](https://
 
 ## A few things I’m into {% .gap %}
 
-{% list max=4 %}
+{% list max=5 %}
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
+- Sharing
 - Climbing, skiing
 - Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
 - Sustainable open source
-- Lending
 - [Field Notes](https://fieldnotesbrand.com)
-- [Pizza](http://cheeseboardcollective.coop)
+- Pizza, Cereal
 {% /list %}
 
 (If you want to chat about any of these things, [hit me up](https://twitter.com/fixitup2)) {% .small %}
