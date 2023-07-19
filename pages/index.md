@@ -28,7 +28,8 @@ Hey there 👋. Currently, I’m doing software engineering at [Stripe](https://
 
 ## Around the web {% .gap %}
 
-{% list max=5 %}
+{% list max=6 %}
+- [Observations](/observations)
 - [Scaling an open source sponsorship program
   \
   Open Source Summit — North America](https://youtu.be/SfhAlLa8fMs) {% badge %}Talk{% /badge %}
