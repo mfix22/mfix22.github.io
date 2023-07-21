@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Mike Fix</title>
         <link
-          href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Bitter"
+          href="https://fonts.googleapis.com/css?family=Potta+One"
           rel="stylesheet"
         />
       </Head>
