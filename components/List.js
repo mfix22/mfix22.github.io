@@ -11,7 +11,7 @@ export function List({ children, max }) {
     <ul>
       {initial}
       {!more ? (
-        <li>
+        <li style={{listStyleType: 'none'}}>
           <span onClick={() => setMore(true)} style={{ cursor: 'pointer' }}>
             More…
           </span>
