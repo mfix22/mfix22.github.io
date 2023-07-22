@@ -3,7 +3,7 @@ title: Mike Fix
 year: 2023
 ---
 
-Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](https://stripe.com), working on [Climate](https://stripe.com/climate) and [Frontier](https://frontierclimate.com/). I also lead the open source team. You might also know me from my open-source projects, [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
+Hey there, I'm Mike 👋. I'm currently a staff frontend engineer at [Stripe](https://stripe.com), working on [Climate](https://stripe.com/climate) and [Frontier](https://frontierclimate.com/). I also lead the open source team. You might also know me from my open-source projects, like [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
 
 ## A few things I’m into
 
