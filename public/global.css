@@ -239,6 +239,10 @@ li a {
   color: inherit;
 }
 
+hr {
+  margin-top: 4rem;
+}
+
 li strong {
   display: inline-block;
   font-size: x-small;

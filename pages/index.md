@@ -1,5 +1,6 @@
 ---
 title: Mike Fix
+year: 2023
 ---
 
 Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](https://stripe.com), working on [Climate](https://stripe.com/climate) and [Frontier](https://frontierclimate.com/). I also lead the open source team. You might also know me from my open-source projects, [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
@@ -55,3 +56,9 @@ Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](ht
 - [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b)
 - [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a)
 {% /list %}
+
+
+---
+
+© 2016–{% $markdoc.frontmatter.year %} Mike Fix  
+[Open-source](https://github.com/mfix22/mikefix.me) and powered by [Markdoc](https://markdoc.dev) {% .small %}
