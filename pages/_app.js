@@ -11,10 +11,8 @@ export default function App({ Component, pageProps }) {
     children = (
       <>
         <nav>
-          <div>
-            <Icon href="https://twitter.com/fixitup2" name="logo-twitter" />
-            <Icon href="https://github.com/mfix22" name="logo-github" />
-          </div>
+          <Icon href="https://twitter.com/fixitup2" name="logo-twitter" />
+          <Icon href="https://github.com/mfix22" name="logo-github" />
         </nav>
         <main>
           <h1>{pageProps.markdoc.frontmatter.title}</h1>

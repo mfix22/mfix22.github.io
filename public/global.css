@@ -171,9 +171,10 @@ article {
 nav {
   position: absolute;
   display: flex;
-  gap: 4px;
-  top: 16px;
-  right: 16px;
+  flex-direction: column;
+  gap: 0.25rem;
+  top: 3.5rem;
+  right: 1rem;
   font-size: 24px;
 }
 
