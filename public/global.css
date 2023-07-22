@@ -2,8 +2,10 @@
   --mint: #00f1ff;
   --pink: #ff81eb;
   --background: #112335;
-  --font-body: 'Potta One', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+  --font-display: 'Potta One', var(--font-body);
   --font-mono: Consolas, Menlo, Courier, monospace;
+  --article-width: 680px;
 }
 
 html,
@@ -137,7 +139,7 @@ body {
   text-rendering: optimizeLegibility;
   background: var(--background);
   color: white;
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-style: normal;
   text-transform: initial;
   letter-spacing: initial;
@@ -163,7 +165,7 @@ article {
   font-size: 16px;
   font-family: var(--font-mono);
   padding: 0 32px;
-  max-width: 680px; 
+  max-width: var(--article-width); 
 }
 
 nav {
@@ -173,6 +175,11 @@ nav {
   top: 16px;
   right: 16px;
   font-size: 24px;
+}
+
+footer {
+  padding: 4rem 0 0 2rem;
+  max-width: var(--article-width); 
 }
 
 p, h1, h2, h3, h4, h5, h6, li {
@@ -193,6 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: var(--font-display);
   font-size: 96px;
   font-weight: 400;
   line-height: 1.25;
@@ -237,10 +245,6 @@ li::marker {
 
 li a {
   color: inherit;
-}
-
-hr {
-  margin-top: 4rem;
 }
 
 li strong {
