@@ -55,9 +55,3 @@ Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](ht
 - [What I learned as a host (Airbnb Whims Pt. 4)](https://medium.com/@fixitup2/what-i-learned-as-a-host-airbnb-whims-pt-4-9f3a9c6f715b)
 - [Purple](https://medium.com/@fixitup2/purple-6c6f21de5a7a)
 {% /list %}
-
-{% comment %}
-## Art {% .gap %}
-
-- [Blocks](/blocks)
-{% /comment %}
