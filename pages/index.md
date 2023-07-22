@@ -2,7 +2,7 @@
 title: Mike Fix
 ---
 
-Hey there 👋. Currently, I’m doing software engineering at [Stripe](https://stripe.com), working on open source and various frontends, but you may know me from my work on [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
+Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](https://stripe.com), working on [Climate](https://stripe.com/climate) and [Frontier](https://frontierclimate.com/). I also lead the open source team. You might also know me from my open-source projects, [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
 
 ## A few things I’m into {% .gap %}
 
