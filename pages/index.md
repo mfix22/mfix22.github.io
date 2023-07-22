@@ -4,7 +4,7 @@ title: Mike Fix
 
 Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](https://stripe.com), working on [Climate](https://stripe.com/climate) and [Frontier](https://frontierclimate.com/). I also lead the open source team. You might also know me from my open-source projects, [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
 
-## A few things I’m into {% .gap %}
+## A few things I’m into
 
 {% list max=5 %}
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
@@ -18,7 +18,7 @@ Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](ht
 
 (If you want to chat about any of these things, [hit me up](https://twitter.com/fixitup2)) {% .small %}
 
-## Work {% .gap %}
+## Work
 
 - Head of open source & frontend engineer at [Stripe](https://stripe.com)
 - Creator & maintainer of [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com)
@@ -26,7 +26,7 @@ Hey there, I'm Mike 👋. I currently work as a frontend engineer at [Stripe](ht
 - President of [Transcend](https://transcenduw.com)
 - Inventor of [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
 
-## Around the web {% .gap %}
+## Around the web
 
 {% list max=6 %}
 - [Observations](/observations)
