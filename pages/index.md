@@ -17,7 +17,7 @@ Hey there, I'm Mike ✌🏻. I've been working as a frontend engineer at [Stripe
 - Pizza, cereal
 {% /list %}
 
-(If you want to chat about any of these things, [hit me up](https://twitter.com/fixitup2)) {% .small %}
+(If you want to chat about any of these things, [hit me up](mailto:mrfix84@gmail.com)) {% .small %}
 
 ## Work
 
