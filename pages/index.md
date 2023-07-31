@@ -14,7 +14,7 @@ Hey there, I'm Mike 👋. I've been working as a frontend engineer at [Stripe](h
 - Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
 - Sustainable open source
 - [Field Notes](https://fieldnotesbrand.com)
-- Pizza, Cereal
+- Pizza, cereal
 {% /list %}
 
 (If you want to chat about any of these things, [hit me up](https://twitter.com/fixitup2)) {% .small %}
@@ -25,11 +25,11 @@ Hey there, I'm Mike 👋. I've been working as a frontend engineer at [Stripe](h
 - Creator & maintainer of [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com)
 - Scout & alum of [Contrary Capital](https://contrary.com)
 - President of [Transcend](https://transcenduw.com)
-- Inventor of [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
+- Inventor of the [Band Wagon](https://patents.google.com/patent/US9321503B2/en)
 
 ## Around the web
 
-{% list max=6 %}
+{% list max=5 %}
 - [Observations](/observations)
 - [Scaling an open source sponsorship program
   \
