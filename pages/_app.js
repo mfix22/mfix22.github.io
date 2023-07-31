@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
           <footer>
             <p className="small">
               <hr />
-              © 2016–{new Date().getFullYear()} Mike Fix  
+              © 2016–{new Date().getFullYear()} Mike Fix 🤙🏻
               <br />
               <Link href="https://github.com/mfix22/mikefix.me">Open-source</Link> and powered by <Link href="https://markdoc.dev">Markdoc</Link>
             </p>
