@@ -261,8 +261,10 @@ li strong {
     padding: 2rem 0 2rem 2rem;
   }
   nav {
-    position: fixed;
-  }  
+    position: relative;
+    float: right;
+    top: 1rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -270,11 +272,7 @@ li strong {
     max-width: 100vw;
     padding: 1rem 1rem 2rem 1rem;
   }
-  nav {
-    position: relative;
-    float: right;
-    padding-top: 8px;
-  }
+
   article {
     padding: 0 1rem;
   }
