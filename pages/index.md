@@ -11,9 +11,7 @@ Hey there, I'm Mike ✌🏻. I've been working as a frontend engineer at [Stripe
 - [Drinking coffee with others](https://goo.gl/maps/VsJW2cLXMcGCWrgs5)
 - Sharing
 - Climbing, skiing
-- Music by Dessa, Kendrick Lamar, Danny Brown, Jackson Browne, and Vince Staples
 - Sustainable open source
-- [Field Notes](https://fieldnotesbrand.com)
 - Pizza, cereal
 {% /list %}
 
