@@ -29,6 +29,7 @@ Hey there, I'm Mike ✌🏻. I've been working as a frontend engineer at [Stripe
 
 {% list max=5 %}
 - [Observations](/observations)
+- [Why Stripe sponsors open source](https://resources.github.com/open-source/why-stripe-sponsors-open-source/)
 - [Scaling an open source sponsorship program
   \
   Open Source Summit — North America](https://youtu.be/SfhAlLa8fMs) {% badge %}Talk{% /badge %}
