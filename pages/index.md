@@ -5,6 +5,8 @@ year: 2023
 
 Hey there, I'm Mike ✌🏻. I've been working as a frontend engineer at [Stripe](https://stripe.com) for the last 5 years, currently on [Frontier](https://frontierclimate.com/) and [Climate](https://stripe.com/climate). I also lead the open source team. You might know me from my open-source projects, like [Carbon](https://carbon.now.sh) and [Ranger](https://reporanger.com).
 
+[Twitter](https://twitter.com/mikefix22) • [GitHub](https://github.com/mfix22) {% .small %}
+
 ## A few things I’m into
 
 {% list max=5 %}
