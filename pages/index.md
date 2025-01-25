@@ -28,8 +28,8 @@ Hey there, I'm Mike ✌🏻. I've been working as a frontend engineer at [Stripe
 ## Around the web
 
 {% list max=5 %}
-- [Observations](/observations)
 - [syllabi.directory](https://syllabi.directory/)
+- [Observations](/observations)
 - [Why Stripe sponsors open source](https://resources.github.com/open-source/why-stripe-sponsors-open-source/)
 - [Scaling an open source sponsorship program
   \
