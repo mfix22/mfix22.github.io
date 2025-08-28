@@ -1,354 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    
-            <meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-            <style>
-                #map_86cc9f7f4c37fbc79d675a05e82ae9cc {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-            </style>
-        
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SF BART + Muni Metro — 1‑Mile Radius Map (N & L Added)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { height: 100%; width: 100%; }
+    .legend {
+      position: absolute; z-index: 500; bottom: 14px; left: 14px;
+      background: rgba(255,255,255,.95); backdrop-filter: blur(4px);
+      border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+      padding: 10px 12px; font: 13px/1.25 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .legend h4 { margin: 0 0 6px; font-size: 14px; }
+    .legend .swatch { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:8px; vertical-align: -2px; }
+    .leaflet-popup-content { font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  </style>
 </head>
 <body>
-    
-    
-            <div class="folium-map" id="map_86cc9f7f4c37fbc79d675a05e82ae9cc" ></div>
-        
+  <div id="map"></div>
+  <div class="legend">
+    <h4>Layers</h4>
+    <div><span class="swatch" style="background:#0a84ff"></span>BART stations</div>
+    <div><span class="swatch" style="background:#34c759"></span>Muni Metro (subway)</div>
+    <div><span class="swatch" style="background:#ff9f0a"></span>N Judah (surface)</div>
+    <div><span class="swatch" style="background:#ff375f"></span>L Taraval (surface)</div>
+    <div style="margin-top:6px;opacity:.7">Each circle = 1 mile radius</div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    // --- Base map ---
+    const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([37.765, -122.445], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    const MILE_METERS = 1609.344;
+
+    function addStops(stops, color) {
+      const layer = L.layerGroup();
+      stops.forEach(s => {
+        const ll = [s.lat, s.lng];
+        L.circle(ll, { radius: MILE_METERS, color, weight: 1.2, fillColor: color, fillOpacity: 0.07 }).addTo(layer);
+        L.circleMarker(ll, { radius: 4.5, color: '#111', weight: 1, fillColor: color, fillOpacity: 1 })
+          .bindPopup(`<strong>${s.name}</strong><br>${s.system}`)
+          .addTo(layer);
+      });
+      return layer;
+    }
+
+    // --- BART stations (within San Francisco) ---
+    const bartStops = [
+      { name: 'Embarcadero (BART/Muni)', lat: 37.792762, lng: -122.397037, system: 'BART + Muni Metro' },
+      { name: 'Montgomery St (BART/Muni)', lat: 37.789173, lng: -122.401587, system: 'BART + Muni Metro' },
+      { name: 'Powell St (BART/Muni)', lat: 37.784606, lng: -122.407331, system: 'BART + Muni Metro' },
+      { name: 'Civic Center / UN Plaza (BART/Muni)', lat: 37.779408, lng: -122.413826, system: 'BART + Muni Metro' },
+      { name: '16th St Mission (BART)', lat: 37.765173, lng: -122.419704, system: 'BART' },
+      { name: '24th St Mission (BART)', lat: 37.752419, lng: -122.418468, system: 'BART' },
+      { name: 'Glen Park (BART)', lat: 37.733235, lng: -122.433515, system: 'BART' },
+      { name: 'Balboa Park (BART/Muni)', lat: 37.721747, lng: -122.447457, system: 'BART + Muni' }
+    ];
+
+    // --- Muni Metro subway (non-surface) key stations (Market St Subway + Twin Peaks) ---
+    const muniSubwayStops = [
+      { name: 'Van Ness (Muni Metro)', lat: 37.775152, lng: -122.419267, system: 'Muni Metro' },
+      { name: 'Church (Muni Metro)', lat: 37.767435, lng: -122.429043, system: 'Muni Metro' },
+      { name: 'Castro (Muni Metro)', lat: 37.762520, lng: -122.435530, system: 'Muni Metro' },
+      { name: 'Forest Hill (Muni Metro)', lat: 37.747834, lng: -122.459137, system: 'Muni Metro' },
+      { name: 'West Portal (Muni Metro)', lat: 37.741171, lng: -122.465609, system: 'Muni Metro' }
+    ];
+
+    // --- N Judah line (surface) — representative stop list from Ocean Beach to Duboce/Cole ---
+    const nStops = [
+      { name: 'Judah & La Playa', lat: 37.760363, lng: -122.509011, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 46th Ave', lat: 37.760350, lng: -122.505843, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 43rd Ave', lat: 37.760564, lng: -122.502719, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 40th Ave', lat: 37.760711, lng: -122.499257, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & Sunset Blvd', lat: 37.760870, lng: -122.495765, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 34th Ave', lat: 37.760992, lng: -122.493065, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 31st Ave', lat: 37.761139, lng: -122.489610, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 28th Ave', lat: 37.761277, lng: -122.486626, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 25th Ave', lat: 37.761418, lng: -122.483409, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 23rd Ave', lat: 37.761547, lng: -122.481164, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 22nd Ave', lat: 37.761534, lng: -122.479855, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 19th Ave', lat: 37.761698, lng: -122.477010, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 12th Ave', lat: 37.762029, lng: -122.469425, system: 'Muni Metro — N Judah' },
+      { name: 'Judah & 9th Ave',  lat: 37.762162, lng: -122.466662, system: 'Muni Metro — N Judah' },
+      { name: 'Irving & 8th Ave', lat: 37.764038, lng: -122.465428, system: 'Muni Metro — N Judah' },
+      { name: 'Irving & 5th Ave', lat: 37.764182, lng: -122.462139, system: 'Muni Metro — N Judah' },
+      { name: 'Irving & 2nd Ave', lat: 37.764441, lng: -122.458643, system: 'Muni Metro — N Judah' },
+      { name: 'Carl & Hillway',  lat: 37.764910, lng: -122.456770, system: 'Muni Metro — N Judah' },
+      { name: 'Carl & Stanyan',  lat: 37.765448, lng: -122.452738, system: 'Muni Metro — N Judah' },
+      { name: 'Carl & Cole',     lat: 37.765788, lng: -122.449952, system: 'Muni Metro — N Judah' }
+      // (N continues via Sunset Tunnel to the Market St Subway shared stations already shown)
+    ];
+
+    // --- L Taraval line (surface) — West Portal to Ocean Beach ---
+    const lStops = [
+      { name: 'West Portal Station', lat: 37.741171, lng: -122.465609, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 15th Ave', lat: 37.743096, lng: -122.471362, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 17th Ave', lat: 37.743136, lng: -122.473567, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 19th Ave', lat: 37.743037, lng: -122.475652, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 22nd Ave', lat: 37.742929, lng: -122.478609, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 23rd Ave', lat: 37.742872, lng: -122.480450, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 26th Ave', lat: 37.742717, lng: -122.483196, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 30th Ave', lat: 37.742534, lng: -122.487423, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 32nd Ave', lat: 37.742423, lng: -122.489619, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & Sunset Blvd', lat: 37.742228, lng: -122.494499, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 40th Ave', lat: 37.742049, lng: -122.498186, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 42nd Ave', lat: 37.741928, lng: -122.500372, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 44th Ave', lat: 37.741864, lng: -122.502481, system: 'Muni Metro — L Taraval' },
+      { name: 'Taraval & 46th Ave', lat: 37.741823, lng: -122.504490, system: 'Muni Metro — L Taraval' }
+    ];
+
+    // --- Build layers ---
+    const bartLayer = addStops(bartStops, '#0a84ff');
+    const muniSubwayLayer = addStops(muniSubwayStops, '#34c759');
+    const nLayer = addStops(nStops, '#ff9f0a');
+    const lLayer = addStops(lStops, '#ff375f');
+
+    // Add default visible layers
+    bartLayer.addTo(map);
+    muniSubwayLayer.addTo(map);
+    nLayer.addTo(map);
+    lLayer.addTo(map);
+
+    // Layer control
+    const overlays = {
+      'BART stations': bartLayer,
+      'Muni Metro (subway)': muniSubwayLayer,
+      'N Judah (surface)': nLayer,
+      'L Taraval (surface)': lLayer
+    };
+    L.control.layers(null, overlays, { collapsed: false, position: 'topright' }).addTo(map);
+
+    // Fit map to all visible markers
+    const all = [].concat(bartStops, muniSubwayStops, nStops, lStops);
+    const bounds = L.latLngBounds(all.map(s => [s.lat, s.lng]));
+    map.fitBounds(bounds.pad(0.08));
+  </script>
 </body>
-<script>
-    
-    
-            var map_86cc9f7f4c37fbc79d675a05e82ae9cc = L.map(
-                "map_86cc9f7f4c37fbc79d675a05e82ae9cc",
-                {
-                    center: [37.7749, -122.4194],
-                    crs: L.CRS.EPSG3857,
-                    zoom: 12,
-                    zoomControl: true,
-                    preferCanvas: false,
-                }
-            );
-            L.control.scale().addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-
-            
-
-        
-    
-            var tile_layer_b3eac86b737452bb199e00381b98d47e = L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            var mouse_position_eee9e9faba48a67fbef746e90ba8cd15 = new L.Control.MousePosition(
-                {"emptyString": "NaN", "lngFirst": true, "numDigits": 6, "position": "bottomleft", "prefix": "Lon | Lat", "separator": " | "}
-            );
-            mouse_position_eee9e9faba48a67fbef746e90ba8cd15.options["latFormatter"] =
-                undefined;
-            mouse_position_eee9e9faba48a67fbef746e90ba8cd15.options["lngFormatter"] =
-                undefined;
-            map_86cc9f7f4c37fbc79d675a05e82ae9cc.addControl(mouse_position_eee9e9faba48a67fbef746e90ba8cd15);
-        
-    
-            var circle_d4ae6cd6d672595a0886a5f22ecb1f16 = L.circle(
-                [37.792762, -122.397037],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_d4ae6cd6d672595a0886a5f22ecb1f16.bindTooltip(
-                `<div>
-                     Embarcadero — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_540403e399178792792a3f6feb3c1ad8 = L.marker(
-                [37.792762, -122.397037],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_540403e399178792792a3f6feb3c1ad8.bindTooltip(
-                `<div>
-                     Embarcadero
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_5699011573db5d5613502d9ec18ea00a = L.circle(
-                [37.789173, -122.401587],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_5699011573db5d5613502d9ec18ea00a.bindTooltip(
-                `<div>
-                     Montgomery St — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_2bb2de7ea2a667952b0bc7763e2268f0 = L.marker(
-                [37.789173, -122.401587],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_2bb2de7ea2a667952b0bc7763e2268f0.bindTooltip(
-                `<div>
-                     Montgomery St
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_9d69699001144560b8c9e93bc2778f6a = L.circle(
-                [37.784606, -122.407331],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_9d69699001144560b8c9e93bc2778f6a.bindTooltip(
-                `<div>
-                     Powell St — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_defd7bece04da687d29d1c78c2043ff0 = L.marker(
-                [37.784606, -122.407331],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_defd7bece04da687d29d1c78c2043ff0.bindTooltip(
-                `<div>
-                     Powell St
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_53bd8b54f67640ceae691c76c52c6a2b = L.circle(
-                [37.779408, -122.413826],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_53bd8b54f67640ceae691c76c52c6a2b.bindTooltip(
-                `<div>
-                     Civic Center/UN Plaza — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_c220eee24c4d4b8cd0f3537bfa3a1394 = L.marker(
-                [37.779408, -122.413826],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_c220eee24c4d4b8cd0f3537bfa3a1394.bindTooltip(
-                `<div>
-                     Civic Center/UN Plaza
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_b53cff3c5ed1dafcf91c9c321953ea99 = L.circle(
-                [37.765173, -122.419704],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_b53cff3c5ed1dafcf91c9c321953ea99.bindTooltip(
-                `<div>
-                     16th St Mission — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_f18c96a9e38ea528fa80d74c109d7e03 = L.marker(
-                [37.765173, -122.419704],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_f18c96a9e38ea528fa80d74c109d7e03.bindTooltip(
-                `<div>
-                     16th St Mission
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_4b15d7e78d0bb39650009ca86842f90f = L.circle(
-                [37.752419, -122.418468],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_4b15d7e78d0bb39650009ca86842f90f.bindTooltip(
-                `<div>
-                     24th St Mission — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_dce73ececb86117ddd079abc05f80a84 = L.marker(
-                [37.752419, -122.418468],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_dce73ececb86117ddd079abc05f80a84.bindTooltip(
-                `<div>
-                     24th St Mission
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_6aef4c5dd4a595d1799dd44e80b40f8b = L.circle(
-                [37.733235, -122.433515],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_6aef4c5dd4a595d1799dd44e80b40f8b.bindTooltip(
-                `<div>
-                     Glen Park — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_f3b95fa3551d00d743003c053302949b = L.marker(
-                [37.733235, -122.433515],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_f3b95fa3551d00d743003c053302949b.bindTooltip(
-                `<div>
-                     Glen Park
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var circle_8414ed34dc5c7a09798992bb1a74a692 = L.circle(
-                [37.721747, -122.447457],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.15, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 804.672, "stroke": true, "weight": 2}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            circle_8414ed34dc5c7a09798992bb1a74a692.bindTooltip(
-                `<div>
-                     Balboa Park — 0.5 mile radius
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_ddb98d9ab45fa5e2ea2128998c6d975a = L.marker(
-                [37.721747, -122.447457],
-                {}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-    
-            marker_ddb98d9ab45fa5e2ea2128998c6d975a.bindTooltip(
-                `<div>
-                     Balboa Park
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-        function geo_json_722b973a888d3650befb315e3595ab38_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"fillOpacity": 0.08, "weight": 3};
-            }
-        }
-
-        function geo_json_722b973a888d3650befb315e3595ab38_onEachFeature(feature, layer) {
-            layer.on({
-            });
-        };
-        var geo_json_722b973a888d3650befb315e3595ab38 = L.geoJson(null, {
-                onEachFeature: geo_json_722b973a888d3650befb315e3595ab38_onEachFeature,
-            
-                style: geo_json_722b973a888d3650befb315e3595ab38_styler,
-        });
-
-        function geo_json_722b973a888d3650befb315e3595ab38_add (data) {
-            geo_json_722b973a888d3650befb315e3595ab38
-                .addData(data)
-                .addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        }
-            geo_json_722b973a888d3650befb315e3595ab38_add({"features": [{"geometry": {"coordinates": [[[[-122.43873575043132, 37.71960045852016], [-122.43904264918893, 37.71893177997153], [-122.43943057348355, 37.71829021524553], [-122.43989578584154, 37.717681942179595], [-122.44043380487844, 37.71711281789223], [-122.4410394485008, 37.7165883224097], [-122.4417068838384, 37.71611350592699], [-122.4424296834253, 37.71569294020945], [-122.44320088708828, 37.715330674601645], [-122.44401306894703, 37.71503019706587], [-122.44485840888206, 37.714794400623866], [-122.4457287677838, 37.71462555552398], [-122.44661576586097, 37.71452528740043], [-122.4475108632563, 37.71449456163432], [-122.44840544219711, 37.71453367406631], [-122.44929088989315, 37.714642248150014], [-122.4501586813865, 37.7148192385735], [-122.45100046155999, 37.71506294131396], [-122.4518081255174, 37.715371010029614], [-122.45257389656481, 37.715740478631325], [-122.45329040104487, 37.716167789817646], [-122.45395073930527, 37.71664882929968], [-122.45454855212036, 37.71717896538736], [-122.45507808192635, 37.71775309355747], [-122.45553422828135, 37.71836568557538], [-122.45591259701524, 37.71901084269916], [-122.45620954259539, 37.719682352454804], [-122.4564222032977, 37.72037374843729], [-122.45654852884256, 37.72107837256248], [-122.45658730022625, 37.72178943917128], [-122.45653814155345, 37.722500100369366], [-122.45640152375383, 37.72320351197363], [-122.45617876014238, 37.723892899430204], [-122.4558719938635, 37.72456162306929], [-122.45548417733546, 37.72520324206767], [-122.45501904389053, 37.72581157650225], [-122.45448107188054, 37.72638076689619], [-122.45387544159172, 37.72690533068273], [-122.45320798538192, 37.727380215042054], [-122.45248513151917, 37.72780084560032], [-122.45171384226248, 37.72816317052117], [-122.45090154678147, 37.72846369956297], [-122.45005606956212, 37.7286995377246], [-122.44918555498964, 37.72886841315446], [-122.44829838883777, 37.72896869905278], [-122.44740311742278, 37.72899942935536], [-122.44650836520478, 37.72896030804725], [-122.445622751633, 37.728851712015846], [-122.44475480803983, 37.728674687416635], [-122.44391289538761, 37.72843093958571], [-122.44310512366361, 37.728122816597654], [-122.44233927370314, 37.727753286627284], [-122.4416227221962, 37.72732590933441], [-122.44096237060225, 37.72684480154835], [-122.44036457865936, 37.72631459758407], [-122.43983510312923, 37.72574040457322], [-122.43937904236797, 37.72512775324226], [-122.43900078725632, 37.72448254461248], [-122.4387039789605, 37.723810993137214], [-122.4384914739289, 37.72311956682475], [-122.43836531645871, 37.722414924924806], [-122.43832671909473, 37.72170385377953], [-122.43837605104468, 37.720993201457574], [-122.43851283472007, 37.72028981180098], [-122.43873575043132, 37.71960045852016]]], [[[-122.42479282308945, 37.73108742356036], [-122.42509989547452, 37.73041878401749], [-122.42548800064516, 37.72977726788668], [-122.42595339938596, 37.72916905253658], [-122.42649160851816, 37.72859999452909], [-122.42709744411842, 37.72807557325161], [-122.42776507146895, 37.72760083818398], [-122.4284880612562, 37.72718036030717], [-122.42925945147695, 37.72681818811964], [-122.43007181445608, 37.72651780868401], [-122.43091732833182, 37.726282114077506], [-122.43178785232146, 37.72611337356807], [-122.4326750050457, 37.726013211783176], [-122.43357024515966, 37.725982593080474], [-122.43446495351779, 37.726021812270304], [-122.4353505160847, 37.726130491778996], [-122.43621840679711, 37.72630758528013], [-122.43706026958294, 37.72655138775917], [-122.43786799875059, 37.72685955191464], [-122.4386338169779, 37.727229110739074], [-122.43935035015255, 37.727656506062836], [-122.440010698345, 37.728137622787386], [-122.44060850223269, 37.72866782847922], [-122.44113800433625, 37.729242017945154], [-122.44159410447884, 37.72985466236034], [-122.44197240893351, 37.73049986247822], [-122.44226927278469, 37.73117140541054], [-122.44248183509339, 37.73186282443241], [-122.4426080465257, 37.732567461237295], [-122.4426466891751, 37.73327853004335], [-122.44259738838458, 37.73398918293432], [-122.44246061645111, 37.73469257580627], [-122.44223768817321, 37.73538193428487], [-122.44193074828051, 37.73605061897848], [-122.44154275086312, 37.7366921894381], [-122.44107743099549, 37.737300466207294], [-122.44053926882543, 37.73786959036379], [-122.43993344647141, 37.738394079978185], [-122.4392657981423, 37.738868882944445], [-122.43854275395776, 37.73928942567232], [-122.43777127801155, 37.73965165717114], [-122.4369588012731, 37.73995208809899], [-122.43611314997592, 37.740187824399854], [-122.43524247018372, 37.74035659520347], [-122.43435514926327, 37.74045677471817], [-122.43345973502306, 37.74048739790498], [-122.43256485330024, 37.74044816978122], [-122.43167912479254, 37.7403394682639], [-122.43081108194019, 37.740162340525195], [-122.42996908666197, 37.7399184928954], [-122.4291612497411, 37.739610274411106], [-122.42839535264062, 37.739240654167595], [-122.42767877250388, 37.738813192694806], [-122.42701841106515, 37.73833200763336], [-122.42642062815605, 37.737801734042876], [-122.42589118044977, 37.73722747972592], [-122.42543516603267, 37.73661477599943], [-122.42505697533731, 37.735969524389326], [-122.42476024890757, 37.73529793976265], [-122.42454784240141, 37.734606490446616], [-122.42442179916532, 37.73390183591191], [-122.42438333064217, 37.733190762621746], [-122.42443280479739, 37.732480118664704], [-122.42456974267165, 37.7317767478014], [-122.42479282308945, 37.73108742356036]]], [[[-122.40974402837693, 37.750270301926655], [-122.41005131715266, 37.74960170555123], [-122.41043965390003, 37.74896024297224], [-122.41090529717316, 37.74835209104148], [-122.41144376143843, 37.74778310570916], [-122.41204986031633, 37.747258765661826], [-122.4127177565548, 37.746784119596335], [-122.41344101825248, 37.74636373763587], [-122.41421268078967, 37.74600166735482], [-122.4150253138712, 37.74570139483419], [-122.41587109303667, 37.74546581112156], [-122.41674187495134, 37.74529718441719], [-122.41762927575468, 37.74519713825297], [-122.41852475171545, 37.74516663587371], [-122.41941968141923, 37.745205970970254], [-122.42030544870113, 37.74531476485363], [-122.42117352552822, 37.74549197009697], [-122.42201555403733, 37.74573588061064], [-122.42282342694175, 37.74604414805382], [-122.42358936553534, 37.7464138044254], [-122.42430599454636, 37.74684129061736], [-122.4249664131216, 37.74732249065686], [-122.4255642612593, 37.74785277130884], [-122.42609378105222, 37.74842702665875], [-122.426549872151, 37.74903972724768], [-122.42692814091339, 37.74968497328824], [-122.42722494276478, 37.75035655144991], [-122.42743741736057, 37.75104799466825], [-122.42756351620874, 37.7517526444033], [-122.42760202248427, 37.752463714748], [-122.42755256284104, 37.75317435777051], [-122.42741561110368, 37.753877729461024], [-122.4271924838005, 37.75456705564815], [-122.42688532757646, 37.755235697250214], [-122.42649709860423, 37.75587721423206], [-122.42603153418793, 37.75648542765121], [-122.42549311683071, 37.75705447919454], [-122.42488703110949, 37.757578887630984], [-122.42421911377072, 37.758053601635595], [-122.4234957975266, 37.75847404847428], [-122.42336791177948, 37.75853405724718], [-122.42406008350612, 37.75879812139528], [-122.42482615902462, 37.75916777005759], [-122.42554291732614, 37.75959524886924], [-122.42620345631285, 37.760076441928945], [-122.42680141482363, 37.760606716069304], [-122.42733103388822, 37.76118096543892], [-122.42778721220085, 37.761793660636926], [-122.42816555527868, 37.76243890192831], [-122.4284624178305, 37.76311047602866], [-122.4286749389259, 37.763801915913014], [-122.42880106962373, 37.764506563073745], [-122.42883959279075, 37.76521763162883], [-122.42879013491658, 37.765928273663775], [-122.4286531698072, 37.76663164517825], [-122.42843001411819, 37.767320972002544], [-122.42812281476641, 37.76798961504865], [-122.42773452833856, 37.76863113426728], [-122.42726889269109, 37.76923935069412], [-122.42673039101224, 37.76980840598668], [-122.42612420869048, 37.77033281887739], [-122.4254561834023, 37.77080753799796], [-122.42473274889956, 37.77122799056454], [-122.42396087303749, 37.77159012645394], [-122.42314799064006, 37.771890457244375], [-122.42230193185111, 37.77212608984385], [-122.42143084666272, 37.77229475438073], [-122.42054312634993, 37.77239482608691], [-122.41964732257188, 37.77242534096209], [-122.41875206492122, 37.772386005067396], [-122.41786597771988, 37.772277197358626], [-122.41699759686583, 37.772099966031746], [-122.41615528753584, 37.77185601841588], [-122.41534716353974, 37.77154770451188], [-122.41458100910663, 37.77117799433534], [-122.41386420385875, 37.77075044928368], [-122.41320365169811, 37.77026918780375], [-122.41260571429198, 37.76973884569231], [-122.41207614979969, 37.769164531412855], [-122.41162005742972, 37.76855177686067], [-122.41124182836228, 37.76790648405176], [-122.41094510350715, 37.76723486825028], [-122.41073273850319, 37.76654339808377], [-122.41060677629302, 37.76583873322358], [-122.41056842753497, 37.765127660231904], [-122.41061805903702, 37.76441702719376], [-122.4107551903207, 37.763713677763675], [-122.41097849834456, 37.76302438526273], [-122.41128583033752, 37.762355787459896], [-122.41167422461555, 37.76171432266576], [-122.41213993917762, 37.761106167753155], [-122.41267848780281, 37.760537178700616], [-122.41328468329854, 37.760012834230096], [-122.41395268748205, 37.75953818308062], [-122.41467606741253, 37.75911779542389], [-122.41480396106854, 37.759057796155595], [-122.41411182055407, 37.758793677906844], [-122.41334580310365, 37.75842396004685], [-122.41262912718453, 37.75799640764391], [-122.41196869545264, 37.75751513921528], [-122.41137086841526, 37.75698479062419], [-122.41084140316877, 37.75641047039605], [-122.41038539796637, 37.75579771048303], [-122.41000724314934, 37.75515241295228], [-122.40971057891339, 37.75448079311306], [-122.40949826031473, 37.75378931963147], [-122.40937232985044, 37.753084652210475], [-122.40933399787463, 37.75237357743677], [-122.4093836310352, 37.7516629434124], [-122.40952074883934, 37.750959593801404], [-122.40974402837693, 37.750270301926655]]], [[[-122.40579497299484, 37.77594891982639], [-122.40626082623886, 37.775340790770684], [-122.40679952425465, 37.77477183120409], [-122.4074058784111, 37.77424751956405], [-122.40807404899783, 37.77377290427283], [-122.40879760147224, 37.77335255515636], [-122.40956956841575, 37.77299051947184], [-122.41038251660363, 37.77269028296641], [-122.41122861854335, 37.77245473634022], [-122.4120997277946, 37.77228614743596], [-122.41298745734765, 37.77218613942132], [-122.41388326030854, 37.772155675173636], [-122.41477851211707, 37.772195048016755], [-122.41566459350956, 37.77230387889853], [-122.41653297343112, 37.77248112003632], [-122.4173752911023, 37.772725064995484], [-122.41818343645384, 37.77303336510435], [-122.41894962815758, 37.77340305204808], [-122.41966648850529, 37.77383056642521], [-122.42032711441624, 37.77431179199249], [-122.42092514389186, 37.77484209526997], [-122.4214548172776, 37.77541637012614], [-122.42191103274352, 37.77602908691505], [-122.42228939544754, 37.77667434569405], [-122.42258625990782, 37.77734593301048], [-122.42279876517391, 37.778037381712146], [-122.42292486245522, 37.77874203320646], [-122.42296333493844, 37.77945310156949], [-122.42291380959952, 37.78016373888826], [-122.42277676089248, 37.78086710120752], [-122.42255350627643, 37.78155641444562], [-122.42224619361971, 37.78222503964486], [-122.42185778059927, 37.78286653692725], [-122.42139200628999, 37.78347472753912], [-122.42085335521531, 37.784043753385994], [-122.42024701420245, 37.784568133483305], [-122.41957882245666, 37.785042816778045], [-122.41885521533368, 37.78546323083092], [-122.4180831623522, 37.78582532588925], [-122.4172701000434, 37.78612561392422], [-122.4164238602853, 37.78636120225541], [-122.41617059680003, 37.78641021800629], [-122.416058921228, 37.78675489716878], [-122.41575152813802, 37.78742350417828], [-122.41536303145803, 37.78806497879619], [-122.41489717106874, 37.788673142486786], [-122.41435843232287, 37.789242137414476], [-122.4137520028924, 37.78976648289222], [-122.41308372283466, 37.79024112820016], [-122.41236002835664, 37.79066150126473], [-122.41158788981909, 37.7910235527279], [-122.41077474457795, 37.79132379498075], [-122.41024707330855, 37.7914706531173], [-122.41000782055013, 37.791990915044096], [-122.40961925002507, 37.79263236961178], [-122.40915331368183, 37.7932405094871], [-122.40861449760473, 37.79380947706361], [-122.40800799021102, 37.79433379191739], [-122.40733963230929, 37.79480840362335], [-122.40661586085683, 37.795228740431355], [-122.4058436469565, 37.795590753332554], [-122.40533875655682, 37.79577713596301], [-122.40506942003289, 37.796221679211335], [-122.404603423695, 37.79682980021872], [-122.40406454656085, 37.797398746126156], [-122.40345797763592, 37.79792303671828], [-122.40278955832187, 37.79839762180344], [-122.4020657261679, 37.79881792988783], [-122.40129345286198, 37.79917991223915], [-122.4004801770593, 37.79948008191404], [-122.39963373269644, 37.7997155473722], [-122.39876227348277, 37.79988404035206], [-122.39787419429956, 37.79998393773838], [-122.39697805026593, 37.80001427721064], [-122.39608247425498, 37.7999747665204], [-122.3951960936578, 37.79986578630821], [-122.39432744720052, 37.79968838643285], [-122.39348490261969, 37.79944427584828], [-122.39267657599193, 37.79913580612644], [-122.39191025349817, 37.798765948785125], [-122.39119331637873, 37.79833826664047], [-122.39053266980434, 37.7978568794609], [-122.38993467634965, 37.797326424254855], [-122.38940509471102, 37.79675201057579], [-122.38894902425899, 37.79613917127683], [-122.38857085595899, 37.795493809190326], [-122.38827423013167, 37.79482214024761], [-122.38806200145804, 37.794130633587564], [-122.38793621156375, 37.79342594923228], [-122.38789806944375, 37.79271487393077], [-122.38794793991232, 37.79200425578906], [-122.3880853401865, 37.79130093831688], [-122.38830894463169, 37.79061169452597], [-122.38861659762021, 37.789943161714596], [-122.38900533437555, 37.78930177756583], [-122.38947140959806, 37.78869371817431], [-122.3900103335938, 37.78812483859713], [-122.39061691555652, 37.787600616500704], [-122.3912853135835, 37.787126099444365], [-122.3920090909435, 37.786705856307655], [-122.39278127805437, 37.78634393332694], [-122.39328613475723, 37.78615760393424], [-122.39355550416374, 37.78571308715841], [-122.39402151940533, 37.78510500888283], [-122.39456038236565, 37.78453610762311], [-122.39516690282588, 37.784011861254676], [-122.39583523947518, 37.78353731757077], [-122.396558956173, 37.783117045707456], [-122.39733108392075, 37.782755092177815], [-122.39814418794667, 37.7824549419378], [-122.39867181809132, 37.78230813744114], [-122.39891111788442, 37.78178789809135], [-122.39929972245223, 37.781146477965905], [-122.399765661757, 37.780538375854654], [-122.40030444741333, 37.779969447226655], [-122.40091088994649, 37.77944517022112], [-122.40157914879562, 37.778970592926576], [-122.40230278856878, 37.77855028480284], [-122.40307484100747, 37.77818829271233], [-122.40388787206444, 37.777888101982285], [-122.4047340534501, 37.777652602872166], [-122.40498729420067, 37.777603611443915], [-122.40509900671398, 37.777258942557864], [-122.40540645207946, 37.77659036264232], [-122.40579497299484, 37.77594891982639]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-            geo_json_722b973a888d3650befb315e3595ab38.bindTooltip(
-                `<div>
-                     Area within 0.5 miles of any SF BART station
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var layer_control_eb2890ad9ef44a89e801db0dc446b0bd = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_b3eac86b737452bb199e00381b98d47e,
-                },
-                overlays :  {
-                    "0.5-mile Union Boundary" : geo_json_722b973a888d3650befb315e3595ab38,
-                },
-            };
-            L.control.layers(
-                layer_control_eb2890ad9ef44a89e801db0dc446b0bd.base_layers,
-                layer_control_eb2890ad9ef44a89e801db0dc446b0bd.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_86cc9f7f4c37fbc79d675a05e82ae9cc);
-        
-</script>
 </html>
