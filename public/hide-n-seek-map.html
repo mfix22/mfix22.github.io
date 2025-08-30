@@ -44,7 +44,7 @@
       const layer = L.layerGroup();
       stops.forEach(s => {
         const ll = [s.lat, s.lng];
-        L.circle(ll, { radius: MILE_METERS / 2, color, weight: 1.2, fillColor: color, fillOpacity: 0.07 }).addTo(layer);
+        L.circle(ll, { radius: MILE_METERS * 0.75, color, weight: 1.2, fillColor: color, fillOpacity: 0.07 }).addTo(layer);
         L.circleMarker(ll, { radius: 4.5, color: '#111', weight: 1, fillColor: color, fillOpacity: 1 })
           .bindPopup(`<strong>${s.name}</strong><br>${s.system}`)
           .addTo(layer);
