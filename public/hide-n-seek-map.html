@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SF BART + Muni Metro — 1‑Mile Radius Map (N & L Added)</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <title>SF BART + Muni Metro — 1-Mile Radius Map (All Metro Lines)</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
   <style>
     html, body { height: 100%; margin: 0; }
     #map { height: 100%; width: 100%; }
@@ -15,7 +15,7 @@
       padding: 10px 12px; font: 13px/1.25 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     }
     .legend h4 { margin: 0 0 6px; font-size: 14px; }
-    .legend .swatch { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:8px; vertical-align: -2px; }
+    .legend .swatch { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:8px; vertical-align:-2px; }
     .leaflet-popup-content { font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
   </style>
 </head>
@@ -27,25 +27,27 @@
     <div><span class="swatch" style="background:#34c759"></span>Muni Metro (subway)</div>
     <div><span class="swatch" style="background:#ff9f0a"></span>N Judah (surface)</div>
     <div><span class="swatch" style="background:#ff375f"></span>L Taraval (surface)</div>
+    <div><span class="swatch" style="background:#af52de"></span>J Church (surface)</div>
+    <div><span class="swatch" style="background:#30b0c7"></span>K Ingleside (surface)</div>
+    <div><span class="swatch" style="background:#ffd60a"></span>M Ocean View (surface)</div>
+    <div><span class="swatch" style="background:#ff453a"></span>T Third (surface)</div>
     <div style="margin-top:6px;opacity:.7">Each circle = 1 mile radius</div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
-    // --- Base map ---
-    const map = L.map('map', { zoomControl: true, preferCanvas: true }).setView([37.765, -122.445], 12);
+    const map = L.map('map').setView([37.765, -122.445], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19, attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
     const MILE_METERS = 1609.344;
-
     function addStops(stops, color) {
       const layer = L.layerGroup();
       stops.forEach(s => {
         const ll = [s.lat, s.lng];
-        L.circle(ll, { radius: MILE_METERS / 2, color, weight: 1.2, fillColor: color, fillOpacity: 0.07 }).addTo(layer);
-        L.circleMarker(ll, { radius: 4.5, color: '#111', weight: 1, fillColor: color, fillOpacity: 1 })
+        L.circle(ll, { radius: MILE_METERS/2, color, weight:1.2, fillColor:color, fillOpacity:0.07 }).addTo(layer);
+        L.circleMarker(ll, { radius:4.5, color:'#111', weight:1, fillColor:color, fillOpacity:1 })
           .bindPopup(`<strong>${s.name}</strong><br>${s.system}`)
           .addTo(layer);
       });
@@ -116,29 +118,77 @@
       { name: 'Taraval & 46th Ave', lat: 37.741823, lng: -122.504490, system: 'Muni Metro — L Taraval' }
     ];
 
-    // --- Build layers ---
+    // J Church (surface section)
+    const jStops = [
+      { name:'Church & Duboce', lat:37.769112, lng:-122.429437, system:'Muni Metro — J Church' },
+      { name:'Church & 18th', lat:37.761837, lng:-122.428985, system:'Muni Metro — J Church' },
+      { name:'Church & 24th', lat:37.751759, lng:-122.427982, system:'Muni Metro — J Church' },
+      { name:'Church & 30th', lat:37.742782, lng:-122.426909, system:'Muni Metro — J Church' },
+      { name:'Balboa Park Station', lat:37.721747, lng:-122.447457, system:'Muni Metro — J Church' }
+    ];
+
+    // K Ingleside
+    const kStops = [
+      { name:'West Portal', lat:37.741171, lng:-122.465609, system:'Muni Metro — K Ingleside' },
+      { name:'St. Francis Circle', lat:37.734490, lng:-122.466100, system:'Muni Metro — K Ingleside' },
+      { name:'Ocean Ave & Aptos', lat:37.732290, lng:-122.468720, system:'Muni Metro — K Ingleside' },
+      { name:'Ocean Ave & Dorado Terrace', lat:37.729590, lng:-122.470620, system:'Muni Metro — K Ingleside' },
+      { name:'Ocean Ave & Jules', lat:37.727740, lng:-122.472050, system:'Muni Metro — K Ingleside' },
+      { name:'Balboa Park Station', lat:37.721747, lng:-122.447457, system:'Muni Metro — K Ingleside' }
+    ];
+
+    // M Ocean View
+    const mStops = [
+      { name:'West Portal', lat:37.741171, lng:-122.465609, system:'Muni Metro — M Ocean View' },
+      { name:'St. Francis Circle', lat:37.734490, lng:-122.466100, system:'Muni Metro — M Ocean View' },
+      { name:'19th Ave & Holloway (SFSU)', lat:37.721529, lng:-122.475297, system:'Muni Metro — M Ocean View' },
+      { name:'19th Ave & Randolph', lat:37.716750, lng:-122.474820, system:'Muni Metro — M Ocean View' },
+      { name:'San Jose Ave & Geneva', lat:37.720228, lng:-122.446800, system:'Muni Metro — M Ocean View' },
+      { name:'Balboa Park Station', lat:37.721747, lng:-122.447457, system:'Muni Metro — M Ocean View' }
+    ];
+
+    // T Third
+    const tStops = [
+      { name:'Embarcadero Station', lat:37.792762, lng:-122.397037, system:'Muni Metro — T Third' },
+      { name:'4th & Brannan', lat:37.776387, lng:-122.396568, system:'Muni Metro — T Third' },
+      { name:'UCSF Mission Bay', lat:37.768799, lng:-122.390661, system:'Muni Metro — T Third' },
+      { name:'23rd St', lat:37.752414, lng:-122.387180, system:'Muni Metro — T Third' },
+      { name:'Evans Ave', lat:37.742541, lng:-122.387501, system:'Muni Metro — T Third' },
+      { name:'Bayview / 3rd & Oakdale', lat:37.732310, lng:-122.391410, system:'Muni Metro — T Third' },
+      { name:'Sunnydale', lat:37.708392, lng:-122.405869, system:'Muni Metro — T Third' }
+    ];
+
+    // Build layers
     const bartLayer = addStops(bartStops, '#0a84ff');
     const muniSubwayLayer = addStops(muniSubwayStops, '#34c759');
     const nLayer = addStops(nStops, '#ff9f0a');
     const lLayer = addStops(lStops, '#ff375f');
+    const jLayer = addStops(jStops, '#af52de');
+    const kLayer = addStops(kStops, '#30b0c7');
+    const mLayer = addStops(mStops, '#ffd60a');
+    const tLayer = addStops(tStops, '#ff453a');
 
-    // Add default visible layers
     bartLayer.addTo(map);
     muniSubwayLayer.addTo(map);
     nLayer.addTo(map);
     lLayer.addTo(map);
+    jLayer.addTo(map);
+    kLayer.addTo(map);
+    mLayer.addTo(map);
+    tLayer.addTo(map);
 
-    // Layer control
-    const overlays = {
+    L.control.layers(null, {
       'BART stations': bartLayer,
       'Muni Metro (subway)': muniSubwayLayer,
       'N Judah (surface)': nLayer,
-      'L Taraval (surface)': lLayer
-    };
-    L.control.layers(null, overlays, { collapsed: false, position: 'topright' }).addTo(map);
+      'L Taraval (surface)': lLayer,
+      'J Church (surface)': jLayer,
+      'K Ingleside (surface)': kLayer,
+      'M Ocean View (surface)': mLayer,
+      'T Third (surface)': tLayer
+    }, { collapsed:false, position:'topright' }).addTo(map);
 
-    // Fit map to all visible markers
-    const all = [].concat(bartStops, muniSubwayStops, nStops, lStops);
+    const all = [].concat(bartStops, muniSubwayStops, nStops, lStops, jStops, kStops, mStops, tStops);
     const bounds = L.latLngBounds(all.map(s => [s.lat, s.lng]));
     map.fitBounds(bounds.pad(0.08));
   </script>
